@@ -1,4 +1,30 @@
 const list = document.querySelector('.article-list');
+const sampleButtons = [...document.querySelectorAll('[data-sample-src]')];
+if (sampleButtons.length) {
+  const image = document.querySelector('#specimen-image');
+  const stage = document.querySelector('#specimen-stage');
+  const link = document.querySelector('#specimen-link');
+  let pending = 0;
+  sampleButtons.forEach(button=>button.addEventListener('click',async()=>{
+    const request=++pending;
+    const preview=new Image();
+    preview.src='./assets/'+button.dataset.sampleSrc;
+    try {await preview.decode();} catch {return;}
+    if(request!==pending)return;
+    image.classList.remove('sample-enter');
+    image.src=preview.src;
+    image.alt=button.dataset.sampleAlt;
+    stage.dataset.mode=button.dataset.sampleMode;
+    stage.href=button.dataset.sampleLink;
+    stage.setAttribute('aria-label','閱讀 '+button.dataset.sampleName+' 介紹');
+    link.href=button.dataset.sampleLink;
+    document.querySelector('#specimen-name').textContent=button.dataset.sampleName;
+    document.querySelector('#specimen-title').textContent=button.dataset.sampleTitle;
+    document.querySelector('#specimen-credit').textContent=button.dataset.sampleCredit;
+    sampleButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    requestAnimationFrame(()=>image.classList.add('sample-enter'));
+  }));
+}
 if (list) {
   const entries = [...list.querySelectorAll('.entry')];
   const search = document.querySelector('#search');
@@ -40,7 +66,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   const observer = new IntersectionObserver(items=>{
     for(const item of items) if(item.isIntersecting){item.target.classList.add('entered');observer.unobserve(item.target);}
   },{threshold:0.08});
-  document.querySelectorAll('.entry,.showcase-images figure,.section-heading,.editorial h2,.editorial p').forEach(element=>observer.observe(element));
+  document.querySelectorAll('.entry,.work-plate,.section-heading,.editorial h2,.editorial p').forEach(element=>observer.observe(element));
 }
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.addEventListener('click',async()=>{

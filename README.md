@@ -4,7 +4,7 @@
 
 - 網站：https://leftben.github.io/skill-art-journal/
 - 本期：2026-10-20，共 23 篇
-- 功能：用途篩選、搜尋、收藏量／增長排序、需求範例複製、相關文章、RSS、sitemap
+- 功能：五種作品樣本切換、用途篩選、搜尋、收藏量／增長排序、需求範例複製、相關文章、RSS、sitemap
 
 ## 本機預覽
 
@@ -21,6 +21,7 @@ npm run dev
 ## 維護文章
 
 - `content/articles.mjs`：每篇文章的繁體中文內容與圖片來源。
+- `content/home.mjs`：首頁樣本夾、作品選讀與文章索引的版面。
 - `content/snapshot.json`：原始 GitHub 星數快照，含各項觀察時間。
 - `public/`：共用樣式、互動與作者示例圖片。
 - `scripts/build.mjs`：產生 `docs/` 中所有獨立靜態頁。

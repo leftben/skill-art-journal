@@ -326,6 +326,7 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {file:'studio-specimen.svg',repo:'MengTo/Skills',url:'https://raw.githubusercontent.com/MengTo/Skills/main/agent-skills/illustration/illustration-isometric-mono/examples/design-studio.svg',title:'等距單色設計工作室插畫',license:'MIT'},
   {file:'mengto-gouache.jpg',repo:'MengTo/Skills',url:'https://raw.githubusercontent.com/MengTo/Skills/main/agent-skills/illustration/illustration-grainy-gouache/demo/preview.jpg',title:'顆粒粉彩動物範例',license:'MIT'},
   {file:'mengto-styles.jpg',repo:'MengTo/Skills',url:'https://raw.githubusercontent.com/MengTo/Skills/main/agent-skills/illustration/styles.jpg',title:'十四種插畫風格總覽',license:'MIT'},
   {file:'pixel-capybara.gif',repo:'Gamezxz/pixel-art-studio',url:'https://raw.githubusercontent.com/Gamezxz/pixel-art-studio/main/docs/assets/capy_walk_down.gif',title:'水豚走路動畫',license:'MIT'},

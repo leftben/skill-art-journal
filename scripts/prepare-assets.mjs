@@ -3,7 +3,7 @@ import {assetSources} from '../content/articles.mjs';
 await mkdir('public/assets/licenses', {recursive:true});
 for (const asset of assetSources) {
   const r = await fetch(asset.url);
-  if (!r.ok || !r.headers.get('content-type')?.startsWith('image/')) throw new Error(`Asset unavailable: ${asset.file} (${r.status})`);
+  if (!r.ok || (!r.headers.get('content-type')?.startsWith('image/') && !asset.file.endsWith('.svg'))) throw new Error(`Asset unavailable: ${asset.file} (${r.status})`);
   await writeFile(`public/assets/${asset.file}`, Buffer.from(await r.arrayBuffer()));
   console.log(`Saved ${asset.file}`);
 }
