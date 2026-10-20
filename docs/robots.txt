@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leftben.github.io/skill-art-journal/sitemap.xml
