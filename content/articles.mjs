@@ -81,7 +81,7 @@ export const articles = [
     skill:'https://github.com/kaankiziltug/logo-design-skill/blob/main/skills/logo-design/SKILL.md'
   },
   {
-    slug:'taste-skill', repo:'Leonxlnx/taste-skill', name:'Taste Skill', category:'網頁與介面', kind:'單一 Skill', featured:true,
+    slug:'taste-skill', image:'taste-coffee.webp', imageAlt:'Taste Skill 原作者的咖啡店網站範例', repo:'Leonxlnx/taste-skill', name:'Taste Skill', category:'網頁與介面', kind:'單一 Skill', featured:true,
     title:'讓 AI 做網頁時，有美術方向', short:'網頁也需要美術指導',
     dek:'從版面、字體、圖片到瀏覽器檢查，把網站做成有明確方向的作品。',
     intro:'Taste Skill 像是替寫網頁的 AI 加一位美術指導。它先讀懂主題，再選擇視覺方向、安排字體與版面，搭配真正的圖片，把想法落實成可使用的網頁。',
@@ -110,7 +110,7 @@ export const articles = [
     skill:'https://github.com/op7418/guizang-material-illustration/blob/main/SKILL.md'
   },
   {
-    slug:'ian-xiaohei', repo:'helloianneo/ian-xiaohei-illustrations', name:'Ian Xiaohei Illustrations', category:'插畫與圖解', kind:'單一 Skill',
+    slug:'ian-xiaohei', image:'ian-breakpoints.png', imageAlt:'Ian Xiaohei 原作者的兩個斷點手繪配圖', repo:'helloianneo/ian-xiaohei-illustrations', name:'Ian Xiaohei Illustrations', category:'插畫與圖解', kind:'單一 Skill',
     title:'讓小黑，把抽象觀點演出來', short:'白底手繪的文章配圖',
     dek:'用白底手繪、少量中文註記與一個忙碌的小角色，解釋文章裡的關鍵意思。',
     intro:'這套插畫把抽象觀點變成具體動作。小黑不是擺在角落的裝飾，而是畫面中正在搬運、分類、連接或改造東西的角色。',
@@ -138,7 +138,7 @@ export const articles = [
     skill:'https://github.com/majidmanzarpour/blender-game-skills/blob/main/skills/blender-image-to-3d/SKILL.md'
   },
   {
-    slug:'dream-loop', repo:'achimala/dream-loop', name:'Dream Loop', category:'3D 與材質', kind:'單一 Skill',
+    slug:'dream-loop', image:'dream-vesper.gif', imageAlt:'Dream Loop 原作者的 Vesper 等距場景示範', repo:'achimala/dream-loop', name:'Dream Loop', category:'3D 與材質', kind:'單一 Skill',
     title:'先看理想畫面，再反覆做近它', short:'用目標圖反覆修畫面',
     dek:'把生圖、實作與視覺評比串成循環，適合場景、遊戲與視覺原型。',
     intro:'有些視覺需求很難用一句「再漂亮一點」說明。Dream Loop 先生成想達到的目標畫面，接著實作，再讓另一個 AI 對照目前畫面與目標，指出差距。',
@@ -191,7 +191,7 @@ export const articles = [
     caveat:'README 標示 MIT，但先前 API 授權欄為空；採用前應核對最新授權檔。'
   },
   {
-    slug:'comfyui-mcp', repo:'artokun/comfyui-mcp', name:'ComfyUI MCP', category:'影像與影片', kind:'工具與 Skills',
+    slug:'comfyui-mcp', image:'comfyui-demo.jpg', imageAlt:'ComfyUI MCP 原作者的工作流操作畫面', repo:'artokun/comfyui-mcp', name:'ComfyUI MCP', category:'影像與影片', kind:'工具與 Skills',
     title:'用自然語言，接近 ComfyUI 工作流', short:'讓 agent 操作 ComfyUI',
     dek:'把工作流、生成任務與現有圖表操作接到 agent，保留 ComfyUI 的控制能力。',
     intro:'ComfyUI 的節點很有彈性，但管理工作流也需要時間。這個專案以 MCP 服務和側邊 agent 為核心，搭配 Skills 協助建立、調整與執行工作流。',
@@ -243,7 +243,7 @@ export const articles = [
     caveat:'品牌板上的標誌圖不保證是可編輯 SVG。這個新倉庫目前仍在早期觀察。'
   },
   {
-    slug:'garden-skills', repo:'ConardLi/garden-skills', name:'Garden Skills', category:'影像與影片', kind:'Skill 合集',
+    slug:'garden-skills', image:'garden-article.webp', imageAlt:'Garden Skills 原作者的視覺文章範例', repo:'ConardLi/garden-skills', name:'Garden Skills', category:'影像與影片', kind:'Skill 合集',
     title:'把內容、設計與動態，放進同一套工具箱', short:'內容與設計的工具箱',
     dek:'涵蓋生圖、文章呈現、網頁設計與短片的創作流程合集。',
     intro:'Garden Skills 以內容創作與設計為主軸，把不同任務拆成各自的技能。你可以從文章、視覺呈現或動態製作其中一條開始。',
@@ -256,7 +256,7 @@ export const articles = [
     caveat:'合集的星數不能直接當作某個子技能的成品品質評分。'
   },
   {
-    slug:'baoyu-skills', repo:'JimLiu/baoyu-skills', name:'Baoyu Skills', category:'插畫與圖解', kind:'Skill 合集',
+    slug:'baoyu-skills', image:'baoyu-fresh.webp', imageAlt:'Baoyu Skills 原作者的 fresh 配圖風格示例', repo:'JimLiu/baoyu-skills', name:'Baoyu Skills', category:'插畫與圖解', kind:'Skill 合集',
     title:'替文章，規劃封面與配圖', short:'文章封面與配圖工作流',
     dek:'把文章內容轉成圖像需求，再選擇合適的圖解與生成路線。',
     intro:'Baoyu Skills 是面向內容工作的技能合集。對美術使用者而言，值得先看的是文章配圖、封面、資訊圖與漫畫等任務的流程。',
@@ -269,7 +269,7 @@ export const articles = [
     caveat:'本篇為合集導覽；實際操作請先讀選定子技能的設定說明。'
   },
   {
-    slug:'ui-ux-pro-max', repo:'nextlevelbuilder/ui-ux-pro-max-skill', name:'UI UX Pro Max', category:'網頁與介面', kind:'單一 Skill',
+    slug:'ui-ux-pro-max', image:'uiux-website.png', imageAlt:'UI UX Pro Max 原作者的網站介面範例', repo:'nextlevelbuilder/ui-ux-pro-max-skill', name:'UI UX Pro Max', category:'網頁與介面', kind:'單一 Skill',
     title:'為介面，找到合適的設計組合', short:'介面的設計參考庫',
     dek:'讓 agent 從樣式、配色、字體與互動準則出發，建立較有依據的介面。',
     intro:'當你需要畫面能被實際操作，設計就不只看氣氛。UI UX Pro Max 將多種介面樣式、字體配對與使用原則整理成可供 agent 查找的資料。',
@@ -326,6 +326,13 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {"file":"taste-coffee.webp","repo":"Leonxlnx/taste-skill","url":"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/examples/v2/coffee-storefront.webp","title":"Taste Skill 原作者的咖啡店網站範例","license":"MIT"},
+  {"file":"ian-breakpoints.png","repo":"helloianneo/ian-xiaohei-illustrations","url":"https://raw.githubusercontent.com/helloianneo/ian-xiaohei-illustrations/main/examples/images/01-two-breakpoints.png","title":"Ian Xiaohei 原作者的兩個斷點手繪配圖","license":"MIT"},
+  {"file":"dream-vesper.gif","repo":"achimala/dream-loop","url":"https://raw.githubusercontent.com/achimala/dream-loop/main/assets/vesper-preview.gif","title":"Dream Loop 原作者的 Vesper 等距場景示範","license":"MIT"},
+  {"file":"comfyui-demo.jpg","repo":"artokun/comfyui-mcp","url":"https://raw.githubusercontent.com/artokun/comfyui-mcp/main/docs/images/demo-poster.jpg","title":"ComfyUI MCP 原作者的工作流操作畫面","license":"MIT"},
+  {"file":"garden-article.webp","repo":"ConardLi/garden-skills","url":"https://raw.githubusercontent.com/ConardLi/garden-skills/main/dist/imgs/covers/beautiful-article.webp","title":"Garden Skills 原作者的視覺文章範例","license":"MIT"},
+  {"file":"baoyu-fresh.webp","repo":"JimLiu/baoyu-skills","url":"https://raw.githubusercontent.com/JimLiu/baoyu-skills/main/screenshots/xhs-images-styles/fresh.webp","title":"Baoyu Skills 原作者的 fresh 配圖風格示例","license":"MIT"},
+  {"file":"uiux-website.png","repo":"nextlevelbuilder/ui-ux-pro-max-skill","url":"https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/screenshots/website.png","title":"UI UX Pro Max 原作者的網站介面範例","license":"MIT"},
   {file:'studio-specimen.svg',repo:'MengTo/Skills',url:'https://raw.githubusercontent.com/MengTo/Skills/main/agent-skills/illustration/illustration-isometric-mono/examples/design-studio.svg',title:'等距單色設計工作室插畫',license:'MIT'},
   {file:'mengto-gouache.jpg',repo:'MengTo/Skills',url:'https://raw.githubusercontent.com/MengTo/Skills/main/agent-skills/illustration/illustration-grainy-gouache/demo/preview.jpg',title:'顆粒粉彩動物範例',license:'MIT'},
   {file:'mengto-styles.jpg',repo:'MengTo/Skills',url:'https://raw.githubusercontent.com/MengTo/Skills/main/agent-skills/illustration/styles.jpg',title:'十四種插畫風格總覽',license:'MIT'},

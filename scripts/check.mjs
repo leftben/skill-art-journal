@@ -14,4 +14,12 @@ for(const a of articles){
 }
 const home=await readFile(join(root,'index.html'),'utf8');
 if((home.match(/class="entry-cover"/g)||[]).length!==articles.length)throw new Error('Not every catalogue entry has an illustration');
+if((home.match(/class="entry-link"/g)||[]).length!==articles.length)throw new Error('Not every catalogue block is a complete link');
+for(const a of articles){
+  const html=await readFile(join(root,'skills',a.slug,'index.html'),'utf8');
+  const firstImage=html.match(/<main[\s\S]*?<img src="([^"]+)"/)[1];
+  const expected=a.image?`../../assets/${a.image}`:`../../assets/illustrations/${a.slug}.svg`;
+  if(firstImage!==expected)throw new Error(`Primary image does not respect author preference: ${a.slug}`);
+  if(!home.includes(`src="./assets/${a.image||`illustrations/${a.slug}.svg`}" alt=""`))throw new Error(`Catalogue image does not respect author preference: ${a.slug}`);
+}
 console.log(`PASS: ${articles.length} complete illustrated articles, ${checked} HTML pages, all local links and assets resolve.`);

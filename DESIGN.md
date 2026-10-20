@@ -44,3 +44,24 @@ Top three problems fixed：
 3. 縮圖若擠壓手機正文會降低可讀性。桌機用固定右側縮圖；平板與手機將插圖放在文章文字上方，內頁正文仍維持18px。
 
 驗收：23張插圖聯絡表逐張校對；首頁1440/768/390px 0FAIL3WARN，Remotion代表文章相同三尺寸0FAIL1WARN，所有列出的截圖均已檢視。警告no-footage/name-only-title/long-pin延續前述閱讀性解釋。像素圖修正後另用瀏覽器檢視；23個縮圖、搜尋像素3/23及篩後3個配圖確認正確。26HTML本機資產與連結通過，Taste lint與JavaScript語法通過。新增SVG均為可讀取的本機檔案，不依賴外部圖片服務；原作者七張圖片和五份MIT授權保留。
+
+## 原作者圖片優先與整塊文章連結 — 2026-10-20
+
+使用者要求文章分界清楚、整個區塊可點進單篇，並補充圖片優先使用原作。沿用既有版面與方向；使用者明確要求的分界優先於Taste預設不畫外框的風格規則。
+
+ROUND 3（局部修正）
+Seen in one second：各篇附圖文章有清楚的獨立邊界，可點擊的範圍與白色區塊一致。
+Idea (one sentence)：讓原作者作品先說明工具，讓整個文章區塊成為單一閱讀入口。
+Live thing：完整原生連結，留白、摘要、圖片均能開啟文章；鍵盤Enter亦可使用。
+Layout words by section：hero=原樣本夾 / catalogue=有邊界的整列文章入口 / article=原作主圖與單欄文字。
+Scores：design7 · usability8.5 · creativity7 · content8.5 → overall7.6。
+Caps applied：接受使用者指定的outlined-box例外；不為檢查器去掉功能性分界。其餘still-page/focal-point/empty-screens等沿用閱讀優先的既有例外。
+Top three problems fixed：
+1. 原先列與列只靠空白，點擊範圍分成標題和縮圖。每篇改成一個完整原生a元素，邊框、24px內距、滑過背景與鍵盤焦點輪廓都在同一個連結上，無巢狀連結、無JavaScript轉址。
+2. 功能圖放在所有文章最前面，未優先使用原作者作品。重新核對18篇原先缺圖專案README，新增7張已核對的原作與7份MIT授權；目前12篇使用原作主圖及縮圖，11篇無可用原作的文章保留功能圖。
+3. 手機舊版外層內距會形成不可點的留白。把全部內距移入連結本身，讓縮圖、文字與留白屬於同一個點擊區塊。
+
+新增原作者圖：Taste Skill咖啡店網站、Ian Xiaohei兩個斷點配圖、Dream Loop的Vesper動畫、ComfyUI MCP操作畫面、Garden Skills視覺文章封面、Baoyu fresh風格示例、UI UX Pro Max網站畫面。來源URL與作者完整列於assetSources，MIT全文保留於assets/licenses與來源頁。總計14張作者圖片、12個作者專案授權。Dream Loop保留作者原GIF約7MB並延遲載入目錄圖片。未下載來源不明的圖片、未用其他專案的圖片冒充作品。
+
+驗收：建置/check通過23篇、26HTML；檢查器強制確認所有文章原作優先、23個整塊連結及配圖。瀏覽器實際點擊第一篇左上留白，成功開啟MengTo，主圖為原作者gouache圖片；第二篇以Enter開啟Pixel。DOM確認23個入口、0巢狀連結。代表原作文章1440/768/390px0FAIL1WARN(no-footage)，七張截圖逐張檢視。目錄以像素搜尋的三篇代表卡片檢查三種尺寸；outlined-box是使用者明確要求而採用的例外。Taste lint0FAIL1WARN同為此功能邊框。
+`n最終卡片三尺寸檢查：0 FAIL、2 WARN，已檢視全部六張截圖。
