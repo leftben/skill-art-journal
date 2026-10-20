@@ -94,4 +94,3 @@ img{max-width:100%;display:block}
  .article-header{padding-top:28px;padding-bottom:28px}.article-side{margin-bottom:22px;gap:6px 16px}.article-headline h1{font-size:32px;line-height:1.5}.article-headline .dek{font-size:20px;line-height:1.85;margin-top:20px}.article-facts{margin-top:22px;gap:8px 20px}.article-image{margin:0 22px 28px}.article-image figcaption{font-size:14px;padding:12px}.article-layout{padding-bottom:40px}.toc{font-size:16px;gap:4px 20px;margin-bottom:28px}.article-body section{margin-top:34px}.article-body h2{font-size:24px}.prompt{padding:20px}.fact-list{grid-template-columns:1fr;gap:8px}.fact-list dd{margin-bottom:14px}.related{padding-block:28px}.credits{padding-top:28px;padding-bottom:40px}.credits h1{font-size:32px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
-

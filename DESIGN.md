@@ -64,4 +64,4 @@ Top three problems fixed：
 新增原作者圖：Taste Skill咖啡店網站、Ian Xiaohei兩個斷點配圖、Dream Loop的Vesper動畫、ComfyUI MCP操作畫面、Garden Skills視覺文章封面、Baoyu fresh風格示例、UI UX Pro Max網站畫面。來源URL與作者完整列於assetSources，MIT全文保留於assets/licenses與來源頁。總計14張作者圖片、12個作者專案授權。Dream Loop保留作者原GIF約7MB並延遲載入目錄圖片。未下載來源不明的圖片、未用其他專案的圖片冒充作品。
 
 驗收：建置/check通過23篇、26HTML；檢查器強制確認所有文章原作優先、23個整塊連結及配圖。瀏覽器實際點擊第一篇左上留白，成功開啟MengTo，主圖為原作者gouache圖片；第二篇以Enter開啟Pixel。DOM確認23個入口、0巢狀連結。代表原作文章1440/768/390px0FAIL1WARN(no-footage)，七張截圖逐張檢視。目錄以像素搜尋的三篇代表卡片檢查三種尺寸；outlined-box是使用者明確要求而採用的例外。Taste lint0FAIL1WARN同為此功能邊框。
-`n最終卡片三尺寸檢查：0 FAIL、2 WARN，已檢視全部六張截圖。
+最終卡片三尺寸檢查：0 FAIL、2 WARN，已檢視全部六張截圖。
