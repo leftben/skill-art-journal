@@ -62,12 +62,6 @@ if (list) {
   document.querySelector('#reset')?.addEventListener('click',()=>{category='全部';search.value='';sort.value='editorial';update();search.focus();});
   update();
 }
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver(items=>{
-    for(const item of items) if(item.isIntersecting){item.target.classList.add('entered');observer.unobserve(item.target);}
-  },{threshold:0.08});
-  document.querySelectorAll('.entry,.work-plate,.section-heading,.editorial h2,.editorial p').forEach(element=>observer.observe(element));
-}
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.addEventListener('click',async()=>{
     const prompt=document.getElementById(button.dataset.copy);
