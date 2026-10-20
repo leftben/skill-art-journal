@@ -26,3 +26,21 @@ Top three problems (most visible first)：
 - no-footage：沒有適合的第一方影片。name-only-title：主標下方18px文字明確說明AI Skill選刊。long-pin：固定分類提供長目錄查閱功能。off-centre：作品樣本內框與文字欄寬不同，外層頁面內距一致。
 
 原作者七張圖片與五個專案MIT授權均保留；本次未新增第三方素材。原始圖片、著作與授權可在網站「圖片與來源」查閱。既有23篇文章文字完整保留。
+
+## 每篇文章的功能插圖 — 2026-10-20
+
+使用者要求每篇文搭配插圖，方便快速理解功能。沿用既有低調方向 page-is-the-object / seed1618859211，未更動字標、導覽或文章閱讀層級。本次加入23張本站原創SVG功能示意圖，對應不同的輸入、處理方式與成果；首頁每篇有縮圖、內頁主圖附中文解說與放大連結。原作者範例保留於內文，所有圖像清楚分辨來源。沒有新增第三方素材或AI生成成果的宣稱。
+
+ROUND 2
+Seen in one second：文章清單旁有整齊的功能圖解，內頁可看到完整三段流程。
+Idea (one sentence)：把每個Skill的工作方法，畫成可掃讀的功能插圖。
+Live thing：搜尋與分類後仍保留正確的文章配圖；內頁可開啟完整SVG放大查看。
+Layout words by section：hero=既有樣本夾 / catalogue=文字清單與整齊縮圖 / article=定寬單欄與功能主圖。
+Scores：design6.5 · usability8.5 · creativity7 · content8.5 → overall7.4。
+Caps applied：保留上一輪針對閱讀性採用的still-page、focal-point與empty-screens例外，不為展示評分加大標語或插入無關圖片。圖片是功能圖解，非攝影；優先符合使用者快速理解的目的。
+Top three problems fixed：
+1. 原先只有部分文章有原作者圖片，其餘純文字。新增23張各自對應的功能插圖，建置檢查強制每篇都有主圖、縮圖與來源標示。
+2. 像素示意第一版混用了人物與向量角色，容易被誤認為不同角色。改成同一個像素角色的逐格變化與精靈圖，並在瀏覽器確認。
+3. 縮圖若擠壓手機正文會降低可讀性。桌機用固定右側縮圖；平板與手機將插圖放在文章文字上方，內頁正文仍維持18px。
+
+驗收：23張插圖聯絡表逐張校對；首頁1440/768/390px 0FAIL3WARN，Remotion代表文章相同三尺寸0FAIL1WARN，所有列出的截圖均已檢視。警告no-footage/name-only-title/long-pin延續前述閱讀性解釋。像素圖修正後另用瀏覽器檢視；23個縮圖、搜尋像素3/23及篩後3個配圖確認正確。26HTML本機資產與連結通過，Taste lint與JavaScript語法通過。新增SVG均為可讀取的本機檔案，不依賴外部圖片服務；原作者七張圖片和五份MIT授權保留。

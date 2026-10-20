@@ -1,0 +1,26 @@
+// Editorial diagrams explain capabilities; they are not generated project results.
+export const illustrations = {
+  'mengto-illustration':{stages:[['brief','插畫需求'],['palette','統一畫風'],['series','系列 SVG']],summary:'把同一套配色與造型規則，延伸成一組風格一致的插畫。'},
+  'pixel-art-studio':{stages:[['pixels','逐格畫像素'],['frames','檢查動作'],['sprites','精靈圖與動畫']],summary:'從像素角色到逐格動作，輸出可放進遊戲的精靈圖與 GIF。'},
+  'anatomy':{stages:[['engine','機械與設備'],['exploded','拆解結構'],['technical','互動圖解']],summary:'把機械結構拆開、標出關係，幫助讀者理解各部件如何運作。'},
+  'diagram-design':{stages:[['notes','文字與關係'],['connections','整理結構'],['flowchart','流程與架構圖']],summary:'把散落的文字關係，整理成可編輯的 SVG 流程與架構圖。'},
+  'logo-design':{stages:[['sketch','品牌概念'],['logogrid','比較與檢查'],['brand','標誌與規範']],summary:'從幾個標誌概念開始，比較小尺寸與單色效果，再延伸品牌應用。'},
+  'taste-skill':{stages:[['moodboard','視覺方向'],['browsercheck','瀏覽器檢查'],['responsive','響應式網站']],summary:'建立視覺方向，在不同螢幕檢查與修正，完成可操作的網站。'},
+  'guizang-material-illustration':{stages:[['document','文章機制'],['material','材質化呈現'],['infographic','中文說明配圖']],summary:'把文章裡的機制，轉成帶材質物件、中文標籤與箭頭的說明圖。'},
+  'ian-xiaohei':{stages:[['document','閱讀文章'],['storyboard','挑出關鍵轉折'],['character','白底手繪配圖']],summary:'挑出文章裡的一個關鍵意思，用小角色與手繪情境說清楚。'},
+  'blender-game-skills':{stages:[['concept','概念與參考'],['mesh','建模與檢查'],['gameasset','遊戲 3D 資產']],summary:'依參考完成形體、拓樸、UV 與綁定，逐步檢查可匯出的遊戲資產。'},
+  'dream-loop':{stages:[['target','目標畫面'],['iterate','製作與評比'],['prototype','反覆改進原型']],summary:'把實作截圖和目標圖比較，反覆修改場景、遊戲或應用原型。'},
+  'holo-card-studio':{stages:[['layers','拆分卡面圖層'],['hologram','建立全息材質'],['cardweb','可旋轉的卡片']],summary:'把角色、背景和文字分層，製作隨角度變化的全息卡與網頁查看器。'},
+  'scenario-skills':{stages:[['character','角色與畫風'],['toolbox','選擇製作技能'],['gamecollection','成套遊戲素材']],summary:'依任務選擇工作方法，製作角色、精靈動畫、材質等系列遊戲素材。'},
+  'fal-skills':{stages:[['modelmenu','選擇模型'],['terminal','執行生成任務'],['media','圖片與影音']],summary:'先找對模型與輸入規格，再透過 genmedia 執行並取得生成成果。'},
+  'comfyui-mcp':{stages:[['request','自然語言需求'],['graph','調整節點工作流'],['rendered','執行與輸出']],summary:'讓 agent 讀取和調整 ComfyUI 工作流，再交給現有模型執行。'},
+  'comfyui-custom-nodes':{stages:[['code','撰寫節點程式'],['customnode','定義輸入輸出'],['graph','整合進工作流']],summary:'把重複的素材處理需求，寫成能接進 ComfyUI 的自訂節點。'},
+  'remotion':{stages:[['media','字卡與素材'],['timeline','程式編排時間軸'],['video','可修改的短片']],summary:'用程式安排字卡、鏡頭與字幕的時間，預覽並輸出影片。'},
+  'imagegen-skills':{stages:[['brief','品牌與介面需求'],['designboard','先生成設計圖'],['mockups','比較畫面方向']],summary:'先用品牌板、網站與手機設計圖片確認方向，再決定後續實作。'},
+  'garden-skills':{stages:[['document','內容素材'],['toolbox','按任務挑技能'],['articlefilm','文章、網頁與短片']],summary:'從內容出發，按任務選擇文章排版、網頁設計、生圖或動態技能。'},
+  'baoyu-skills':{stages:[['document','理解文章'],['storyboard','規劃每張圖'],['covers','封面與內容配圖']],summary:'先決定每張圖要表達的意思，再選擇適合的封面、插畫或資訊圖流程。'},
+  'ui-ux-pro-max':{stages:[['product','產品使用需求'],['tokens','配色與字體規則'],['dashboard','介面與設計系統']],summary:'依產品需求查找樣式、字體與互動準則，建立介面設計的共同規則。'},
+  'stitch-skills':{stages:[['mockups','探索介面'],['components','設計與建置銜接'],['responsive','元件與實作']],summary:'透過設定完成的 Stitch MCP，銜接介面探索、元件與後續建置。'},
+  'anthropic-skills':{stages:[['folder','官方範例集'],['skillbook','挑選單項技能'],['documents','創作與文件成果']],summary:'從官方合集挑選一項技能，了解指令、腳本與參考資源如何協作。'},
+  'openai-skills':{stages:[['oldfolder','已停用的舊目錄'],['redirect','確認維護中入口'],['plugins','目前 Plugins 倉庫']],summary:'這是舊目錄的遷移導覽；尋找新範例時，改從作者指定的 Plugins 入口開始。'}
+};

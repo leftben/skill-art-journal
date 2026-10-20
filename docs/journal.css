@@ -56,7 +56,9 @@ img{max-width:100%;display:block}
 .search input{border:0;background:#ecefe7;min-height:48px;padding:10px 14px;width:100%;min-width:0;font-size:16px;border-radius:0}
 .search select{border:0;background:#ecefe7;font-size:16px;padding:10px;max-width:144px;min-height:48px;flex-shrink:0}
 .result-count{font-size:14px;margin-bottom:2px;color:var(--muted)}.article-list{display:flex;flex-direction:column}
-.entry{padding:24px 0;position:relative}.entry[hidden]{display:none}.entry-main{max-width:760px}
+.entry{padding:24px 0;position:relative;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:28px;align-items:center}.entry[hidden]{display:none}.entry-main{max-width:760px;min-width:0}
+.entry-cover{display:block;background:#f0f2e8}.entry-cover img{width:100%;height:auto;aspect-ratio:960/500;object-fit:contain}
+.skill-illustration{max-width:856px;margin:0 auto 40px;padding-inline:48px}.skill-illustration>a{display:block;background:#f0f2e8}.skill-illustration img{width:100%;height:auto}.skill-illustration figcaption{padding-top:18px}.skill-illustration figcaption p{font-size:18px;line-height:1.9}.skill-illustration figcaption span{display:block;font-size:14px;color:var(--muted);margin-top:8px}.skill-illustration figcaption span a{margin-left:16px}
 .entry-main>.meta{font-size:14px;color:var(--muted);line-height:1.8}
 .entry-main>h3{font-size:24px;line-height:1.5;margin-top:8px;margin-bottom:12px;font-weight:600}.entry-main>h3 a{text-decoration:none}.entry-main>h3 a:hover{text-decoration:underline}
 .entry-main>p{font-size:18px;line-height:1.9;max-width:60ch}
@@ -77,9 +79,11 @@ img{max-width:100%;display:block}
 .related{max-width:856px;margin:auto;background:var(--surface);padding-top:36px;padding-bottom:36px}.related h2{font-size:32px}.related-links{display:flex;flex-direction:column;gap:24px;margin-top:24px}.related-links a{text-decoration:none;font-size:18px}.related-links small{display:block;font-size:14px;margin-bottom:4px;color:var(--muted)}
 .credits{max-width:856px;margin:auto;padding-top:38px;padding-bottom:60px}.credits h1{font-size:40px;margin-bottom:28px}.credits h2{font-size:24px;margin-top:36px;margin-bottom:16px}.credits p{margin-bottom:20px}.credit-item{margin:36px 0}.credit-item h2{margin-top:0}.credit-item p{font-size:16px;overflow-wrap:anywhere}.credit-item img{max-height:260px;object-fit:contain;margin-bottom:18px}
 @media(max-width:1000px){
+ .entry{grid-template-columns:1fr;gap:20px}.entry-cover{grid-row:1}.entry-cover img{max-height:240px}.skill-illustration{padding-inline:32px}
  :root{--gutter:32px}.specimen-spread{gap:36px}.cover-copy h1{font-size:44px}.specimen-sheet{padding:18px}.specimen-stage{height:240px}.read-link{display:block;margin:10px 0 0}.catalogue{grid-template-columns:170px minmax(0,1fr);gap:36px}.brand-caption{display:none}.article-image{margin-inline:32px}.article-body .article-image{margin-inline:0}
 }
 @media(max-width:700px){
+ .skill-illustration{padding-inline:22px;margin-bottom:28px}.skill-illustration figcaption p{font-size:18px}.entry-cover img{max-height:none}
  :root{--gutter:22px}.masthead{padding-top:20px;padding-bottom:20px;gap:16px}.brand-lockup>span:first-child{font-size:32px}.nav{gap:20px;font-size:14px}.nav .source-nav{display:none}
  .specimen-spread{display:flex;flex-direction:column;align-items:stretch;gap:32px;padding-top:28px;padding-bottom:48px}.cover-copy h1{font-size:40px;line-height:1.35}.cover-description{margin-top:22px;font-size:18px}.cover-copy>.button{margin-top:24px}.specimen-tab{font-size:16px}.specimen-sheet{padding:18px}.specimen-stage{height:230px}.specimen-title>a{font-size:18px}
  .catalogue{display:block;padding-top:20px;padding-bottom:48px}.catalogue-desk{position:static}.catalogue-desk h2{font-size:32px}.index-intro{margin-bottom:18px}.filters{flex-direction:row;flex-wrap:wrap;gap:6px}.filter{font-size:14px;padding:8px 10px;gap:8px;background:#ecefe7;min-height:44px}.filter span{font-size:14px}.catalogue-pages{margin-top:26px}.search{gap:10px}.search select{font-size:14px;max-width:108px}.search input{font-size:16px}.entry{padding:26px 0}.entry-main>h3{font-size:24px;margin-bottom:10px}.entry-main>p{font-size:18px}.entry-meta{margin-top:12px}
