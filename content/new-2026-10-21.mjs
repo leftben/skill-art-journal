@@ -1,0 +1,52 @@
+// First discovered today; not claims of releases today or locally tested results.
+export const newArticles = [
+  {
+    slug:'aseprite-ai-artist', repo:'with-pebbly/aseprite-ai-artist', name:'Aseprite AI Artist', category:'像素與遊戲', kind:'Skill 合集',
+    published:'2026-10-21T00:38:09Z',
+    title:'在像素原始檔裡，把角色畫到會動', short:'能繼續修改的像素動畫',
+    dek:'讓 AI 操作 Aseprite 的圖層、調色盤與影格，留下可編修的角色與動畫。',
+    image:'aseprite-slime.gif', imageAlt:'Aseprite AI Artist 原作者的史萊姆攻擊動畫，跳起砸地後長出尖刺再恢復',
+    intro:'做遊戲素材時，一張不能修改的圖片往往不夠。Aseprite AI Artist 讓 agent 在 Aseprite 文件裡安排像素、分開圖層與規劃動作，你可以接手修改，也可以用復原撤回步驟。',
+    process:'studio 負責從需求、概念、繪製到動畫與輸出；也可單獨使用配色、陰影、動畫或修圖技能。它把畫面寫成逐格文字網格，讀回畫布再調整，並以預覽和獨立評圖回合檢查結果。作者另外公開了史萊姆攻擊的 18 格動畫、製作記錄與原始檔。',
+    example:'製作一位 32×32、PICO-8 配色的森林騎士，加上四格待機動畫。身體與武器分圖層，保留 .aseprite 原始檔，另輸出 Godot 用 spritesheet 與 GIF 預覽。',
+    fit:'適合獨立遊戲美術、角色逐格動畫，以及希望能持續修改素材的人。',
+    requirements:'Aseprite 1.3+、Node 22.6+、專案的 Aseprite 擴充套件與 MCP server，以及可使用它的 agent。',
+    costs:'專案採 MIT；Aseprite 與 agent 模型費用另計。概念參考圖可跳過，若另用生圖服務則依服務計費。',
+    outputs:'可編修 .aseprite、sprite sheet／atlas、GIF、PNG',
+    caveat:'今天首次收錄的小眾工具。作者表示評圖流程的品質改善仍未正式測量；展示動畫不代表每次都能達到相同效果。',
+    skill:'https://github.com/with-pebbly/aseprite-ai-artist/blob/main/skills/studio/SKILL.md',
+    authorExample:'https://github.com/with-pebbly/aseprite-ai-artist/blob/main/gallery/generations/2026-10-18-jelly-slime-spike-slam/generation.yaml'
+  },
+  {
+    slug:'gsap-skills', repo:'greensock/gsap-skills', name:'GSAP AI Skills', category:'網頁與介面', kind:'官方 Skill 合集',
+    published:'2026-10-21T00:38:09Z',
+    title:'讓網頁動作，有順序也有節奏', short:'替網頁安排動作與節奏',
+    dek:'用八項官方技能，處理時間軸、捲動動畫與介面切換，讓 AI 正確使用 GSAP。',
+    intro:'標題何時出現、圖片如何接續、捲動到哪裡才變化，會影響網站的閱讀節奏。GSAP AI Skills 把動畫程式的正確作法整理給 agent，讓動作依內容安排。',
+    process:'合集涵蓋核心動作、時間軸、ScrollTrigger、外掛、工具函式、React、其他框架與效能。時間軸控制先後和重疊；ScrollTrigger 把播放進度連到頁面位置，框架指引則提醒元件移除時清理動畫。作者也提供最小參考範例。',
+    example:'替陶藝作品頁安排一段輕緩的展示：作品圖先出現，接著是名稱與說明；手機保留正常閱讀，減少動態偏好的訪客直接看到完整內容。使用 GSAP，元件離開時清理動畫。',
+    fit:'適合作品集、品牌官網、產品展示與需要細緻介面動態的前端設計工作。',
+    requirements:'可編寫前端的 agent、JavaScript 網站與 GSAP 執行套件；依專案選用 React、Vue、Svelte 或原生 JavaScript。',
+    costs:'不需生圖 API；agent 用量與網站服務另計。GSAP 引擎與外掛的使用條件，請核對官方目前授權。',
+    outputs:'網站動畫程式、時間軸、捲動互動與框架整合',
+    caveat:'這是官方使用指引合集，不是預先完成的動畫作品庫。Skill 文件採 MIT，不代表 GSAP 引擎也採 MIT。今天首次收錄，不代表今天發布。',
+    skill:'https://github.com/greensock/gsap-skills/blob/main/skills/gsap-scrolltrigger/SKILL.md',
+    authorExample:'https://github.com/greensock/gsap-skills/tree/main/examples'
+  },
+  {
+    slug:'pixel-path', repo:'jonwheatley/pixel-path', name:'Pixel Path', category:'像素與遊戲', kind:'單一 Skill',
+    published:'2026-10-21T00:38:09Z',
+    title:'把走過的路，變成像素街景', short:'穿梭真實道路的像素旅途',
+    dek:'輸入兩個地點，用地圖與地域素材，組成可在瀏覽器穿梭的像素公路。',
+    intro:'一段旅途也能變成會移動的像素場景。Pixel Path 從真實路線出發，讀取建築、地形與地標，再用符合地域風格的圖片組成沿路風景。',
+    process:'先計算路線與素材估價，可用免費佔位圖確認構成，再決定是否生成正式建築和樹木。輸出為可自行託管的 HTML 場景，能加速、倒退與暫停。它使用類街機的透視投影；地標是圖片，並不是可自由轉看的城市 3D 模型。',
+    example:'先用免費佔位圖，把京都車站到金閣寺做成像素公路場景。確認沿路節奏、地標與地圖署名，提供正式圖片估價，等我確認預算後再生成素材。',
+    fit:'適合旅行回顧、lo-fi 背景、道路遊戲原型與影片開場。',
+    requirements:'Node 18+、可連線地圖服務；完整截圖檢查需 Node 20+、Playwright 與 Chromium。正式圖片需 RetroDiffusion 帳號、API key 與餘額。',
+    costs:'佔位圖可免費試構成。作者京都範例使用四張圖、估計 US$0.72；這是範例費用，正式生成以即時報價為準，並預留重抽預算。',
+    outputs:'可自行託管的像素公路 HTML 場景與路線資料',
+    caveat:'今天首次收錄的小眾工具。地圖覆蓋影響成果；公開資料需保留 OSM 署名與 ODbL 條件，圖像另有條款。本站使用功能示意圖，原作街景可從來源連結查看。',
+    skill:'https://github.com/jonwheatley/pixel-path/blob/main/SKILL.md',
+    authorExample:'https://github.com/jonwheatley/pixel-path#examples'
+  }
+];

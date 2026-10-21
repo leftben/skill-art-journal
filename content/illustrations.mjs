@@ -1,5 +1,8 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'aseprite-ai-artist':{stages:[['pixels','在原始檔畫像素'],['frames','分層與逐格動畫'],['sprites','可編修檔與精靈圖']],summary:'在 Aseprite 中安排像素、圖層與動作，保留原始檔並輸出遊戲素材。'},
+  'gsap-skills':{stages:[['storyboard','安排動作順序'],['timeline','編排動畫時間軸'],['responsive','網頁與捲動互動']],summary:'用時間軸控制畫面的先後和重疊，將動作接上網站與捲動進度。'},
+  'pixel-path':{stages:[['route','真實道路與地圖'],['landscape','組合地域素材'],['roadview','可穿梭的像素街景']],summary:'依真實道路與地圖安排沿路景物，輸出可在瀏覽器穿梭的像素公路。'},
   'mengto-illustration':{stages:[['brief','插畫需求'],['palette','統一畫風'],['series','系列 SVG']],summary:'把同一套配色與造型規則，延伸成一組風格一致的插畫。'},
   'pixel-art-studio':{stages:[['pixels','逐格畫像素'],['frames','檢查動作'],['sprites','精靈圖與動畫']],summary:'從像素角色到逐格動作，輸出可放進遊戲的精靈圖與 GIF。'},
   'anatomy':{stages:[['engine','機械與設備'],['exploded','拆解結構'],['technical','互動圖解']],summary:'把機械結構拆開、標出關係，幫助讀者理解各部件如何運作。'},

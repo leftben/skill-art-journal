@@ -65,3 +65,13 @@ Top three problems fixed：
 
 驗收：建置/check通過23篇、26HTML；檢查器強制確認所有文章原作優先、23個整塊連結及配圖。瀏覽器實際點擊第一篇左上留白，成功開啟MengTo，主圖為原作者gouache圖片；第二篇以Enter開啟Pixel。DOM確認23個入口、0巢狀連結。代表原作文章1440/768/390px0FAIL1WARN(no-footage)，七張截圖逐張檢視。目錄以像素搜尋的三篇代表卡片檢查三種尺寸；outlined-box是使用者明確要求而採用的例外。Taste lint0FAIL1WARN同為此功能邊框。
 最終卡片三尺寸檢查：0 FAIL、2 WARN，已檢視全部六張截圖。
+
+## 2026-10-21 — Daily publication connected
+
+Kept the existing quiet layout, full-block article links and author-first imagery. Added Aseprite AI Artist, GSAP AI Skills and Pixel Path as three independently sourced articles, placed first in the index. The Aseprite cover is the author's original 18-frame slime GIF with MIT notice. GSAP has no relevant result image in its README; Pixel Path explicitly excludes images from its code MIT license. Both use clearly labelled editorial function diagrams and link to original examples.
+
+Snapshot refreshed to 26 repositories. Dates and article counts derive from data; RSS keeps stable first-publication dates and sitemap uses explicit substantive update dates. Negative star deltas display as decreases. Existing Codex daily 08:30 automation now includes committing, pushing and verifying Pages deployment, with the maintenance sequence in README.
+
+Validation: build and check pass for 26 illustrated articles and 29 HTML pages, including author-first images, full-block links, RSS dates and sitemap dates. Taste inspector on the new Aseprite article at 1440, 768 and 390: 0 FAIL, 1 WARN (no-footage). Reviewed all seven generated screenshots. The real author GIF supplies subject-specific motion; adding unrelated video would not improve this reading article. Existing reading-first exceptions remain. Desktop new-article index reviewed in browser; all three distinct thumbnails visible and Pixel Path block navigation works.
+
+Critique: legible two-line mobile headline, stable reading column, no collisions. Single-column prose deliberately repeats familiar reading structure. Gallery rubric self-score: design 6.5 (limited real-image variety), usability 8.5, creativity 6.5, content 8.5; weighted 7.3. Preserve reading clarity rather than redesigning the established site during routine publication.

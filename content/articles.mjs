@@ -1,6 +1,8 @@
 // Original Traditional Chinese editorial summaries. Repository statistics live in snapshot.json.
 // Every example prompt below is an editorial suggestion, not a claimed test result.
+import {newArticles} from './new-2026-10-21.mjs';
 export const articles = [
+  ...newArticles,
   {
     slug:'mengto-illustration', repo:'MengTo/Skills', name:'MengTo Illustration', category:'插畫與圖解', kind:'Skill 合集', featured:true,
     title:'讓一整組插畫，像同一個人畫的', short:'一整組同畫風插畫',
@@ -47,7 +49,7 @@ export const articles = [
     outputs:'互動 SVG／HTML、列印 PDF；WebGL 畫面以影像輸出',
     caveat:'機械結構仍須核對原始資料；可選的 3D 路線仍屬 beta。',
     skill:'https://github.com/wheresryan22/anatomy/blob/main/SKILL.md',
-    update:'2026-10-20：較昨日增加 833 星；主分支沒有新變更。PDF 列印是前次已確認的功能。'
+    update:'2026-10-21：較前次增加 744 星；主分支未變更。PDF 列印並非本日新增功能。'
   },
   {
     slug:'diagram-design', repo:'cathrynlavery/diagram-design', name:'Diagram Design', category:'插畫與圖解', kind:'單一 Skill', featured:true,
@@ -63,7 +65,7 @@ export const articles = [
     outputs:'HTML＋SVG，另可依工具匯出圖片',
     caveat:'作者提供的範例不代表本站已實際測試所有圖表類型。',
     skill:'https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md',
-    update:'2026-10-20：修正 SVG 匯出時保留條件式樣式，以及單行 Mermaid 流程圖匯入變空白的問題。'
+    update:'2026-10-21：較前次增加 578 星，主分支未變更。前次已確認的 SVG 匯出與單行 Mermaid 匯入修正仍可參考。'
   },
   {
     slug:'logo-design', repo:'kaankiziltug/logo-design-skill', name:'Logo Design Skill', category:'品牌與設計', kind:'單一 Skill', featured:true,
@@ -78,7 +80,9 @@ export const articles = [
     costs:'主要依 agent 方案計算；參考庫用來研究構成，不代表可直接挪用既有標誌。',
     outputs:'SVG 標誌、概念比較圖、品牌規範及圖示套件',
     caveat:'原作者範例中的品牌是虛構 brief。實際品牌仍須自行確認原創性與適用性。',
-    skill:'https://github.com/kaankiziltug/logo-design-skill/blob/main/skills/logo-design/SKILL.md'
+    skill:'https://github.com/kaankiziltug/logo-design-skill/blob/main/skills/logo-design/SKILL.md',
+    updated:'2026-10-21',
+    update:'2026-10-21：1.4.5 修正 SVG 標題含 & 或角括號時的處理，屬輸出可靠性改善，沒有新增設計風格。'
   },
   {
     slug:'taste-skill', image:'taste-coffee.webp', imageAlt:'Taste Skill 原作者的咖啡店網站範例', repo:'Leonxlnx/taste-skill', name:'Taste Skill', category:'網頁與介面', kind:'單一 Skill', featured:true,
@@ -93,7 +97,8 @@ export const articles = [
     outputs:'實際前端網站、響應式版面與檢查截圖',
     caveat:'生圖用的品牌板與介面圖工作流程，已移至 imagegen-skills。',
     skill:'https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md',
-    update:'2026-10-20：2.1.2 修正技能描述的 YAML 格式，2.1.3 整理倉庫並移出 classic 技能。'
+    updated:'2026-10-21',
+    update:'2026-10-21：2.1.4 改善多個檢查同時執行時的瀏覽器設定檔清理，避免刪除其他工作仍在使用的資料。這是檢查工具修正，不是新畫風；本站沒有更新你的本機技能。'
   },
   {
     slug:'guizang-material-illustration', repo:'op7418/guizang-material-illustration', name:'歸藏材質插畫', category:'插畫與圖解', kind:'單一 Skill',
@@ -175,7 +180,9 @@ export const articles = [
     requirements:'Scenario 路線需帳號與 MCP 連線；DCC 專家工具依軟體家族另行設定。',
     costs:'生成服務依帳號方案與模型消耗計費，執行前應先確認報價。',
     outputs:'依子技能交付圖片、動畫、材質、影片或 3D 資產',
-    caveat:'這是大型合集，建議只選眼前工作需要的子技能。'
+    caveat:'這是大型合集，建議只選眼前工作需要的子技能。',
+    updated:'2026-10-21',
+    update:'2026-10-21：新增本機 12 秒 Canvas 循環動畫流程，可檢查接縫並輸出可編輯 HTML 與 MP4；需要 Node 18+、ffmpeg／ffprobe 5.1+、Playwright 與瀏覽器。另新增影片調色及 Blender 匯出檢查。本機循環不需生成 API，額外生成素材仍計費；80 種探索方向不是 80 套隨附獨立模板。'
   },
   {
     slug:'fal-skills', repo:'fal-ai-community/skills', name:'fal.ai Skills', category:'影像與影片', kind:'Skill 合集',
@@ -326,6 +333,7 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {file:'aseprite-slime.gif',repo:'with-pebbly/aseprite-ai-artist',url:'https://raw.githubusercontent.com/with-pebbly/aseprite-ai-artist/main/gallery/generations/2026-10-18-jelly-slime-spike-slam/jelly-slime-spike-slam.gif',title:'Aseprite AI Artist 原作者的史萊姆攻擊像素動畫',license:'MIT'},
   {"file":"taste-coffee.webp","repo":"Leonxlnx/taste-skill","url":"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/examples/v2/coffee-storefront.webp","title":"Taste Skill 原作者的咖啡店網站範例","license":"MIT"},
   {"file":"ian-breakpoints.png","repo":"helloianneo/ian-xiaohei-illustrations","url":"https://raw.githubusercontent.com/helloianneo/ian-xiaohei-illustrations/main/examples/images/01-two-breakpoints.png","title":"Ian Xiaohei 原作者的兩個斷點手繪配圖","license":"MIT"},
   {"file":"dream-vesper.gif","repo":"achimala/dream-loop","url":"https://raw.githubusercontent.com/achimala/dream-loop/main/assets/vesper-preview.gif","title":"Dream Loop 原作者的 Vesper 等距場景示範","license":"MIT"},

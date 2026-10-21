@@ -1,4 +1,4 @@
-export function renderHome({articles,entry,external}) {
+export function renderHome({articles,entry,external,dateLabel}) {
   const samples=[
     {label:'插畫',title:'一套畫風，延伸成一組作品',name:'MengTo Illustration',src:'studio-specimen.svg',slug:'mengto-illustration',mode:'vector',credit:'MengTo／原作者 SVG',alt:'MengTo 原作者的綠色等距設計工作室插畫'},
     {label:'剖解',title:'沿著結構，看懂它如何運作',name:'Anatomy',src:'anatomy-engine.webp',slug:'anatomy',mode:'technical',credit:'Anatomy／原作者示例',alt:'Anatomy 的 Raptor 引擎等距剖解圖'},
@@ -31,6 +31,6 @@ export function renderHome({articles,entry,external}) {
       <aside class="catalogue-desk"><h2>文章索引</h2><p class="index-intro">今天，你想做什麼？</p><div class="filters" role="group" aria-label="依用途篩選">${filterButtons}</div></aside>
       <div class="catalogue-pages"><div class="catalogue-controls"><div class="search"><label for="search" class="visually-hidden">搜尋文章、工具或用途</label><input id="search" type="search" placeholder="搜尋工具或用途" autocomplete="off"><label for="sort" class="visually-hidden">文章排序</label><select id="sort"><option value="editorial">編輯選序</option><option value="stars">收藏最多</option><option value="growth">增長最多</option></select></div></div><p class="result-count" id="result-count" aria-live="polite">顯示 ${articles.length} / ${articles.length} 篇文章</p><div class="article-list">${articles.map(entry).join('')}</div><div id="empty" class="empty" hidden><p>沒有符合的文章，換個關鍵字試試。</p><button class="button" id="reset">清除搜尋與篩選</button></div><noscript><p>所有文章已列出。搜尋與篩選需要 JavaScript。</p></noscript></div>
     </section>
-    <section id="about" class="editorial wrap"><h2>讓工具，<br>留在作品背後。</h2><div><p>這本選刊從 GitHub 的 AI Skills 專案出發，優先整理和美術有關的工作方法。每篇文章說明它能幫你做什麼、適合誰，以及開始前需要準備什麼。</p><p>圖片是原作者的作品，需求範例則由本站編寫。星數保留在 2026 年 10 月 20 日的觀察時點；它提供線索，作品與方法才是選擇的理由。${external('./credits.html','查看圖片與資料來源')}。</p></div></section>
+    <section id="about" class="editorial wrap"><h2>讓工具，<br>留在作品背後。</h2><div><p>這本選刊從 GitHub 的 AI Skills 專案出發，優先整理和美術有關的工作方法。每篇文章說明它能幫你做什麼、適合誰，以及開始前需要準備什麼。</p><p>配圖優先使用原作者作品，缺少可用原作時使用本站功能示意圖；需求範例由本站編寫。每日掃描後更新選刊，星數保留在 ${dateLabel}的觀察時點；它提供線索，作品與方法才是選擇的理由。${external('./credits.html','查看圖片與資料來源')}。</p></div></section>
   </main>`;
 }

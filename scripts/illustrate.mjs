@@ -23,6 +23,8 @@ const pixelCreature=(unit=16,pose=0)=>{
   return cells.map((row,y)=>[...row].map((n,x)=>n==='0'?'':`<rect x="${(x-4)*unit}" y="${(y-4.5)*unit}" width="${unit}" height="${unit}" fill="${n==='2'?ink:n==='3'?pale:dark}"/>`).join('')).join('');
 };
 const drawings={
+ route:()=>path('M-85 68C-50 30 50 55 26-2S-60-72 78-89','none',dark,15)+circle(-85,68,13,warm)+circle(78,-89,13,pale)+path('M-105-100v200h210V-100Z','none',ink,2),
+ roadview:()=>browser(path('M-34 80-5-10h10l34 90Z',dark)+path('M0 11v13m0 14v19m0 13v10','none',white,3)+rect(-85,-13,45,69,green,0)+rect(44,-31,43,87,pale,0)+rect(-71,0,14,17,white,0)+rect(54,-17,17,17,white,0)),
  brief:()=>doc('需求'), document:()=>doc('文章'),
  palette:()=>path('M-84 23C-110-40-44-95 27-78S114 6 73 43Q55 60 35 36T1 54C-3 96-64 85-84 23Z',white)+circle(-48,-17,13,green)+circle(-17,-47,13,dark)+circle(24,-47,13,warm)+circle(65,-17,13,pale)+path('M-24 92 51-23 65-14-5 101Z',green)+path('M51-23 71-48 65-14Z',warm),
  series:()=>[-65,0,65].map((x,i)=>group(x,i===1?-19:10,rect(-39,-60,78,120,white,4)+group(0,0,fox(),.65),1)).join(''),

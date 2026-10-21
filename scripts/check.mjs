@@ -13,6 +13,17 @@ for(const a of articles){
   if(!html.includes(`assets/illustrations/${a.slug}.svg`)||!html.includes('功能示意・本站繪製'))throw new Error(`Article illustration is not displayed or credited: ${a.slug}`);
 }
 const home=await readFile(join(root,'index.html'),'utf8');
+const snapshot=JSON.parse(await readFile('content/snapshot.json','utf8'));
+const feed=await readFile(join(root,'feed.xml'),'utf8');
+const sitemap=await readFile(join(root,'sitemap.xml'),'utf8');
+for(const a of articles){
+  if(!snapshot.repositories.some(s=>s.repo===a.repo))throw new Error(`Missing snapshot: ${a.repo}`);
+  const published=a.published||'2026-10-20T00:34:43Z';
+  if(!Number.isFinite(Date.parse(published)))throw new Error(`Invalid publication date: ${a.slug}`);
+  const item=feed.match(new RegExp(`<item>(?:(?!</item>)[\\s\\S])*skills/${a.slug}/(?:(?!</item>)[\\s\\S])*</item>`))?.[0];
+  if(!item?.includes(`<pubDate>${new Date(published).toUTCString()}</pubDate>`))throw new Error(`RSS publication date mismatch: ${a.slug}`);
+  if(!sitemap.includes(`skills/${a.slug}/</loc><lastmod>${a.updated||published.slice(0,10)}</lastmod>`))throw new Error(`Sitemap date mismatch: ${a.slug}`);
+}
 if((home.match(/class="entry-cover"/g)||[]).length!==articles.length)throw new Error('Not every catalogue entry has an illustration');
 if((home.match(/class="entry-link"/g)||[]).length!==articles.length)throw new Error('Not every catalogue block is a complete link');
 for(const a of articles){

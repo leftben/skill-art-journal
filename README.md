@@ -3,8 +3,8 @@
 以繁體中文介紹美術、設計、遊戲與影片相關 AI Skills。每個收錄項目有獨立文章網址，說明用途、需求範例、工具條件、成本與原作者來源。Skill 合集清楚標示為合集。
 
 - 網站：https://leftben.github.io/skill-art-journal/
-- 本期：2026-10-20，共 23 篇
-- 功能：23 篇附圖文章、整個文章區塊可點擊、原作者圖片優先、五種作品樣本切換、用途篩選、搜尋、收藏量／增長排序、需求範例複製、相關文章、RSS、sitemap
+- 本期：2026-10-21，共 26 篇
+- 功能：每篇附圖、整個文章區塊可點擊、原作者圖片優先、五種作品樣本切換、用途篩選、搜尋、收藏量／增長排序、需求範例複製、相關文章、RSS、sitemap
 
 ## 本機預覽
 
@@ -29,7 +29,20 @@ npm run dev
 - `scripts/build.mjs`：產生 `docs/` 中所有獨立靜態頁。
 - `docs/`：已建置成品，可直接部署。
 
-修改內容後執行 build 與 check，將原始內容和更新後的 docs 一起提交。日期、網站網址與 RSS 發佈時間目前在 build.mjs 中集中設定。新增項目必須同時補齊 snapshot 來源資料；沒有前次快照的項目將 delta 設為 null。
+修改內容後執行 build 與 check，將原始內容和更新後的 docs 一起提交。網站核對日期自動讀取 snapshot.date，篇數依內容計算。文章的 published 是穩定收錄時間，updated 只在實質改寫時設定；舊文章預設保留 2026-10-20 的首次發布時間，RSS 不會因刷新星數而重新發布全部文章。新增項目必須同時補齊 snapshot 來源資料；沒有前次快照的項目將 delta 設為 null。
+
+## 每日發布
+
+既有 Codex 自動化「每日 GitHub 美術 Skill 掃描與網站更新」每天台北時間 08:30 執行，使用同一個公開儲存庫及 main 分支 /docs 發布。這個流程使用本機 checkout 與現有 GitHub 憑證；本機排程執行時需電腦與 Codex 開啟。
+
+1. 先讀自動化 memory 與最近 baseline，檢查工作狀態並整合遠端變更，勿覆蓋其他工作。
+2. 以 GitHub 第一方文件與真正的 SKILL.md 查證新候選，區分首次發現與新發布。每個新收錄項目新增獨立完整文章，按 repo / slug 去重；舊項目有實質變更才更新原文。
+3. 把當日完整 baseline 放進 content/snapshot.json；在 articles.mjs 中加入文章（可依日期分檔匯入），新收錄置前，填入 published，實質更新填 updated。補齊 illustrations.mjs 的三段功能圖及必要繪圖函式。
+4. 優先使用作者真實成果並核對授權、標示來源與保存聲明。沒有可再利用的原作時，用標示清楚的本站功能示意圖，同時用 authorExample 連到作者實例。Pixel Path 圖片另有條款，不能因程式 MIT 就當作圖片 MIT。
+5. 執行 npm run build 與 npm run check，核對新文章、圖片、首頁索引、RSS 與 sitemap；有版面變動時檢查桌機、平板與手機。提交相關來源及 docs，推送 origin main。
+6. 確認對應 commit 的 GitHub Pages 部署成功，並檢查公開首頁、新文章及圖片。將 baseline 路徑、篇數、commit、部署結果寫回 memory。部署失敗須如實回報；沒有新候選就更新已核實資料，不湊文章。
+
+每日網站新增與發布已獲使用者授權。不因此安裝 Skills、執行候選程式或呼叫付費生圖服務。排程本身由 Codex 管理，這個儲存庫不含獨立定時爬蟲。
 
 配圖優先使用已核對來源與授權的原作者圖片（articles.mjs 的 image/imageAlt 與 assetSources），目錄和內頁主圖共用此選擇。沒有可用原作時才使用本站功能示意圖；有原作時功能圖移至正文補充。每篇仍需提供功能圖資料，建置檢查會驗證原作優先與完整配圖。
 
