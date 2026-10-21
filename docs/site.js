@@ -53,6 +53,7 @@ if(carousel){
   else inView=true;
   play.hidden=false;
   carousel.querySelector('.featured-navigation').hidden=false;
+  carousel.querySelector('.featured-pickers').hidden=false;
   measure();
   document.fonts?.ready.then(measure);
   let measuredWidth=carousel.clientWidth;
@@ -96,6 +97,14 @@ if (list) {
   sort.addEventListener('change',update);
   document.querySelector('#reset')?.addEventListener('click',()=>{category='全部';search.value='';sort.value='editorial';update();search.focus();});
   update();
+}
+// Images arrive first, then their captions; content remains readable without JS.
+const arrivals=document.querySelectorAll('.entry-cover,.entry-main,.editorial>div');
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const observer=new IntersectionObserver(entries=>{
+    for(const item of entries)if(item.isIntersecting){item.target.classList.add('has-arrived');observer.unobserve(item.target);}
+  },{threshold:.08});
+  arrivals.forEach(element=>observer.observe(element));
 }
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.addEventListener('click',async()=>{
