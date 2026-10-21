@@ -1,29 +1,64 @@
 const list = document.querySelector('.article-list');
-const sampleButtons = [...document.querySelectorAll('[data-sample-src]')];
-if (sampleButtons.length) {
-  const image = document.querySelector('#specimen-image');
-  const stage = document.querySelector('#specimen-stage');
-  const link = document.querySelector('#specimen-link');
-  let pending = 0;
-  sampleButtons.forEach(button=>button.addEventListener('click',async()=>{
+const carousel=document.querySelector('.featured-carousel');
+if(carousel){
+  const slides=[...carousel.querySelectorAll('.featured-slide')];
+  const pickers=[...carousel.querySelectorAll('[data-featured-index]')];
+  const play=carousel.querySelector('#featured-play');
+  const region=carousel.querySelector('.featured-slides');
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  let index=0,playing=!reduced.matches,timer=null,inView=false,pending=0;
+  function measure(){
+    // Measure all panels synchronously, then truly hide the inactive ones.
+    // Stable height prevents the catalogue from jumping when captions differ.
+    region.classList.add('is-measuring');
+    region.style.minHeight=`${Math.ceil(Math.max(...slides.map(s=>s.getBoundingClientRect().height)))}px`;
+    region.classList.remove('is-measuring');
+  }
+  function schedule(){
+    clearTimeout(timer);
+    play.textContent=playing?'暫停輪播':'播放輪播';
+    region.setAttribute('aria-live',playing?'off':'polite');
+    if(playing&&inView&&!document.hidden)timer=setTimeout(()=>show(index+1),8000);
+  }
+  function stop(){pending++;playing=false;schedule();}
+  async function show(next){
+    const target=(next+slides.length)%slides.length;
+    if(target===index){schedule();return;}
     const request=++pending;
-    const preview=new Image();
-    preview.src='./assets/'+button.dataset.sampleSrc;
-    try {await preview.decode();} catch {return;}
+    const image=slides[target].querySelector('img');
+    image.loading='eager';
+    try{await image.decode();}catch{stop();return;}
     if(request!==pending)return;
-    image.classList.remove('sample-enter');
-    image.src=preview.src;
-    image.alt=button.dataset.sampleAlt;
-    stage.dataset.mode=button.dataset.sampleMode;
-    stage.href=button.dataset.sampleLink;
-    stage.setAttribute('aria-label','閱讀 '+button.dataset.sampleName+' 介紹');
-    link.href=button.dataset.sampleLink;
-    document.querySelector('#specimen-name').textContent=button.dataset.sampleName;
-    document.querySelector('#specimen-title').textContent=button.dataset.sampleTitle;
-    document.querySelector('#specimen-credit').textContent=button.dataset.sampleCredit;
-    sampleButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-    requestAnimationFrame(()=>image.classList.add('sample-enter'));
-  }));
+    slides[index].hidden=true;
+    slides[index].inert=true;
+    index=target;
+    slides[index].hidden=false;
+    slides[index].inert=false;
+    slides[index].classList.remove('featured-arrive');
+    if(!reduced.matches)requestAnimationFrame(()=>slides[index].classList.add('featured-arrive'));
+    pickers.forEach((p,i)=>{if(i===index)p.setAttribute('aria-disabled','true');else p.removeAttribute('aria-disabled');});
+    carousel.querySelector('#featured-position').textContent=`${index+1} / ${slides.length}`;
+    schedule();
+  }
+  // Focus/hover/manual navigation stop autoplay until an explicit Play request.
+  carousel.addEventListener('focusin',stop);
+  carousel.addEventListener('pointerenter',stop);
+  play.addEventListener('click',()=>{playing=!playing;schedule();});
+  carousel.querySelector('#featured-prev').addEventListener('click',()=>{stop();show(index-1);});
+  carousel.querySelector('#featured-next').addEventListener('click',()=>{stop();show(index+1);});
+  pickers.forEach((button,i)=>button.addEventListener('click',()=>{stop();show(i);}));
+  reduced.addEventListener('change',stop);
+  document.addEventListener('visibilitychange',schedule);
+  if('IntersectionObserver'in window){new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:.25}).observe(carousel);}
+  else inView=true;
+  play.hidden=false;
+  carousel.querySelector('.featured-navigation').hidden=false;
+  measure();
+  document.fonts?.ready.then(measure);
+  let measuredWidth=carousel.clientWidth;
+  if('ResizeObserver'in window)new ResizeObserver(()=>{const width=carousel.clientWidth;if(width!==measuredWidth){measuredWidth=width;measure();}}).observe(carousel);
+  else window.addEventListener('resize',measure);
+  schedule();
 }
 if (list) {
   const entries = [...list.querySelectorAll('.entry')];

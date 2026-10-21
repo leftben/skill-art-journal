@@ -2,6 +2,8 @@ import {readFile,readdir,stat} from 'node:fs/promises';
 import {resolve,dirname,join} from 'node:path';
 import {articles} from '../content/articles.mjs';
 import {illustrations} from '../content/illustrations.mjs';
+import {selectFeatured} from '../content/featured.mjs';
+import './check-featured.mjs';
 const root=resolve('docs');let checked=0;
 async function walk(dir){for(const d of await readdir(dir,{withFileTypes:true})){const p=join(dir,d.name);if(d.isDirectory())await walk(p);else if(d.name.endsWith('.html')){const html=await readFile(p,'utf8');if((html.match(/<h1(?:\s|>)/g)||[]).length!==1)throw new Error(`Expected one h1: ${p}`);if(!html.includes('lang="zh-Hant"'))throw new Error(`Missing language: ${p}`);for(const [,attr,url]of html.matchAll(/\s(href|src)="([^"]+)"/g)){if(url.startsWith('http')||url.startsWith('#')||url.startsWith('data:')||url.startsWith('/skill-art-journal/'))continue;const target=resolve(dirname(p),url.split('#')[0].split('?')[0]);try{await stat(target)}catch{throw new Error(`Broken ${attr}: ${p} -> ${url}`)}}checked++;}}}
 if(new Set(articles.map(a=>a.slug)).size!==articles.length)throw new Error('Duplicate slugs');
@@ -14,6 +16,17 @@ for(const a of articles){
 }
 const home=await readFile(join(root,'index.html'),'utf8');
 const snapshot=JSON.parse(await readFile('content/snapshot.json','utf8'));
+const featured=JSON.parse(await readFile(join(root,'featured.json'),'utf8'));
+const history=JSON.parse(await readFile('content/featured-history.json','utf8'));
+const expectedFeatures=selectFeatured(articles,snapshot,history);
+if(JSON.stringify(featured)!==JSON.stringify(expectedFeatures))throw new Error('Featured scores or selection are stale');
+if((home.match(/class="featured-slide"/g)||[]).length!==5)throw new Error('Homepage must contain five daily features');
+if(!home.includes(`data-featured-date="${snapshot.date}"`))throw new Error('Featured date does not match snapshot');
+if(history.filter(h=>h.date===snapshot.date).length!==1)throw new Error('Featured history needs exactly one record per date');
+for(const item of featured.items){
+  const a=articles.find(a=>a.slug===item.slug);
+  if(!home.includes(`href="./skills/${a.slug}/index.html" aria-labelledby="featured-title-`))throw new Error(`Missing featured link: ${a.slug}`);
+}
 const feed=await readFile(join(root,'feed.xml'),'utf8');
 const sitemap=await readFile(join(root,'sitemap.xml'),'utf8');
 for(const a of articles){

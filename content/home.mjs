@@ -1,12 +1,8 @@
-export function renderHome({articles,entry,external,dateLabel}) {
-  const samples=[
-    {label:'插畫',title:'一套畫風，延伸成一組作品',name:'MengTo Illustration',src:'studio-specimen.svg',slug:'mengto-illustration',mode:'vector',credit:'MengTo／原作者 SVG',alt:'MengTo 原作者的綠色等距設計工作室插畫'},
-    {label:'剖解',title:'沿著結構，看懂它如何運作',name:'Anatomy',src:'anatomy-engine.webp',slug:'anatomy',mode:'technical',credit:'Anatomy／原作者示例',alt:'Anatomy 的 Raptor 引擎等距剖解圖'},
-    {label:'像素',title:'讓一格格像素，變成動作',name:'Pixel Art Studio',src:'pixel-capybara.gif',slug:'pixel-art-studio',mode:'pixel',credit:'Pixel Art Studio／原作者動畫',alt:'Pixel Art Studio 原作者的水豚走路動畫'},
-    {label:'圖解',title:'把複雜關係，整理成路徑',name:'Diagram Design',src:'diagram-flowchart.webp',slug:'diagram-design',mode:'diagram',credit:'Diagram Design／原作者示例',alt:'Diagram Design 原作者的流程圖'},
-    {label:'識別',title:'從概念，到一個成立的標誌',name:'Logo Design Skill',src:'logo-examples.png',slug:'logo-design',mode:'brand',credit:'Logo Design Skill／原作者示例',alt:'Logo Design Skill 原作者的標誌概念總覽'}
-  ];
-  const first=samples[0];
+export function renderHome({articles,entry,external,dateLabel,featured,selection,esc,assetSources,illustrations}) {
+  const panels=featured.map((a,i)=>{
+    const source=assetSources.find(s=>s.file===a.image);
+    return `<div class="featured-slide" id="featured-${i}" role="group" aria-roledescription="投影片" aria-label="${i+1} / 5：${esc(a.name)}" ${i?'hidden':''}><a class="featured-story" href="./skills/${a.slug}/index.html" aria-labelledby="featured-title-${i}"><div class="featured-art"><img src="./assets/${a.image||`illustrations/${a.slug}.svg`}" alt="${esc(a.imageAlt||illustrations[a.slug].summary)}" width="960" height="600" ${i?'loading="lazy"':'fetchpriority="high"'}></div><div class="featured-copy"><p class="featured-category">${esc(a.category)} · ${esc(a.name)}</p><h3 id="featured-title-${i}">${esc(a.short)}</h3><p class="featured-dek">${esc(a.dek)}</p><span class="featured-read">閱讀文章 <span aria-hidden="true">↗</span></span></div></a><p class="featured-credit">${source?`原作：${esc(source.repo)} · ${esc(source.title)}`:'功能示意・本站繪製'}</p></div>`;
+  }).join('');
   const categories=[...new Set(articles.map(a=>a.category))];
   const filterButtons=['全部',...categories].map(c=>`<button type="button" class="filter" data-category="${c}" aria-pressed="${c==='全部'}">${c}<span>${c==='全部'?articles.length:articles.filter(a=>a.category===c).length}</span></button>`).join('');
   return `<main id="main">
@@ -16,16 +12,13 @@ export function renderHome({articles,entry,external,dateLabel}) {
         <p class="cover-description">給創作者的 AI Skill 選刊。<br>先看作品，再找到適合你的工具。</p>
         <a class="button" href="#articles">翻閱 ${articles.length} 篇文章 <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="specimen-book">
-        <div class="specimen-tabs" role="group" aria-label="切換作品樣本">
-          ${samples.map((s,i)=>`<button type="button" class="specimen-tab" aria-pressed="${i===0}" data-sample-src="${s.src}" data-sample-title="${s.title}" data-sample-name="${s.name}" data-sample-link="./skills/${s.slug}/index.html" data-sample-mode="${s.mode}" data-sample-credit="${s.credit}" data-sample-alt="${s.alt}">${s.label}</button>`).join('')}
-        </div>
-        <figure class="specimen-sheet">
-          <a class="specimen-stage" id="specimen-stage" data-mode="vector" href="./skills/${first.slug}/index.html" aria-label="閱讀 ${first.name} 介紹"><img id="specimen-image" src="./assets/${first.src}" alt="${first.alt}" fetchpriority="high" width="480" height="360"></a>
-          <figcaption><div class="specimen-title"><p id="specimen-name">${first.name}</p><a id="specimen-link" href="./skills/${first.slug}/index.html"><span id="specimen-title">${first.title}</span><span class="read-link">閱讀介紹</span></a></div><p class="specimen-credit" id="specimen-credit" aria-live="polite">${first.credit}</p></figcaption>
-        </figure>
-        <noscript><p>所有工具介紹都在下方目錄，可直接閱讀。</p></noscript>
-      </div>
+      <section class="featured-carousel" aria-roledescription="輪播" aria-labelledby="featured-heading" data-featured-date="${selection.date}">
+        <header class="featured-header"><div><h2 id="featured-heading">今日精選</h2><p>${dateLabel} · 每天五篇</p></div><button class="featured-control" id="featured-play" type="button" hidden>暫停輪播</button></header>
+        <div class="featured-slides" aria-live="off" aria-atomic="false">${panels}</div>
+        <div class="featured-navigation" hidden><button class="featured-control" id="featured-prev" type="button" aria-label="上一篇精選">←</button><div class="featured-pickers" role="group" aria-label="選擇精選文章">${featured.map((a,i)=>`<button type="button" class="featured-picker" data-featured-index="${i}" aria-label="${esc(a.name)}" aria-controls="featured-${i}" ${i?'':'aria-disabled="true"'}><span></span></button>`).join('')}</div><p id="featured-position" aria-live="off">1 / 5</p><button class="featured-control" id="featured-next" type="button" aria-label="下一篇精選">→</button></div>
+        <p class="featured-note">從不同創作主題，挑五篇給你。<a href="./selection.html">選文方式</a></p>
+        <noscript><p>本日五篇：${featured.map(a=>`<a href="./skills/${a.slug}/index.html">${esc(a.name)}</a>`).join('、')}。</p></noscript>
+      </section>
     </section>
     <section id="articles" class="catalogue wrap">
       <aside class="catalogue-desk"><h2>文章索引</h2><p class="index-intro">今天，你想做什麼？</p><div class="filters" role="group" aria-label="依用途篩選">${filterButtons}</div></aside>

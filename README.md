@@ -4,7 +4,7 @@
 
 - 網站：https://leftben.github.io/skill-art-journal/
 - 本期：2026-10-21，共 26 篇
-- 功能：每篇附圖、整個文章區塊可點擊、原作者圖片優先、五種作品樣本切換、用途篩選、搜尋、收藏量／增長排序、需求範例複製、相關文章、RSS、sitemap
+- 功能：每日五篇精選輪播、公開選文公式、每篇附圖、整個文章區塊可點擊、原作者圖片優先、用途篩選、搜尋、收藏量／增長排序、需求範例複製、相關文章、RSS、sitemap
 
 ## 本機預覽
 
@@ -21,7 +21,9 @@ npm run dev
 ## 維護文章
 
 - `content/articles.mjs`：每篇文章的繁體中文內容與圖片來源。
-- `content/home.mjs`：首頁作品樣本夾與文章索引的版面。
+- `content/home.mjs`：首頁每日精選與文章索引的版面。
+- `content/featured.mjs`：每日精選的固定評分、資格與主題限制。
+- `content/featured-history.json`：最近 30 天的入選紀錄，建置時自動按日期更新；需與成品一起提交。
 - `content/illustrations.mjs`：每篇文章的三段功能流程與圖說；新增文章時需一併補齊。
 - `scripts/illustrate.mjs`：繪製本站原創 SVG 功能插圖，建置時自動執行。
 - `content/snapshot.json`：原始 GitHub 星數快照，含各項觀察時間。
@@ -39,10 +41,25 @@ npm run dev
 2. 以 GitHub 第一方文件與真正的 SKILL.md 查證新候選，區分首次發現與新發布。每個新收錄項目新增獨立完整文章，按 repo / slug 去重；舊項目有實質變更才更新原文。
 3. 把當日完整 baseline 放進 content/snapshot.json；在 articles.mjs 中加入文章（可依日期分檔匯入），新收錄置前，填入 published，實質更新填 updated。補齊 illustrations.mjs 的三段功能圖及必要繪圖函式。
 4. 優先使用作者真實成果並核對授權、標示來源與保存聲明。沒有可再利用的原作時，用標示清楚的本站功能示意圖，同時用 authorExample 連到作者實例。Pixel Path 圖片另有條款，不能因程式 MIT 就當作圖片 MIT。
-5. 執行 npm run build 與 npm run check，核對新文章、圖片、首頁索引、RSS 與 sitemap；有版面變動時檢查桌機、平板與手機。提交相關來源及 docs，推送 origin main。
+5. 執行 npm run build 與 npm run check；build 會依當日 snapshot 自動選五篇、產生 docs/featured.json 與 selection.html，更新入選歷史。核對新文章、圖片、首頁輪播、首頁索引、RSS 與 sitemap；有版面變動時檢查桌機、平板與手機。提交相關來源、content/featured-history.json 及 docs，推送 origin main。
 6. 確認對應 commit 的 GitHub Pages 部署成功，並檢查公開首頁、新文章及圖片。將 baseline 路徑、篇數、commit、部署結果寫回 memory。部署失敗須如實回報；沒有新候選就更新已核實資料，不湊文章。
 
 每日網站新增與發布已獲使用者授權。不因此安裝 Skills、執行候選程式或呼叫付費生圖服務。排程本身由 Codex 管理，這個儲存庫不含獨立定時爬蟲。
+
+## 每日五篇精選
+
+公式版本 1.0：`30V + 25A + 20G + 15F + 10P − min(36, 12E)`。V/A/G/F/P 都在 0–1。
+
+- V 原作展示：作者配圖 1，本站功能圖 0.45；不是美術品質評分。
+- A 創作相關性：插畫／遊戲／品牌／3D 為 1，影片 0.9，網頁 0.8；工具目錄不參選。
+- G 增長：`clamp((delta / 比較間隔天數) / (前次星數 + 200) / 0.05, 0, 1)`；缺少有效比較或 delta≤0 時為 0。
+- F 新鮮度：`2^(-距收錄或實質更新天數/7)`；更新星數不刷新這個日期。
+- P 人氣：`min(1, log10(stars+1)/5)`。
+- E 曝光：前七個日曆日入選次數；同日多次重建只計一次。
+
+先預留當日新收錄中最高分的一篇（若有），再依分數補到三種主題，接著填滿五篇；同類最多兩篇、同 repo 不重複，slug 為固定同分排序。最後按分數安排播放順序。排除封存、停用與不完整文章；不足五篇或三類時建置報錯，不捏造內容。所有日期依 snapshot.date，不取訪客裝置日期、不隨機選文。同日重建結果固定；過去 30 天紀錄保存在 source control，舊於紀錄的 snapshot 不能覆蓋新紀錄。
+
+首頁提供完整文章連結、作品圖和用途摘要；每八秒切換，支援前後篇、五個選擇按鈕及播放／暫停。聚焦、滑鼠進入或手動切換後停止，明確按播放才繼續；離開畫面或背景分頁暫停。減少動態偏好預設不自動播放。未啟用 JavaScript 時顯示第一篇及全部五篇的文字連結。選文規則公開於 selection.html，完整當日計分在 featured.json。未接入點擊追蹤，這些分數衡量選文條件，尚未以實際點擊率驗證。
 
 配圖優先使用已核對來源與授權的原作者圖片（articles.mjs 的 image/imageAlt 與 assetSources），目錄和內頁主圖共用此選擇。沒有可用原作時才使用本站功能示意圖；有原作時功能圖移至正文補充。每篇仍需提供功能圖資料，建置檢查會驗證原作優先與完整配圖。
 
