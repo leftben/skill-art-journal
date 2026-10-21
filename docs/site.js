@@ -3,7 +3,6 @@ const carousel=document.querySelector('.featured-carousel');
 if(carousel){
   const slides=[...carousel.querySelectorAll('.featured-slide')];
   const pickers=[...carousel.querySelectorAll('[data-featured-index]')];
-  const play=carousel.querySelector('#featured-play');
   const region=carousel.querySelector('.featured-slides');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let index=0,playing=!reduced.matches,timer=null,inView=false,pending=0;
@@ -16,7 +15,17 @@ if(carousel){
   }
   function schedule(){
     clearTimeout(timer);
-    play.textContent=playing?'暫停輪播':'播放輪播';
+    pickers.forEach((button,i)=>{
+      const current=i===index;
+      const action=playing?'暫停輪播':'播放輪播';
+      const title=button.querySelector('.featured-picker-title').textContent;
+      const status=button.querySelector('.featured-picker-status');
+      if(current)button.setAttribute('aria-current','true');
+      else button.removeAttribute('aria-current');
+      status.textContent=current?`${i+1} / ${slides.length} · ${playing?'Ⅱ 暫停':'▶ 播放'}`:'';
+      button.setAttribute('aria-label',`${button.dataset.featuredName}：${title}，${current?`目前第 ${i+1} / ${slides.length} 篇，${action}`:`切換至第 ${i+1} / ${slides.length} 篇`}`);
+      button.title=current?action:`切換精選：${title}`;
+    });
     region.setAttribute('aria-live',playing?'off':'polite');
     if(playing&&inView&&!document.hidden)timer=setTimeout(()=>show(index+1),8000);
   }
@@ -36,24 +45,22 @@ if(carousel){
     slides[index].inert=false;
     slides[index].classList.remove('featured-arrive');
     if(!reduced.matches)requestAnimationFrame(()=>slides[index].classList.add('featured-arrive'));
-    pickers.forEach((p,i)=>{if(i===index)p.setAttribute('aria-disabled','true');else p.removeAttribute('aria-disabled');});
-    carousel.querySelector('#featured-position').textContent=`${index+1} / ${slides.length}`;
     schedule();
   }
   // Focus/hover/manual navigation stop autoplay until an explicit Play request.
-  carousel.addEventListener('focusin',stop);
+  carousel.addEventListener('focusin',event=>{if(!carousel.contains(event.relatedTarget))stop();});
   carousel.addEventListener('pointerenter',stop);
-  play.addEventListener('click',()=>{playing=!playing;schedule();});
   carousel.querySelector('#featured-prev').addEventListener('click',()=>{stop();show(index-1);});
   carousel.querySelector('#featured-next').addEventListener('click',()=>{stop();show(index+1);});
-  pickers.forEach((button,i)=>button.addEventListener('click',()=>{stop();show(i);}));
+  pickers.forEach((button,i)=>button.addEventListener('click',()=>{
+    if(i===index){playing=!playing;schedule();}
+    else{stop();show(i);}
+  }));
   reduced.addEventListener('change',stop);
   document.addEventListener('visibilitychange',schedule);
   if('IntersectionObserver'in window){new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:.25}).observe(carousel);}
   else inView=true;
-  play.hidden=false;
   carousel.querySelector('.featured-navigation').hidden=false;
-  carousel.querySelector('.featured-pickers').hidden=false;
   measure();
   document.fonts?.ready.then(measure);
   let measuredWidth=carousel.clientWidth;
