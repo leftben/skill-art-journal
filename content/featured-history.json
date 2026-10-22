@@ -9,5 +9,16 @@
       "taste-skill",
       "aseprite-ai-artist"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "version": "1.0",
+    "slugs": [
+      "anatomy",
+      "logo-design",
+      "illo",
+      "dream-loop",
+      "garden-skills"
+    ]
   }
 ]

@@ -1,5 +1,7 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'illo':{stages:[['document','文章與抽象概念'],['character','固定角色與畫風'],['series','系列編輯插畫']],summary:'把文章中的意思轉成角色正在做的事，用一致主角與畫風完成系列插畫。'},
+  'threejs-skills':{stages:[['mesh','既有模型與材質'],['landscape','打光與場景構成'],['prototype','網頁互動與動畫']],summary:'將既有模型整理、打光並加上互動，完成能在瀏覽器觀看的 3D 展示；本站功能示意，非作者作品。'},
   'aseprite-ai-artist':{stages:[['pixels','在原始檔畫像素'],['frames','分層與逐格動畫'],['sprites','可編修檔與精靈圖']],summary:'在 Aseprite 中安排像素、圖層與動作，保留原始檔並輸出遊戲素材。'},
   'gsap-skills':{stages:[['storyboard','安排動作順序'],['timeline','編排動畫時間軸'],['responsive','網頁與捲動互動']],summary:'用時間軸控制畫面的先後和重疊，將動作接上網站與捲動進度。'},
   'pixel-path':{stages:[['route','真實道路與地圖'],['landscape','組合地域素材'],['roadview','可穿梭的像素街景']],summary:'依真實道路與地圖安排沿路景物，輸出可在瀏覽器穿梭的像素公路。'},

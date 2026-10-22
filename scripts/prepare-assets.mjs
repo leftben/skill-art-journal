@@ -11,8 +11,13 @@ for (const repo of [...new Set(assetSources.map(a=>a.repo))]) {
   const url = `https://raw.githubusercontent.com/${repo}/main/LICENSE`;
   const r = await fetch(url);
   if (!r.ok) throw new Error(`License missing: ${repo}`);
-  const license = await r.text();
+  let license = await r.text();
   if (!license.includes('MIT License') && !license.includes('Permission is hereby granted')) throw new Error(`Review license: ${repo}`);
+  for (const noticeURL of new Set(assetSources.filter(a=>a.repo===repo&&a.noticeURL).map(a=>a.noticeURL))) {
+    const notice = await fetch(noticeURL);
+    if (!notice.ok) throw new Error(`Notice missing: ${repo}`);
+    license += `\n\n${await notice.text()}`;
+  }
   await writeFile(`public/assets/licenses/${repo.replaceAll('/','--')}.txt`, license);
   console.log(`Preserved license: ${repo}`);
 }

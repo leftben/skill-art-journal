@@ -1,7 +1,9 @@
 // Original Traditional Chinese editorial summaries. Repository statistics live in snapshot.json.
 // Every example prompt below is an editorial suggestion, not a claimed test result.
 import {newArticles} from './new-2026-10-21.mjs';
+import {newArticles as todayArticles} from './new-2026-10-22.mjs';
 export const articles = [
+  ...todayArticles,
   ...newArticles,
   {
     slug:'mengto-illustration', repo:'MengTo/Skills', name:'MengTo Illustration', category:'插畫與圖解', kind:'Skill 合集', featured:true,
@@ -65,7 +67,8 @@ export const articles = [
     outputs:'HTML＋SVG，另可依工具匯出圖片',
     caveat:'作者提供的範例不代表本站已實際測試所有圖表類型。',
     skill:'https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md',
-    update:'2026-10-21：較前次增加 578 星，主分支未變更。前次已確認的 SVG 匯出與單行 Mermaid 匯入修正仍可參考。'
+    updated:'2026-10-22',
+    update:'2026-10-22：修正服務藍圖的日文標籤檢查，文字拆成兩行時不再被誤判缺漏；同時補回 SVG-only 與 PNG-only 不能一起指定的匯出規則。這是檢查與操作指引修正，沒有新增圖表類型。'
   },
   {
     slug:'logo-design', repo:'kaankiziltug/logo-design-skill', name:'Logo Design Skill', category:'品牌與設計', kind:'單一 Skill', featured:true,
@@ -181,8 +184,8 @@ export const articles = [
     costs:'生成服務依帳號方案與模型消耗計費，執行前應先確認報價。',
     outputs:'依子技能交付圖片、動畫、材質、影片或 3D 資產',
     caveat:'這是大型合集，建議只選眼前工作需要的子技能。',
-    updated:'2026-10-21',
-    update:'2026-10-21：新增本機 12 秒 Canvas 循環動畫流程，可檢查接縫並輸出可編輯 HTML 與 MP4；需要 Node 18+、ffmpeg／ffprobe 5.1+、Playwright 與瀏覽器。另新增影片調色及 Blender 匯出檢查。本機循環不需生成 API，額外生成素材仍計費；80 種探索方向不是 80 套隨附獨立模板。'
+    updated:'2026-10-22',
+    update:'2026-10-22：Blender 交付檢查會深入材質的節點群組尋找圖片貼圖；模型缺少 UV 時，能正確指出貼圖錯誤，避免當成單色材質警告。屬交付可靠性修正，沒有新增生圖模型。前次收錄的本機 12 秒 Canvas 循環動畫仍可輸出 HTML 與 MP4，需要 Node 18+、ffmpeg／ffprobe 5.1+、Playwright 與瀏覽器；本機循環不需生成 API，額外生成素材另計費。'
   },
   {
     slug:'fal-skills', repo:'fal-ai-community/skills', name:'fal.ai Skills', category:'影像與影片', kind:'Skill 合集',
@@ -333,6 +336,7 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {file:'illo-bridge.png',repo:'tmchow/illo-skill',url:'https://raw.githubusercontent.com/tmchow/illo-skill/0b0abee9214d9cef3c9f42d5c739a0d63cb618e6/_assets/illo/05-bridgeswap-ink-punch.png',title:'Illo by Trevin Chow. 原作者的零停機換橋概念插畫',license:'MIT',noticeURL:'https://raw.githubusercontent.com/tmchow/illo-skill/0b0abee9214d9cef3c9f42d5c739a0d63cb618e6/skills/illo/NOTICE'},
   {file:'aseprite-slime.gif',repo:'with-pebbly/aseprite-ai-artist',url:'https://raw.githubusercontent.com/with-pebbly/aseprite-ai-artist/main/gallery/generations/2026-10-18-jelly-slime-spike-slam/jelly-slime-spike-slam.gif',title:'Aseprite AI Artist 原作者的史萊姆攻擊像素動畫',license:'MIT'},
   {"file":"taste-coffee.webp","repo":"Leonxlnx/taste-skill","url":"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/examples/v2/coffee-storefront.webp","title":"Taste Skill 原作者的咖啡店網站範例","license":"MIT"},
   {"file":"ian-breakpoints.png","repo":"helloianneo/ian-xiaohei-illustrations","url":"https://raw.githubusercontent.com/helloianneo/ian-xiaohei-illustrations/main/examples/images/01-two-breakpoints.png","title":"Ian Xiaohei 原作者的兩個斷點手繪配圖","license":"MIT"},
