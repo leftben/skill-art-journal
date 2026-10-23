@@ -13,7 +13,10 @@ export const newArticles = [
     requirements:'Aseprite 1.3+、Node 22.6+、專案的 Aseprite 擴充套件與 MCP server，以及可使用它的 agent。',
     costs:'專案採 MIT；Aseprite 與 agent 模型費用另計。概念參考圖可跳過，若另用生圖服務則依服務計費。',
     outputs:'可編修 .aseprite、sprite sheet／atlas、GIF、PNG',
-    caveat:'今天首次收錄的小眾工具。作者表示評圖流程的品質改善仍未正式測量；展示動畫不代表每次都能達到相同效果。',
+    caveat:'2026-10-21 首次收錄的小眾工具。作者表示評圖流程的品質改善仍未正式測量；展示動畫不代表每次都能達到相同效果。',
+    updated:'2026-10-23',
+    update:'2026-10-23：作者更新 MCP SDK 與 Vite 相依套件，並在提交說明標示為安全修補。像素繪製流程沒有新增功能。已在使用的人可留意作者版本；本站沒有安裝或執行這些更新。',
+    extraSource:'https://github.com/with-pebbly/aseprite-ai-artist/commit/a32a2a58e76b06fc9ad7b29b12abd003ec769665',
     skill:'https://github.com/with-pebbly/aseprite-ai-artist/blob/main/skills/studio/SKILL.md',
     authorExample:'https://github.com/with-pebbly/aseprite-ai-artist/blob/main/gallery/generations/2026-10-18-jelly-slime-spike-slam/generation.yaml'
   },

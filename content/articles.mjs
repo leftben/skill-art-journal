@@ -2,7 +2,9 @@
 // Every example prompt below is an editorial suggestion, not a claimed test result.
 import {newArticles} from './new-2026-10-21.mjs';
 import {newArticles as todayArticles} from './new-2026-10-22.mjs';
+import {newArticles as latestArticles} from './new-2026-10-23.mjs';
 export const articles = [
+  ...latestArticles,
   ...todayArticles,
   ...newArticles,
   {
@@ -237,7 +239,11 @@ export const articles = [
     requirements:'Remotion／React 專案與對應 Node 環境、可寫程式的 agent。',
     costs:'agent 與渲染環境另計；Remotion 的商業授權條件請以官方規定為準。',
     outputs:'影片程式、預覽、影片或靜態畫面',
-    caveat:'技能是製作指引，並不取代影片引擎和相關授權。'
+    caveat:'技能是製作指引，並不取代影片引擎和相關授權。',
+    updated:'2026-10-23',
+    update:'2026-10-23：4.0.538 補強影片效能指引：把逐格更新限制在真正需要動態的音量、字卡和覆蓋圖層，減少整個場景跟著重畫；拆分時仍要保留正確時間座標與可編輯的插值。效果清單也補上長陰影 longShadows。這是製作指引更新，並非新增時間軸編輯器。',
+    source:'https://github.com/remotion-dev/skills/blob/6c67adcd9cdbe6eb84d76342da89b225f9161cb2/README.md',
+    skill:'https://github.com/remotion-dev/skills/blob/6c67adcd9cdbe6eb84d76342da89b225f9161cb2/skills/remotion-markup/SKILL.md'
   },
   {
     slug:'imagegen-skills', repo:'Leonxlnx/imagegen-skills', name:'Imagegen Skills', category:'品牌與設計', kind:'Skill 合集',
@@ -289,7 +295,11 @@ export const articles = [
     requirements:'支援技能的 coding agent；搜尋工具依專案安裝說明設定。',
     costs:'主要依 agent 使用量計算，外部服務另計。',
     outputs:'設計系統建議與介面程式',
-    caveat:'仍需使用真實內容檢查可用性；資料庫建議不等於經過使用者測試。'
+    caveat:'仍需使用真實內容檢查可用性；資料庫建議不等於經過使用者測試。',
+    updated:'2026-10-23',
+    update:'2026-10-23：安裝工具新增 Kimi Code 平台與資料夾偵測，並修正 Windows 換行與測試命令造成資料驗證失敗的問題。這是平台相容性與維護改善，沒有新增設計風格；作者提交說明也註明未實際執行 Kimi Code。',
+    source:'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/04cfb449bd8494811ad63e94172a308fa25a551a/README.md',
+    extraSource:'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/compare/623a9a9037d006ea727f8213f084d02a6b6f11b5...04cfb449bd8494811ad63e94172a308fa25a551a'
   },
   {
     slug:'stitch-skills', repo:'google-labs-code/stitch-skills', name:'Stitch Design Skills', category:'網頁與介面', kind:'Skill 合集',
@@ -336,6 +346,8 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {file:'blender-concrete.webp',repo:'EL4CTEO/blender-skills',url:'https://raw.githubusercontent.com/EL4CTEO/blender-skills/71d031dab8bc6729504d11a78cbe91945401045f/docs/comparison/media/concrete-hero-skill.webp',title:'EL4CTEO 原作者的水泥牆材質展示；作者比較案例，非本站實測',license:'MIT'},
+  {file:'blender-blanket.webp',repo:'EL4CTEO/blender-skills',url:'https://raw.githubusercontent.com/EL4CTEO/blender-skills/71d031dab8bc6729504d11a78cbe91945401045f/docs/comparison/media/blanket-skill-poster.webp',title:'EL4CTEO 原作者的床單模擬展示；非本站實測',license:'MIT'},
   {file:'illo-bridge.png',repo:'tmchow/illo-skill',url:'https://raw.githubusercontent.com/tmchow/illo-skill/0b0abee9214d9cef3c9f42d5c739a0d63cb618e6/_assets/illo/05-bridgeswap-ink-punch.png',title:'Illo by Trevin Chow. 原作者的零停機換橋概念插畫',license:'MIT',noticeURL:'https://raw.githubusercontent.com/tmchow/illo-skill/0b0abee9214d9cef3c9f42d5c739a0d63cb618e6/skills/illo/NOTICE'},
   {file:'aseprite-slime.gif',repo:'with-pebbly/aseprite-ai-artist',url:'https://raw.githubusercontent.com/with-pebbly/aseprite-ai-artist/main/gallery/generations/2026-10-18-jelly-slime-spike-slam/jelly-slime-spike-slam.gif',title:'Aseprite AI Artist 原作者的史萊姆攻擊像素動畫',license:'MIT'},
   {"file":"taste-coffee.webp","repo":"Leonxlnx/taste-skill","url":"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/examples/v2/coffee-storefront.webp","title":"Taste Skill 原作者的咖啡店網站範例","license":"MIT"},

@@ -1,5 +1,7 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'blender-agent-skills':{stages:[['mesh','建模與材質'],['browsercheck','數值與多角度檢查'],['gameasset','確認模型交付']],summary:'把建模、材質與動畫串成流程，經數值和多角度檢查再輸出資產。'},
+  'motion-design':{stages:[['brief','決定感受與性格'],['timeline','安排速度與順序'],['responsive','介面狀態與動畫']],summary:'先決定動作想表達的感受，再安排時長、速度與先後，實作一致的介面動效。'},
   'illo':{stages:[['document','文章與抽象概念'],['character','固定角色與畫風'],['series','系列編輯插畫']],summary:'把文章中的意思轉成角色正在做的事，用一致主角與畫風完成系列插畫。'},
   'threejs-skills':{stages:[['mesh','既有模型與材質'],['landscape','打光與場景構成'],['prototype','網頁互動與動畫']],summary:'將既有模型整理、打光並加上互動，完成能在瀏覽器觀看的 3D 展示；本站功能示意，非作者作品。'},
   'aseprite-ai-artist':{stages:[['pixels','在原始檔畫像素'],['frames','分層與逐格動畫'],['sprites','可編修檔與精靈圖']],summary:'在 Aseprite 中安排像素、圖層與動作，保留原始檔並輸出遊戲素材。'},
