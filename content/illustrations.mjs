@@ -1,5 +1,7 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'pixel-style-poster':{stages:[['brief','主題與短句'],['palette','構圖與墨色'],['bitmapPoster','直式網點海報']],summary:'把主題、文字和墨色排成直式海報，保留提示詞便於延伸系列；本站功能示意，非作者作品。'},
+  'webgpu-threejs-tsl':{stages:[['mesh','建立 3D 場景'],['material','TSL 材質與光線'],['gpuParticles','GPU 粒子與互動']],summary:'把場景、材質和粒子計算組成互動 3D 視覺；本站功能示意，非作者成品或執行結果。'},
   'blender-agent-skills':{stages:[['mesh','建模與材質'],['browsercheck','數值與多角度檢查'],['gameasset','確認模型交付']],summary:'把建模、材質與動畫串成流程，經數值和多角度檢查再輸出資產。'},
   'motion-design':{stages:[['brief','決定感受與性格'],['timeline','安排速度與順序'],['responsive','介面狀態與動畫']],summary:'先決定動作想表達的感受，再安排時長、速度與先後，實作一致的介面動效。'},
   'illo':{stages:[['document','文章與抽象概念'],['character','固定角色與畫風'],['series','系列編輯插畫']],summary:'把文章中的意思轉成角色正在做的事，用一致主角與畫風完成系列插畫。'},

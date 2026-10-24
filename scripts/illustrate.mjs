@@ -23,6 +23,8 @@ const pixelCreature=(unit=16,pose=0)=>{
   return cells.map((row,y)=>[...row].map((n,x)=>n==='0'?'':`<rect x="${(x-4)*unit}" y="${(y-4.5)*unit}" width="${unit}" height="${unit}" fill="${n==='2'?ink:n==='3'?pale:dark}"/>`).join('')).join('');
 };
 const drawings={
+ bitmapPoster:()=>rect(-72,-99,144,198,white,2)+group(0,-4,flower(),1.15)+text(0,76,'quiet bloom',16)+[-48,-32,-16,0,16,32,48].map((x,i)=>circle(x,-82+(i%2)*8,1.5,dark)).join(''),
+ gpuParticles:()=>browser([-2,-1,0,1,2].map((x,i)=>[-1,0,1].map((y,j)=>circle(x*31+y*8,y*29+8+(i%2)*10,4+(i+j)%3,[green,dark,warm][(i+j)%3])).join('')).join('')+path('M-63 57Q0 92 66 35','none',dark,2))+path('M65 47 99 81 78 80 73 99Z',warm),
  route:()=>path('M-85 68C-50 30 50 55 26-2S-60-72 78-89','none',dark,15)+circle(-85,68,13,warm)+circle(78,-89,13,pale)+path('M-105-100v200h210V-100Z','none',ink,2),
  roadview:()=>browser(path('M-34 80-5-10h10l34 90Z',dark)+path('M0 11v13m0 14v19m0 13v10','none',white,3)+rect(-85,-13,45,69,green,0)+rect(44,-31,43,87,pale,0)+rect(-71,0,14,17,white,0)+rect(54,-17,17,17,white,0)),
  brief:()=>doc('需求'), document:()=>doc('文章'),

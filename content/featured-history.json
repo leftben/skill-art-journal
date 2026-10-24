@@ -31,5 +31,16 @@
       "blender-agent-skills",
       "pixel-art-studio"
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "version": "1.0",
+    "slugs": [
+      "blender-agent-skills",
+      "pixel-style-poster",
+      "ian-xiaohei",
+      "comfyui-mcp",
+      "aseprite-ai-artist"
+    ]
   }
 ]

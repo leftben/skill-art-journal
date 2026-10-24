@@ -3,7 +3,9 @@
 import {newArticles} from './new-2026-10-21.mjs';
 import {newArticles as todayArticles} from './new-2026-10-22.mjs';
 import {newArticles as latestArticles} from './new-2026-10-23.mjs';
+import {newArticles as newOctober24Articles} from './new-2026-10-24.mjs';
 export const articles = [
+  ...newOctober24Articles,
   ...latestArticles,
   ...todayArticles,
   ...newArticles,
@@ -346,6 +348,7 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {file:'pixel-style-poster-lily.png',repo:'v92388375-gif/pixel-style-poster-skill',url:'https://raw.githubusercontent.com/v92388375-gif/pixel-style-poster-skill/b93066b52fc2f32bf9ec3a9a6d379b4088d6fd7b/examples/mint-night-lily.png',title:'Pixel Style Poster Skill 原作者的 Mint Night Lily 百合網點海報；非本站生成',license:'MIT'},
   {file:'blender-concrete.webp',repo:'EL4CTEO/blender-skills',url:'https://raw.githubusercontent.com/EL4CTEO/blender-skills/71d031dab8bc6729504d11a78cbe91945401045f/docs/comparison/media/concrete-hero-skill.webp',title:'EL4CTEO 原作者的水泥牆材質展示；作者比較案例，非本站實測',license:'MIT'},
   {file:'blender-blanket.webp',repo:'EL4CTEO/blender-skills',url:'https://raw.githubusercontent.com/EL4CTEO/blender-skills/71d031dab8bc6729504d11a78cbe91945401045f/docs/comparison/media/blanket-skill-poster.webp',title:'EL4CTEO 原作者的床單模擬展示；非本站實測',license:'MIT'},
   {file:'illo-bridge.png',repo:'tmchow/illo-skill',url:'https://raw.githubusercontent.com/tmchow/illo-skill/0b0abee9214d9cef3c9f42d5c739a0d63cb618e6/_assets/illo/05-bridgeswap-ink-punch.png',title:'Illo by Trevin Chow. 原作者的零停機換橋概念插畫',license:'MIT',noticeURL:'https://raw.githubusercontent.com/tmchow/illo-skill/0b0abee9214d9cef3c9f42d5c739a0d63cb618e6/skills/illo/NOTICE'},
