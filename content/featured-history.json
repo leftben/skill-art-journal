@@ -42,5 +42,16 @@
       "comfyui-mcp",
       "aseprite-ai-artist"
     ]
+  },
+  {
+    "date": "2026-10-25",
+    "version": "1.0",
+    "slugs": [
+      "diagram-design",
+      "garden-skills",
+      "taste-skill",
+      "pixel-style-poster",
+      "gimi-illustration"
+    ]
   }
 ]

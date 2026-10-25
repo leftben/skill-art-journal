@@ -1,5 +1,7 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'gimi-illustration':{stages:[['document','閱讀中文正文'],['storyboard','安排配圖與風格'],['editorialSet','系列內容插畫']],summary:'依文章挑選插入位置，統一風格並完成系列配圖；本站功能示意，非作者作品或生成實測。'},
+  'spine-animation-ai':{stages:[['parts2d','角色透明拆件'],['skeleton2d','對位與建立骨架'],['timeline','動作與預覽輸出']],summary:'把角色拆件對位，接成骨架與關鍵影格，輸出動畫資料及預覽；本站功能示意，非作者實例。'},
   'pixel-style-poster':{stages:[['brief','主題與短句'],['palette','構圖與墨色'],['bitmapPoster','直式網點海報']],summary:'把主題、文字和墨色排成直式海報，保留提示詞便於延伸系列；本站功能示意，非作者作品。'},
   'webgpu-threejs-tsl':{stages:[['mesh','建立 3D 場景'],['material','TSL 材質與光線'],['gpuParticles','GPU 粒子與互動']],summary:'把場景、材質和粒子計算組成互動 3D 視覺；本站功能示意，非作者成品或執行結果。'},
   'blender-agent-skills':{stages:[['mesh','建模與材質'],['browsercheck','數值與多角度檢查'],['gameasset','確認模型交付']],summary:'把建模、材質與動畫串成流程，經數值和多角度檢查再輸出資產。'},

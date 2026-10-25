@@ -23,6 +23,9 @@ const pixelCreature=(unit=16,pose=0)=>{
   return cells.map((row,y)=>[...row].map((n,x)=>n==='0'?'':`<rect x="${(x-4)*unit}" y="${(y-4.5)*unit}" width="${unit}" height="${unit}" fill="${n==='2'?ink:n==='3'?pale:dark}"/>`).join('')).join('');
 };
 const drawings={
+ editorialSet:()=>[-68,0,68].map((x,i)=>group(x,i===1?-13:8,rect(-32,-68,64,136,[white,pale,green][i],3)+group(0,-15,i===1?flower():fox(),.42)+path('M-21 39h42M-21 51h29','none',dark,3))).join(''),
+ parts2d:()=>circle(0,-73,23,pale)+rect(-27,-28,54,62,green,5)+rect(-83,-17,22,66,white,6)+rect(61,-17,22,66,white,6)+rect(-36,59,24,48,white,5)+rect(12,59,24,48,white,5)+path('M-51-6H-33M33-6H51M-15 41v11M15 41v11','none',warm,3),
+ skeleton2d:()=>path('M0-61V28M-58-4 0-26 58-4M0 28-30 82M0 28 30 82','none',dark,10)+circle(0,-76,23,pale)+[[0,-26],[0,28],[-58,-4],[58,-4],[-30,82],[30,82]].map(([x,y])=>circle(x,y,8,warm)).join('')+path('M-94-105h30M-94-105v30M94 106H64M94 106V76','none',ink,3),
  bitmapPoster:()=>rect(-72,-99,144,198,white,2)+group(0,-4,flower(),1.15)+text(0,76,'quiet bloom',16)+[-48,-32,-16,0,16,32,48].map((x,i)=>circle(x,-82+(i%2)*8,1.5,dark)).join(''),
  gpuParticles:()=>browser([-2,-1,0,1,2].map((x,i)=>[-1,0,1].map((y,j)=>circle(x*31+y*8,y*29+8+(i%2)*10,4+(i+j)%3,[green,dark,warm][(i+j)%3])).join('')).join('')+path('M-63 57Q0 92 66 35','none',dark,2))+path('M65 47 99 81 78 80 73 99Z',warm),
  route:()=>path('M-85 68C-50 30 50 55 26-2S-60-72 78-89','none',dark,15)+circle(-85,68,13,warm)+circle(78,-89,13,pale)+path('M-105-100v200h210V-100Z','none',ink,2),

@@ -4,7 +4,9 @@ import {newArticles} from './new-2026-10-21.mjs';
 import {newArticles as todayArticles} from './new-2026-10-22.mjs';
 import {newArticles as latestArticles} from './new-2026-10-23.mjs';
 import {newArticles as newOctober24Articles} from './new-2026-10-24.mjs';
+import {newArticles as newOctober25Articles} from './new-2026-10-25.mjs';
 export const articles = [
+  ...newOctober25Articles,
   ...newOctober24Articles,
   ...latestArticles,
   ...todayArticles,
@@ -71,8 +73,11 @@ export const articles = [
     outputs:'HTML＋SVG，另可依工具匯出圖片',
     caveat:'作者提供的範例不代表本站已實際測試所有圖表類型。',
     skill:'https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md',
-    updated:'2026-10-22',
-    update:'2026-10-22：修正服務藍圖的日文標籤檢查，文字拆成兩行時不再被誤判缺漏；同時補回 SVG-only 與 PNG-only 不能一起指定的匯出規則。這是檢查與操作指引修正，沒有新增圖表類型。'
+    source:'https://github.com/cathrynlavery/diagram-design/blob/0b9b10cab3dbf695642fa1a6c4b4f60df9083689/README.md',
+    extraSource:'https://github.com/cathrynlavery/diagram-design/commit/f8d14c7c21b7475317195c7ea2c1fe7fa354cb43',
+    extraSourceLabel:'本次摘要修正',
+    updated:'2026-10-25',
+    update:'2026-10-25：2.6.120 修正 Mermaid 時序圖匯入的文字摘要，現在會列出 else、and、option 的其他分支。例如「檔案有效／否則太大」不再只留下第一條條件，方便 agent 正確理解原圖。JSON 原本已有這些資料，這次修的是摘要呈現，沒有新增圖表類型。'
   },
   {
     slug:'logo-design', repo:'kaankiziltug/logo-design-skill', name:'Logo Design Skill', category:'品牌與設計', kind:'單一 Skill', featured:true,
@@ -104,8 +109,11 @@ export const articles = [
     outputs:'實際前端網站、響應式版面與檢查截圖',
     caveat:'生圖用的品牌板與介面圖工作流程，已移至 imagegen-skills。',
     skill:'https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md',
-    updated:'2026-10-21',
-    update:'2026-10-21：2.1.4 改善多個檢查同時執行時的瀏覽器設定檔清理，避免刪除其他工作仍在使用的資料。這是檢查工具修正，不是新畫風；本站沒有更新你的本機技能。'
+    source:'https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/README.md',
+    extraSource:'https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/CHANGELOG.md',
+    extraSourceLabel:'版本變更紀錄',
+    updated:'2026-10-25',
+    update:'2026-10-25：2.1.5 修正同屬平板尺寸的截圖互相覆蓋；例如 1024px 與 768px 現在各自保留。也改善省略文字的邊界誤判與斜體載入，將圖表及標題中的外來文字安全地當文字顯示，補強鍵盤操作與控制名稱，並要求最後檢查正式建置頁面。這些是檢查可靠性與無障礙指引改善，沒有新增畫風；本站沒有更新你的本機技能，也未執行候選程式。'
   },
   {
     slug:'guizang-material-illustration', repo:'op7418/guizang-material-illustration', name:'歸藏材質插畫', category:'插畫與圖解', kind:'單一 Skill',
@@ -215,7 +223,12 @@ export const articles = [
     requirements:'可用的 ComfyUI、模型和相容的 agent／MCP 設定；依選擇的本機或雲端環境配置。',
     costs:'本機生成使用硬體資源；雲端、模型與 agent 服務依實際方案計費。',
     outputs:'ComfyUI 工作流，以及依模型產生的影像、影片或音訊',
-    caveat:'並非單一免設定生圖 Skill。模型與節點環境仍需要準備。'
+    caveat:'並非單一免設定生圖 Skill。模型與節點環境仍需要準備。作者已移除先前有限維護的公告，這不代表本站已驗證新的維護承諾。',
+    source:'https://github.com/artokun/comfyui-mcp/blob/f61b2d4542e282560ca4df4e01d3cbeecc34396b/README.md',
+    extraSource:'https://github.com/artokun/comfyui-mcp/commit/e40c09e03fb8ba2ef5728ea03ccd39b3b1905705',
+    extraSourceLabel:'本次路徑修正',
+    updated:'2026-10-25',
+    update:'2026-10-25：修正同一安裝目錄因捷徑、目錄連結或 Windows 短路徑而有不同寫法時，被錯認為另一套環境的問題，涵蓋節點與訓練資料路徑檢查。這是安裝辨識與可靠性改善，沒有增加生圖模型或畫風；本站只查閱原始碼差異，未實際測試安裝。'
   },
   {
     slug:'comfyui-custom-nodes', repo:'jtydhr88/comfyui-custom-node-skills', name:'ComfyUI Custom Node Skills', category:'像素與遊戲', kind:'Skill 合集',
@@ -265,13 +278,20 @@ export const articles = [
     title:'把內容、設計與動態，放進同一套工具箱', short:'內容與設計的工具箱',
     dek:'涵蓋生圖、文章呈現、網頁設計與短片的創作流程合集。',
     intro:'Garden Skills 以內容創作與設計為主軸，把不同任務拆成各自的技能。你可以從文章、視覺呈現或動態製作其中一條開始。',
-    process:'目前 README 列出 web-video-presentation、web-design-engineer、gpt-image-2、beautiful-article 與 motion-showreel 等項目。它們的目標與工具條件不同，適合按工作挑選。',
-    example:'把這篇展覽介紹整理成好讀的視覺文章，先確認內容架構，再挑選需要的圖片與動態呈現方式。',
+    process:'目前 README 列出 motion-showreel、web-video-presentation、web-design-engineer、gpt-image-2、beautiful-article 等項目。motion-showreel 用程式安排圖形、文字與介面動態，再逐格擷取成影片；現在也能按章節處理最長 20 分鐘的內容，保留完成章節，修改時只重建需要的部分。',
+    example:'把我提供的三分鐘展覽口播錄音，做成三章圖形動畫。保留講述停頓，讓畫面配合真正的語音時間，背景音樂和音效分開選擇；先確認三張風格畫面，再製作 MP4 與可修改原始檔。',
     fit:'適合跨文章、網頁與動態素材工作的內容設計者。',
-    requirements:'依子技能準備生圖、瀏覽器或程式執行能力。',
-    costs:'agent 和所選外部服務各自計費。',
+    requirements:'依子技能準備生圖、瀏覽器或程式執行能力。motion-showreel 需要 Node 18+、ffmpeg／ffprobe、Playwright 與 Chromium；作者設定使用 sh 腳本，Windows 需相容的 shell。',
+    costs:'agent 和所選外部服務各自計費。動態與內建音樂合成可在本機處理，使用自己的錄音不必呼叫 TTS；選 Gemini、MiniMax 等語音服務時需 API 設定並依服務計費。',
     outputs:'依子技能交付文章頁、設計圖、網頁或影片',
-    caveat:'合集的星數不能直接當作某個子技能的成品品質評分。'
+    caveat:'合集的星數不能直接當作某個子技能的成品品質評分。主圖仍是作者的視覺文章示例，並非本次長片功能的實測畫面；長片速度與實際語音服務未經本站測試。',
+    source:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/README.md',
+    skill:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/skills/motion-showreel/SKILL.md',
+    extraSource:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/skills/motion-showreel/references/long-form.md',
+    extraSourceLabel:'章節式長片說明',
+    authorExample:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/skills/motion-showreel/README.md',
+    updated:'2026-10-25',
+    update:'2026-10-25：motion-showreel 擴充章節式長片、錄音與口播時間軸，新增 TTS、章節快取與失敗後續建工具，風格庫擴至 43 種。語音合成必須使用使用者提供的原稿，畫面跟隨實際音訊；配樂與音效可獨立選擇來源。這是既有合集的實質更新，沒有另發重複文章。'
   },
   {
     slug:'baoyu-skills', image:'baoyu-fresh.webp', imageAlt:'Baoyu Skills 原作者的 fresh 配圖風格示例', repo:'JimLiu/baoyu-skills', name:'Baoyu Skills', category:'插畫與圖解', kind:'Skill 合集',
