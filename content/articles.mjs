@@ -5,7 +5,9 @@ import {newArticles as todayArticles} from './new-2026-10-22.mjs';
 import {newArticles as latestArticles} from './new-2026-10-23.mjs';
 import {newArticles as newOctober24Articles} from './new-2026-10-24.mjs';
 import {newArticles as newOctober25Articles} from './new-2026-10-25.mjs';
+import {newArticles as newOctober26Articles} from './new-2026-10-26.mjs';
 export const articles = [
+  ...newOctober26Articles,
   ...newOctober25Articles,
   ...newOctober24Articles,
   ...latestArticles,
@@ -23,10 +25,14 @@ export const articles = [
     requirements:'能寫程式並看圖的 AI agent、Node；渲染檢查另需 playwright-core 與 Chromium。',
     costs:'SVG 繪圖路線沒有必需的額外生圖 API；AI agent 用量依你的方案計算。',
     outputs:'可編輯 SVG、渲染預覽圖',
-    caveat:'星數屬於整個 MengTo/Skills 合集；不是插畫子技能各自的收藏量。本篇聚焦插畫分區。',
+    caveat:"星數屬於整個 MengTo/Skills 合集，不是子技能各自的人氣。本篇主圖與主要介紹仍聚焦插畫分區；HTML Reel 是本次補充的合集新能力，沒有以本站主圖冒充影片成果。本站未執行候選程式。",
     source:'https://github.com/MengTo/Skills/tree/main/agent-skills/illustration',
     skill:'https://github.com/MengTo/Skills/blob/main/agent-skills/illustration/illustration-grainy-gouache/SKILL.md',
-    extraImage:'mengto-styles.jpg'
+    extraImage:'mengto-styles.jpg',
+    updated:"2026-10-26",
+    extraSource:"https://github.com/MengTo/Skills/blob/a45892d2fdadab75b31fb16abecc02f101b31c43/agent-skills/media/html-reel/SKILL.md",
+    extraSourceLabel:"合集新增 HTML Reel",
+    update:"2026-10-26：同一合集新增 HTML Reel，可把貼文、網頁或影片轉成跟隨口播的 9:16 直式短片，沿用來源字體、配色與事實，讓大字和切鏡落在說到的詞上。先做本機預覽，再透過 Fil MCP 組片；後補真人錄影時，可依實際詞語時間重新對齊。需要 Node、Python、ffmpeg、瀏覽器與 Fil；ElevenLabs 合成語音及 Fil 字幕等用量另計，螢幕錄影路線另用 DreamCut。本篇原有十四種 SVG 插畫仍在，新增的是另一項影片工作流程，未增加插畫畫風。"
   },
   {
     slug:'pixel-art-studio', repo:'Gamezxz/pixel-art-studio', name:'Pixel Art Studio', category:'像素與遊戲', kind:'單一 Skill', featured:true,
@@ -73,11 +79,11 @@ export const articles = [
     outputs:'HTML＋SVG，另可依工具匯出圖片',
     caveat:'作者提供的範例不代表本站已實際測試所有圖表類型。',
     skill:'https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md',
-    source:'https://github.com/cathrynlavery/diagram-design/blob/0b9b10cab3dbf695642fa1a6c4b4f60df9083689/README.md',
-    extraSource:'https://github.com/cathrynlavery/diagram-design/commit/f8d14c7c21b7475317195c7ea2c1fe7fa354cb43',
-    extraSourceLabel:'本次摘要修正',
-    updated:'2026-10-25',
-    update:'2026-10-25：2.6.120 修正 Mermaid 時序圖匯入的文字摘要，現在會列出 else、and、option 的其他分支。例如「檔案有效／否則太大」不再只留下第一條條件，方便 agent 正確理解原圖。JSON 原本已有這些資料，這次修的是摘要呈現，沒有新增圖表類型。'
+    source:"https://github.com/cathrynlavery/diagram-design/blob/10cfad6a7be7f734a92d3d628e5fa344685d4f01/README.md",
+    extraSource:"https://github.com/cathrynlavery/diagram-design/compare/0b9b10cab3dbf695642fa1a6c4b4f60df9083689...10cfad6a7be7f734a92d3d628e5fa344685d4f01",
+    extraSourceLabel:"本次匯入與檢查修正",
+    updated:"2026-10-26",
+    update:"2026-10-26：2.6.128 能匯入帶有邊線 ID 的 Mermaid 流程圖，保留時序圖的自動編號起點、間隔或關閉設定；樣式設定若被捨棄也會明列數量。例如原文提到「步驟 10」時，agent 較不易丟失編號脈絡。另補強未寫完 HTML、亂碼、標籤失衡與熱圖檢查，修正深色背景上箭頭文字的底色指引。不是新增圖表類型，既有配色與向量交付流程仍在。"
   },
   {
     slug:'logo-design', repo:'kaankiziltug/logo-design-skill', name:'Logo Design Skill', category:'品牌與設計', kind:'單一 Skill', featured:true,
@@ -196,8 +202,12 @@ export const articles = [
     costs:'生成服務依帳號方案與模型消耗計費，執行前應先確認報價。',
     outputs:'依子技能交付圖片、動畫、材質、影片或 3D 資產',
     caveat:'這是大型合集，建議只選眼前工作需要的子技能。',
-    updated:'2026-10-22',
-    update:'2026-10-22：Blender 交付檢查會深入材質的節點群組尋找圖片貼圖；模型缺少 UV 時，能正確指出貼圖錯誤，避免當成單色材質警告。屬交付可靠性修正，沒有新增生圖模型。前次收錄的本機 12 秒 Canvas 循環動畫仍可輸出 HTML 與 MP4，需要 Node 18+、ffmpeg／ffprobe 5.1+、Playwright 與瀏覽器；本機循環不需生成 API，額外生成素材另計費。'
+    updated:"2026-10-26",
+    update:"2026-10-26：圖片轉遊戲 3D 道具時，將一萬至五萬三角面的目標擴及各類模型；先讀模型實際可用控制，不支援目標時再減面，最後核對成品面數。這是道具範例的預算，不是所有遊戲的通用標準。下載已儲存的 GLB 時保留原檔，避免同格式重新匯出。Blender 交付檢查也會擋下修改器運算後沒有面的空模型，並補足無外掛時分階段續建的說明。生成依所選模型計費；本站未呼叫生成或執行 Blender。",
+    source:"https://github.com/scenario-labs/skills/blob/e0a051cd6e3a7ce3b27b607f4f859611de0c49df/README.md",
+    skill:"https://github.com/scenario-labs/skills/blob/e0a051cd6e3a7ce3b27b607f4f859611de0c49df/skills/scenario-3d/SKILL.md",
+    extraSource:"https://github.com/scenario-labs/skills/compare/5429dea302ccc7edbce8ace9d5c1fb6852499540...e0a051cd6e3a7ce3b27b607f4f859611de0c49df",
+    extraSourceLabel:"本次 3D 交付修正"
   },
   {
     slug:'fal-skills', repo:'fal-ai-community/skills', name:'fal.ai Skills', category:'影像與影片', kind:'Skill 合集',
@@ -224,11 +234,12 @@ export const articles = [
     costs:'本機生成使用硬體資源；雲端、模型與 agent 服務依實際方案計費。',
     outputs:'ComfyUI 工作流，以及依模型產生的影像、影片或音訊',
     caveat:'並非單一免設定生圖 Skill。模型與節點環境仍需要準備。作者已移除先前有限維護的公告，這不代表本站已驗證新的維護承諾。',
-    source:'https://github.com/artokun/comfyui-mcp/blob/f61b2d4542e282560ca4df4e01d3cbeecc34396b/README.md',
-    extraSource:'https://github.com/artokun/comfyui-mcp/commit/e40c09e03fb8ba2ef5728ea03ccd39b3b1905705',
-    extraSourceLabel:'本次路徑修正',
-    updated:'2026-10-25',
-    update:'2026-10-25：修正同一安裝目錄因捷徑、目錄連結或 Windows 短路徑而有不同寫法時，被錯認為另一套環境的問題，涵蓋節點與訓練資料路徑檢查。這是安裝辨識與可靠性改善，沒有增加生圖模型或畫風；本站只查閱原始碼差異，未實際測試安裝。'
+    source:"https://github.com/artokun/comfyui-mcp/blob/c96916b6f284ee4bbe75e6b9cced9a71a642fbeb/README.md",
+    extraSource:"https://github.com/artokun/comfyui-mcp/compare/f61b2d4542e282560ca4df4e01d3cbeecc34396b...c96916b6f284ee4bbe75e6b9cced9a71a642fbeb",
+    extraSourceLabel:"本次工作流可靠性修正",
+    updated:"2026-10-26",
+    update:"2026-10-26：送出生成前會等待先前的圖表修改得到確認；若結果不明，就先拒絕執行，降低用舊設定出圖的風險。也修正看似寫入、實際由介面控制的 LoRA 欄位，指引改用文字輸入節點連線。新增唯讀的啟停狀態檢查；Windows 不支援單獨 start，停機後可能須由 Desktop 或原啟動器手動開回，重啟流程會先檢查能否恢復。這些是操作可靠性修正，沒有新增生圖模型；本站未實測執行。",
+    skill:"https://github.com/artokun/comfyui-mcp/blob/c96916b6f284ee4bbe75e6b9cced9a71a642fbeb/plugin/skills/comfyui-core/SKILL.md"
   },
   {
     slug:'comfyui-custom-nodes', repo:'jtydhr88/comfyui-custom-node-skills', name:'ComfyUI Custom Node Skills', category:'像素與遊戲', kind:'Skill 合集',
@@ -279,19 +290,19 @@ export const articles = [
     dek:'涵蓋生圖、文章呈現、網頁設計與短片的創作流程合集。',
     intro:'Garden Skills 以內容創作與設計為主軸，把不同任務拆成各自的技能。你可以從文章、視覺呈現或動態製作其中一條開始。',
     process:'目前 README 列出 motion-showreel、web-video-presentation、web-design-engineer、gpt-image-2、beautiful-article 等項目。motion-showreel 用程式安排圖形、文字與介面動態，再逐格擷取成影片；現在也能按章節處理最長 20 分鐘的內容，保留完成章節，修改時只重建需要的部分。',
-    example:'把我提供的三分鐘展覽口播錄音，做成三章圖形動畫。保留講述停頓，讓畫面配合真正的語音時間，背景音樂和音效分開選擇；先確認三張風格畫面，再製作 MP4 與可修改原始檔。',
+    example:"把我提供的三分鐘展覽錄音做成三章圖形動畫。先確認風格，再逐章打開工作區預覽，調低背景音樂、裁短音效，讓我確認畫面與聲音後再匯出 MP4，保留可修改原始檔。",
     fit:'適合跨文章、網頁與動態素材工作的內容設計者。',
     requirements:'依子技能準備生圖、瀏覽器或程式執行能力。motion-showreel 需要 Node 18+、ffmpeg／ffprobe、Playwright 與 Chromium；作者設定使用 sh 腳本，Windows 需相容的 shell。',
     costs:'agent 和所選外部服務各自計費。動態與內建音樂合成可在本機處理，使用自己的錄音不必呼叫 TTS；選 Gemini、MiniMax 等語音服務時需 API 設定並依服務計費。',
     outputs:'依子技能交付文章頁、設計圖、網頁或影片',
     caveat:'合集的星數不能直接當作某個子技能的成品品質評分。主圖仍是作者的視覺文章示例，並非本次長片功能的實測畫面；長片速度與實際語音服務未經本站測試。',
-    source:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/README.md',
-    skill:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/skills/motion-showreel/SKILL.md',
-    extraSource:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/skills/motion-showreel/references/long-form.md',
-    extraSourceLabel:'章節式長片說明',
+    source:"https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/README.md",
+    skill:"https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/motion-showreel/SKILL.md",
+    extraSource:"https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/motion-showreel/references/editor.md",
+    extraSourceLabel:"預覽與音軌工作區",
     authorExample:'https://github.com/ConardLi/garden-skills/blob/ce64df677d4c55a3d1d86805147ff973cd11803f/skills/motion-showreel/README.md',
-    updated:'2026-10-25',
-    update:'2026-10-25：motion-showreel 擴充章節式長片、錄音與口播時間軸，新增 TTS、章節快取與失敗後續建工具，風格庫擴至 43 種。語音合成必須使用使用者提供的原稿，畫面跟隨實際音訊；配樂與音效可獨立選擇來源。這是既有合集的實質更新，沒有另發重複文章。'
+    updated:"2026-10-26",
+    update:"2026-10-26：motion-showreel 新增預設剪輯工作區，完成場景後先預覽真實畫面與聲音，確認後再匯出 MP4。可逐格檢查，分別調整口播、配樂與音效音量，也能拖動、切分與裁剪配樂及音效，支援復原與保存。口播位置仍鎖定；已混成一軌的音訊不能拆回獨立聲音。多頁長片須逐章預覽，並非整片跨頁連播。另可按需提早觀看製作進度，匯出保留檢查紀錄；本機工作區本身沒有新增遠端帳號或生圖費用。"
   },
   {
     slug:'baoyu-skills', image:'baoyu-fresh.webp', imageAlt:'Baoyu Skills 原作者的 fresh 配圖風格示例', repo:'JimLiu/baoyu-skills', name:'Baoyu Skills', category:'插畫與圖解', kind:'Skill 合集',
@@ -368,6 +379,8 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {"file":"3dicon-timer.webp","repo":"samyost1/3dicon","url":"https://raw.githubusercontent.com/samyost1/3dicon/9539d3a79ae6937205bf44f6b102af5ea15b9d49/skills/3dicon/examples/timer/timer.webp","title":"Sam Yost / 3dicon 作者隨附碼錶透明循環動畫，MIT；非本站生成","license":"MIT"},
+  {"file":"iart-motion-showcase.gif","repo":"iart-ai/motion-design-skills","url":"https://raw.githubusercontent.com/iart-ai/motion-design-skills/3c129f769d90a1328c209c386492333c9ac62312/showcase.gif","title":"iart.ai 作者 README 的動態設計展示，MIT；非本站實測","license":"MIT"},
   {file:'pixel-style-poster-lily.png',repo:'v92388375-gif/pixel-style-poster-skill',url:'https://raw.githubusercontent.com/v92388375-gif/pixel-style-poster-skill/b93066b52fc2f32bf9ec3a9a6d379b4088d6fd7b/examples/mint-night-lily.png',title:'Pixel Style Poster Skill 原作者的 Mint Night Lily 百合網點海報；非本站生成',license:'MIT'},
   {file:'blender-concrete.webp',repo:'EL4CTEO/blender-skills',url:'https://raw.githubusercontent.com/EL4CTEO/blender-skills/71d031dab8bc6729504d11a78cbe91945401045f/docs/comparison/media/concrete-hero-skill.webp',title:'EL4CTEO 原作者的水泥牆材質展示；作者比較案例，非本站實測',license:'MIT'},
   {file:'blender-blanket.webp',repo:'EL4CTEO/blender-skills',url:'https://raw.githubusercontent.com/EL4CTEO/blender-skills/71d031dab8bc6729504d11a78cbe91945401045f/docs/comparison/media/blanket-skill-poster.webp',title:'EL4CTEO 原作者的床單模擬展示；非本站實測',license:'MIT'},

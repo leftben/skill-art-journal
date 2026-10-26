@@ -1,5 +1,7 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  '3dicon':{stages:[['concept','確認圖示造型'],['iterate','設計循環動作'],['hologram','透明動畫 WebP']],summary:'先確認立體風格圖示，再生成循環影片並逐格去背；本站功能示意，非模型檔或作者成品。'},
+  'iart-motion-design':{stages:[['designboard','訂定品牌動態'],['timeline','安排節奏與緩動'],['brand','延伸標誌與字卡']],summary:'由品牌方向訂定共用動作規則，延伸網頁與影片；本站功能示意，非作者案例。'},
   'gimi-illustration':{stages:[['document','閱讀中文正文'],['storyboard','安排配圖與風格'],['editorialSet','系列內容插畫']],summary:'依文章挑選插入位置，統一風格並完成系列配圖；本站功能示意，非作者作品或生成實測。'},
   'spine-animation-ai':{stages:[['parts2d','角色透明拆件'],['skeleton2d','對位與建立骨架'],['timeline','動作與預覽輸出']],summary:'把角色拆件對位，接成骨架與關鍵影格，輸出動畫資料及預覽；本站功能示意，非作者實例。'},
   'pixel-style-poster':{stages:[['brief','主題與短句'],['palette','構圖與墨色'],['bitmapPoster','直式網點海報']],summary:'把主題、文字和墨色排成直式海報，保留提示詞便於延伸系列；本站功能示意，非作者作品。'},

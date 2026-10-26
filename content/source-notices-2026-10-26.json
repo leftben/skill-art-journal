@@ -1,0 +1,24 @@
+[
+  {
+    "file": "3dicon-timer.webp",
+    "repo": "samyost1/3dicon",
+    "url": "https://raw.githubusercontent.com/samyost1/3dicon/9539d3a79ae6937205bf44f6b102af5ea15b9d49/skills/3dicon/examples/timer/timer.webp",
+    "title": "Sam Yost / 3dicon 作者隨附碼錶透明循環動畫，MIT；非本站生成",
+    "license": "MIT License\n\nCopyright (c) 2026 Sam Yost\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "sourceBlob": "090f9df4cdfc8cf8d428bb5492c33158a8f63eaa",
+    "downloadedBlob": "090f9df4cdfc8cf8d428bb5492c33158a8f63eaa",
+    "licenseURL": "https://raw.githubusercontent.com/samyost1/3dicon/9539d3a79ae6937205bf44f6b102af5ea15b9d49/LICENSE",
+    "review": "First-party README/repo example under root MIT; no image exclusion found. Original bytes preserved, attribution and full license retained. Not a journal-generated work."
+  },
+  {
+    "file": "iart-motion-showcase.gif",
+    "repo": "iart-ai/motion-design-skills",
+    "url": "https://raw.githubusercontent.com/iart-ai/motion-design-skills/3c129f769d90a1328c209c386492333c9ac62312/showcase.gif",
+    "title": "iart.ai 作者 README 的動態設計展示，MIT；非本站實測",
+    "license": "MIT License\n\nCopyright (c) 2026 iart.ai\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "sourceBlob": "f558cad7baea3f29aca1392f537d365de837cb57",
+    "downloadedBlob": "f558cad7baea3f29aca1392f537d365de837cb57",
+    "licenseURL": "https://raw.githubusercontent.com/iart-ai/motion-design-skills/3c129f769d90a1328c209c386492333c9ac62312/LICENSE",
+    "review": "First-party README/repo example under root MIT; no image exclusion found. Original bytes preserved, attribution and full license retained. Not a journal-generated work."
+  }
+]
