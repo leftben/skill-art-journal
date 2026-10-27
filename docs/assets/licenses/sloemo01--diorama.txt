@@ -1,0 +1,78 @@
+MIT License
+
+Copyright (c) 2026 Nehal Kanak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+--- templates/CREDITS.md ---
+
+# Credits
+
+Every imported asset gets a line here: what it is, where it came from, who made
+it, and the licence. Delete the examples once real rows are in.
+
+| Asset | File | Source | Author | Licence |
+| --- | --- | --- | --- | --- |
+| hero fighter rig (skinned) | `assets/knight.glb` | https://poly.pizza/m/xxxx | @author | CC0 |
+| stall awning texture | `assets/awning.glb` | https://sketchfab.com/3d-models/xxxx | @author | CC-BY 4.0 |
+| crow animation clips | `assets/crow.anim.glb` | user-supplied | — | owned by client |
+
+## Rules
+
+- **Allowed:** CC0, public domain, CC-BY with attribution, assets the user owns
+  or supplied, and AI-generated meshes the user commissioned (Meshy, Tripo, etc).
+- **Not allowed without asking:** anything NC, ND, "editorial use only", ripped
+  from a game, or with no stated licence. Ask the user; do not guess.
+- CC-BY needs visible attribution in the page footer or an `About` line, not just
+  this file.
+- Record the URL you actually downloaded from, and the date, because listings
+  move.
+- Note the edits you made: retopology, reskin, rescaled, root motion stripped.
+
+
+--- verify/water/README.md ---
+
+# Water harness
+
+A working scene for `water.js`, `wake.js` and `splash.js`, and a worked example
+of the QA loop. No story, no cast: two swimmers crossing a pool on a sine, a
+timed splash, and the post pass.
+
+```bash
+npm i three esbuild playwright-core     # or link a project that already has them
+node build.mjs                          # dist/app.js + index.html
+python3 -m http.server 4181 &
+BASE_URL=http://127.0.0.1:4181/index.html QA_DIR=shots SHOTS="1.75:splash" \
+  node ../../templates/qa/shoot.mjs     # copy the qa folder into the root first
+```
+
+## What the verification found
+
+- `water.js` is sound: the vertex ramp reads as depth provided the pool's shallow
+  to deep axis matches the plane's local X, and the basin under it is dark. A deck
+  box spanning the whole slab puts beige under the water and the surface reads as
+  a stain, which is a scene bug, not an effect bug.
+- `wake.js` works; rings are pooled and one `spawn` tick is shared by every
+  swimmer, so more than four bodies will exhaust the ring pool.
+- `splash.js` used `Math.random` in `trigger`, so two identical frames never
+  matched. It now takes a `burstSeed`. Both effects also gained `reset()`: they
+  integrate `dt`, so freezing the clock does not reset them, and a frozen frame
+  showed the last played state. Re-simulating from zero in fixed steps took a
+  two-frame diff from 334 differing pixels to 18.

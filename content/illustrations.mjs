@@ -1,5 +1,7 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'brand-identity':{stages:[['moodboard','品牌需求與方向'],['designboard','比較標誌字體配色'],['folder','選定後交付規範']],summary:'同一個品牌想法產生標誌、字體與配色，先比較再製作完整規範。'},
+  'diorama':{stages:[['storyboard','觀察場景與動作'],['gamecollection','搭建角色與小舞台'],['iterate','逐角色檢查動畫']],summary:'研究動作、搭建固定鏡頭的像素風 3D 微縮場景，逐角色檢查循環。'},
   '3dicon':{stages:[['concept','確認圖示造型'],['iterate','設計循環動作'],['hologram','透明動畫 WebP']],summary:'先確認立體風格圖示，再生成循環影片並逐格去背；本站功能示意，非模型檔或作者成品。'},
   'iart-motion-design':{stages:[['designboard','訂定品牌動態'],['timeline','安排節奏與緩動'],['brand','延伸標誌與字卡']],summary:'由品牌方向訂定共用動作規則，延伸網頁與影片；本站功能示意，非作者案例。'},
   'gimi-illustration':{stages:[['document','閱讀中文正文'],['storyboard','安排配圖與風格'],['editorialSet','系列內容插畫']],summary:'依文章挑選插入位置，統一風格並完成系列配圖；本站功能示意，非作者作品或生成實測。'},

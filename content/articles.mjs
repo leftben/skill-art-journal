@@ -6,7 +6,9 @@ import {newArticles as latestArticles} from './new-2026-10-23.mjs';
 import {newArticles as newOctober24Articles} from './new-2026-10-24.mjs';
 import {newArticles as newOctober25Articles} from './new-2026-10-25.mjs';
 import {newArticles as newOctober26Articles} from './new-2026-10-26.mjs';
+import {newArticles as newOctober27Articles} from './new-2026-10-27.mjs';
 export const articles = [
+  ...newOctober27Articles,
   ...newOctober26Articles,
   ...newOctober25Articles,
   ...newOctober24Articles,
@@ -78,12 +80,12 @@ export const articles = [
     costs:'技能本身可取得，agent、字體或其他外部資源依你使用的服務計費。',
     outputs:'HTML＋SVG，另可依工具匯出圖片',
     caveat:'作者提供的範例不代表本站已實際測試所有圖表類型。',
-    skill:'https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md',
-    source:"https://github.com/cathrynlavery/diagram-design/blob/10cfad6a7be7f734a92d3d628e5fa344685d4f01/README.md",
-    extraSource:"https://github.com/cathrynlavery/diagram-design/compare/0b9b10cab3dbf695642fa1a6c4b4f60df9083689...10cfad6a7be7f734a92d3d628e5fa344685d4f01",
-    extraSourceLabel:"本次匯入與檢查修正",
-    updated:"2026-10-26",
-    update:"2026-10-26：2.6.128 能匯入帶有邊線 ID 的 Mermaid 流程圖，保留時序圖的自動編號起點、間隔或關閉設定；樣式設定若被捨棄也會明列數量。例如原文提到「步驟 10」時，agent 較不易丟失編號脈絡。另補強未寫完 HTML、亂碼、標籤失衡與熱圖檢查，修正深色背景上箭頭文字的底色指引。不是新增圖表類型，既有配色與向量交付流程仍在。"
+    skill:"https://github.com/cathrynlavery/diagram-design/blob/97d795138448f6a739a0cebc3d9beb37a42077f1/skills/diagram-design/SKILL.md",
+    source:"https://github.com/cathrynlavery/diagram-design/blob/97d795138448f6a739a0cebc3d9beb37a42077f1/README.md",
+    extraSource:"https://github.com/cathrynlavery/diagram-design/compare/10cfad6a7be7f734a92d3d628e5fa344685d4f01...97d795138448f6a739a0cebc3d9beb37a42077f1",
+    extraSourceLabel:"匯入文字與巢狀群組修正",
+    updated:"2026-10-27",
+    update:"2026-10-27：2.6.131 修正 draw.io 匯入時誤刪角括號文字的問題，像 List<String> 或 a < b > c 能保留下來；HTML 格式標籤才會按規則轉為純文字。Excalidraw 的外層群組也會被辨識，即使成員同時在內層群組，摘要仍只列前八個排序後候選。另改寫範例註解，修復 Hermes Agent 安裝掃描誤擋。屬於匯入保真度與相容性修正，未增加圖表類型。",
   },
   {
     slug:'logo-design', repo:'kaankiziltug/logo-design-skill', name:'Logo Design Skill', category:'品牌與設計', kind:'單一 Skill', featured:true,
@@ -202,12 +204,12 @@ export const articles = [
     costs:'生成服務依帳號方案與模型消耗計費，執行前應先確認報價。',
     outputs:'依子技能交付圖片、動畫、材質、影片或 3D 資產',
     caveat:'這是大型合集，建議只選眼前工作需要的子技能。',
-    updated:"2026-10-26",
-    update:"2026-10-26：圖片轉遊戲 3D 道具時，將一萬至五萬三角面的目標擴及各類模型；先讀模型實際可用控制，不支援目標時再減面，最後核對成品面數。這是道具範例的預算，不是所有遊戲的通用標準。下載已儲存的 GLB 時保留原檔，避免同格式重新匯出。Blender 交付檢查也會擋下修改器運算後沒有面的空模型，並補足無外掛時分階段續建的說明。生成依所選模型計費；本站未呼叫生成或執行 Blender。",
-    source:"https://github.com/scenario-labs/skills/blob/e0a051cd6e3a7ce3b27b607f4f859611de0c49df/README.md",
-    skill:"https://github.com/scenario-labs/skills/blob/e0a051cd6e3a7ce3b27b607f4f859611de0c49df/skills/scenario-3d/SKILL.md",
-    extraSource:"https://github.com/scenario-labs/skills/compare/5429dea302ccc7edbce8ace9d5c1fb6852499540...e0a051cd6e3a7ce3b27b607f4f859611de0c49df",
-    extraSourceLabel:"本次 3D 交付修正"
+    updated:"2026-10-27",
+    update:"2026-10-27：0.60.0 新增影片動作捕捉 Skill，可把手機拍攝的人體動作轉成角色動畫，或只取標準骨架上的動作再重定向。既有角色骨架要保留時，應走動作檔與骨骼對應流程；自動綁定路線不會直接沿用原骨架。例如將八秒舞蹈交給遊戲角色，先檢查全身與腳掌是否入鏡，再檢查朝向、落腳及循環接點。另補上綠／藍幕去背：透明成品選 WebM 或 ProRes 4444 MOV，MP4 只能合成實色背景。純文字 3D 路線也已寫入指引，可直接描述寶箱並命名蓋子、箱體和鎖；圖片轉 3D 仍有較多可選模型。Blender 匯出新增實際尺寸與落地樞紐、金屬度／粗糙度貼圖檢查，以及減面時避免 UV 接縫裂開。生成、動捕及影片處理按模型與片長計費，需 Scenario MCP 與帳號；本次只核實文件與差異，未執行生成。",
+    source:"https://github.com/scenario-labs/skills/blob/72b763c162266948f06f299b8aecfdf9f74a4779/README.md",
+    skill:"https://github.com/scenario-labs/skills/blob/72b763c162266948f06f299b8aecfdf9f74a4779/skills/scenario-video-to-motion/SKILL.md",
+    extraSource:"https://github.com/scenario-labs/skills/compare/e0a051cd6e3a7ce3b27b607f4f859611de0c49df...72b763c162266948f06f299b8aecfdf9f74a4779",
+    extraSourceLabel:"動作捕捉、去背與 3D 交付更新",
   },
   {
     slug:'fal-skills', repo:'fal-ai-community/skills', name:'fal.ai Skills', category:'影像與影片', kind:'Skill 合集',
@@ -234,11 +236,11 @@ export const articles = [
     costs:'本機生成使用硬體資源；雲端、模型與 agent 服務依實際方案計費。',
     outputs:'ComfyUI 工作流，以及依模型產生的影像、影片或音訊',
     caveat:'並非單一免設定生圖 Skill。模型與節點環境仍需要準備。作者已移除先前有限維護的公告，這不代表本站已驗證新的維護承諾。',
-    source:"https://github.com/artokun/comfyui-mcp/blob/c96916b6f284ee4bbe75e6b9cced9a71a642fbeb/README.md",
-    extraSource:"https://github.com/artokun/comfyui-mcp/compare/f61b2d4542e282560ca4df4e01d3cbeecc34396b...c96916b6f284ee4bbe75e6b9cced9a71a642fbeb",
-    extraSourceLabel:"本次工作流可靠性修正",
-    updated:"2026-10-26",
-    update:"2026-10-26：送出生成前會等待先前的圖表修改得到確認；若結果不明，就先拒絕執行，降低用舊設定出圖的風險。也修正看似寫入、實際由介面控制的 LoRA 欄位，指引改用文字輸入節點連線。新增唯讀的啟停狀態檢查；Windows 不支援單獨 start，停機後可能須由 Desktop 或原啟動器手動開回，重啟流程會先檢查能否恢復。這些是操作可靠性修正，沒有新增生圖模型；本站未實測執行。",
+    source:"https://github.com/artokun/comfyui-mcp/blob/5bfe534ed114c3037137b3fabd209011238e9d10/README.md",
+    extraSource:"https://github.com/artokun/comfyui-mcp/compare/c96916b6f284ee4bbe75e6b9cced9a71a642fbeb...5bfe534ed114c3037137b3fabd209011238e9d10",
+    extraSourceLabel:"pi 連線與 Windows 設定判讀修正",
+    updated:"2026-10-27",
+    update:"2026-10-27：pi 後端修正兩種誤判：Windows PowerShell 寫出的設定若帶 UTF-8 BOM，不再被錯認為沒有可用憑證；使用者已替 pi 設好 MCP 橋接時，也不再一概告訴模型「沒有 ComfyUI 工具」，而是依實際取得的工具清單操作。沒有橋接的原始 pi 仍維持原限制。適合遇到連線明明已設好、agent 卻拒絕操作的人留意；這不是新增生圖模型，也不保證設定檔存在就代表伺服器連線成功。",
     skill:"https://github.com/artokun/comfyui-mcp/blob/c96916b6f284ee4bbe75e6b9cced9a71a642fbeb/plugin/skills/comfyui-core/SKILL.md"
   },
   {
@@ -266,10 +268,12 @@ export const articles = [
     costs:'agent 與渲染環境另計；Remotion 的商業授權條件請以官方規定為準。',
     outputs:'影片程式、預覽、影片或靜態畫面',
     caveat:'技能是製作指引，並不取代影片引擎和相關授權。',
-    updated:'2026-10-23',
-    update:'2026-10-23：4.0.538 補強影片效能指引：把逐格更新限制在真正需要動態的音量、字卡和覆蓋圖層，減少整個場景跟著重畫；拆分時仍要保留正確時間座標與可編輯的插值。效果清單也補上長陰影 longShadows。這是製作指引更新，並非新增時間軸編輯器。',
-    source:'https://github.com/remotion-dev/skills/blob/6c67adcd9cdbe6eb84d76342da89b225f9161cb2/README.md',
-    skill:'https://github.com/remotion-dev/skills/blob/6c67adcd9cdbe6eb84d76342da89b225f9161cb2/skills/remotion-markup/SKILL.md'
+    updated:"2026-10-27",
+    update:"2026-10-27：4.0.539 的技能文件補齊色階、調色曲線及 Studio 操作。例如替展覽短片提亮中間調，再只調整紅色通道，保持透明區域；圖形編輯器可顯示直方圖並拖曳曲線點。指引明確說這些引擎功能從 4.0.537 已可使用，這次是教學補強，不能說今天才新增調色器。色階數值與曲線強度可在 Studio 設關鍵影格，曲線控制點動畫則需程式處理。React／Remotion 與渲染環境仍需準備，商業授權另依官方條件。",
+    source:"https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/README.md",
+    skill:"https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/skills/remotion-markup/SKILL.md",
+    extraSource:"https://github.com/remotion-dev/skills/blob/30d4553ecd46fbc5212fd0ff006ae43af522158b/skills/remotion-markup/color-correction.md",
+    extraSourceLabel:"色階與曲線調色指引",
   },
   {
     slug:'imagegen-skills', repo:'Leonxlnx/imagegen-skills', name:'Imagegen Skills', category:'品牌與設計', kind:'Skill 合集',
@@ -329,10 +333,11 @@ export const articles = [
     costs:'主要依 agent 使用量計算，外部服務另計。',
     outputs:'設計系統建議與介面程式',
     caveat:'仍需使用真實內容檢查可用性；資料庫建議不等於經過使用者測試。',
-    updated:'2026-10-23',
-    update:'2026-10-23：安裝工具新增 Kimi Code 平台與資料夾偵測，並修正 Windows 換行與測試命令造成資料驗證失敗的問題。這是平台相容性與維護改善，沒有新增設計風格；作者提交說明也註明未實際執行 Kimi Code。',
-    source:'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/04cfb449bd8494811ad63e94172a308fa25a551a/README.md',
-    extraSource:'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/compare/623a9a9037d006ea727f8213f084d02a6b6f11b5...04cfb449bd8494811ad63e94172a308fa25a551a'
+    updated:"2026-10-27",
+    update:"2026-10-27：搜尋 React 3D 介面或 React 2FA 驗證畫面時，不再把 3d、2fa 的開頭數字誤認為 React 3／2 版本，避免只查到過時建議或沒有結果。另修正舊版下載成功後暫存目錄未清理。屬於查詢與維護修正，沒有新增設計風格；本站未執行候選程式。",
+    source:"https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/28b3b8dee8c976df4fa3e94aed4e092ad43fcb03/README.md",
+    extraSource:"https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/compare/d14efff8ed1faa4187f004f79926f428c8074ec7...28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+    extraSourceLabel:"3D 與 2FA 搜尋字詞修正",
   },
   {
     slug:'stitch-skills', repo:'google-labs-code/stitch-skills', name:'Stitch Design Skills', category:'網頁與介面', kind:'Skill 合集',
@@ -379,6 +384,8 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {file:'brand-identity-fernhill.jpg',repo:'fatihaydost/brand-identity-skill',url:'https://raw.githubusercontent.com/fatihaydost/brand-identity-skill/532742d7477dba3b744433adf92845642953dc28/docs/images/fernhill-board.jpg',title:'Fatih Aydost / 虛構 Fernhill Books 品牌比較板，保留 MIT 與商標聲明；非本站實測',license:'MIT'},
+  {file:'diorama-pool.gif',repo:'sloemo01/diorama',url:'https://raw.githubusercontent.com/sloemo01/diorama/37739e804f67f4bcb445da635e6bedb060c704c6/media/pool.gif',title:'Nehal Kanak / Diorama 作者提供的泳池場景動畫，MIT；非本站生成',license:'MIT'},
   {"file":"3dicon-timer.webp","repo":"samyost1/3dicon","url":"https://raw.githubusercontent.com/samyost1/3dicon/9539d3a79ae6937205bf44f6b102af5ea15b9d49/skills/3dicon/examples/timer/timer.webp","title":"Sam Yost / 3dicon 作者隨附碼錶透明循環動畫，MIT；非本站生成","license":"MIT"},
   {"file":"iart-motion-showcase.gif","repo":"iart-ai/motion-design-skills","url":"https://raw.githubusercontent.com/iart-ai/motion-design-skills/3c129f769d90a1328c209c386492333c9ac62312/showcase.gif","title":"iart.ai 作者 README 的動態設計展示，MIT；非本站實測","license":"MIT"},
   {file:'pixel-style-poster-lily.png',repo:'v92388375-gif/pixel-style-poster-skill',url:'https://raw.githubusercontent.com/v92388375-gif/pixel-style-poster-skill/b93066b52fc2f32bf9ec3a9a6d379b4088d6fd7b/examples/mint-night-lily.png',title:'Pixel Style Poster Skill 原作者的 Mint Night Lily 百合網點海報；非本站生成',license:'MIT'},
