@@ -7,7 +7,9 @@ import {newArticles as newOctober24Articles} from './new-2026-10-24.mjs';
 import {newArticles as newOctober25Articles} from './new-2026-10-25.mjs';
 import {newArticles as newOctober26Articles} from './new-2026-10-26.mjs';
 import {newArticles as newOctober27Articles} from './new-2026-10-27.mjs';
+import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 export const articles = [
+  ...newOctober28Articles,
   ...newOctober27Articles,
   ...newOctober26Articles,
   ...newOctober25Articles,
@@ -80,12 +82,12 @@ export const articles = [
     costs:'技能本身可取得，agent、字體或其他外部資源依你使用的服務計費。',
     outputs:'HTML＋SVG，另可依工具匯出圖片',
     caveat:'作者提供的範例不代表本站已實際測試所有圖表類型。',
-    skill:"https://github.com/cathrynlavery/diagram-design/blob/97d795138448f6a739a0cebc3d9beb37a42077f1/skills/diagram-design/SKILL.md",
-    source:"https://github.com/cathrynlavery/diagram-design/blob/97d795138448f6a739a0cebc3d9beb37a42077f1/README.md",
-    extraSource:"https://github.com/cathrynlavery/diagram-design/compare/10cfad6a7be7f734a92d3d628e5fa344685d4f01...97d795138448f6a739a0cebc3d9beb37a42077f1",
-    extraSourceLabel:"匯入文字與巢狀群組修正",
-    updated:"2026-10-27",
-    update:"2026-10-27：2.6.131 修正 draw.io 匯入時誤刪角括號文字的問題，像 List<String> 或 a < b > c 能保留下來；HTML 格式標籤才會按規則轉為純文字。Excalidraw 的外層群組也會被辨識，即使成員同時在內層群組，摘要仍只列前八個排序後候選。另改寫範例註解，修復 Hermes Agent 安裝掃描誤擋。屬於匯入保真度與相容性修正，未增加圖表類型。",
+    skill:"https://github.com/cathrynlavery/diagram-design/blob/0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1/skills/diagram-design/SKILL.md",
+    source:"https://github.com/cathrynlavery/diagram-design/blob/0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1/README.md",
+    extraSource:"https://github.com/cathrynlavery/diagram-design/blob/0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1/skills/diagram-design/references/type-scatter.md#box-plot",
+    extraSourceLabel:"新增箱形圖與資料檢查規則",
+    updated:"2026-10-28",
+    update:"2026-10-28：2.6.136 新增橫向箱形圖，讓三至八組資料共用同一把尺，比較中位數、集中範圍和離群值。例如比較五款遊戲的關卡完成時間，不只看平均值，也能看出哪款遊戲的玩家差異最大。這是 Scatter 類別的新變體，並非另外增加一個頂層圖表類型。隨附檢查器會核對箱體、中央線、鬚線和離群點是否對得上資料，並限制一組重點色；不應為排版好看而挪動數據位置。同批修正主連接線與箭頭顏色不一致、單引號 SVG 屬性漏檢、爆炸圖 CSS 位移漏檢，以及 Windows 換行造成檢查測試失敗。原有 draw.io 角括號文字與 Excalidraw 群組匯入修正仍保留。成本與工具條件沿用原文；本次核實文件及差異，未執行候選檢查器。",
   },
   {
     slug:'logo-design', repo:'kaankiziltug/logo-design-skill', name:'Logo Design Skill', category:'品牌與設計', kind:'單一 Skill', featured:true,
@@ -384,6 +386,7 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {"file":"pixel2motion-horizon.gif","repo":"nolangz/pixel2motion","url":"https://raw.githubusercontent.com/nolangz/pixel2motion/e9faedb28930df0da2acf17da00c80730a78cfe8/docs/gifs/claude-horizon.gif","title":"Nolan Lai / Pixel2Motion 作者 README 的 Horizon 標誌動畫，MIT；非本站實測","license":"MIT"},
   {file:'brand-identity-fernhill.jpg',repo:'fatihaydost/brand-identity-skill',url:'https://raw.githubusercontent.com/fatihaydost/brand-identity-skill/532742d7477dba3b744433adf92845642953dc28/docs/images/fernhill-board.jpg',title:'Fatih Aydost / 虛構 Fernhill Books 品牌比較板，保留 MIT 與商標聲明；非本站實測',license:'MIT'},
   {file:'diorama-pool.gif',repo:'sloemo01/diorama',url:'https://raw.githubusercontent.com/sloemo01/diorama/37739e804f67f4bcb445da635e6bedb060c704c6/media/pool.gif',title:'Nehal Kanak / Diorama 作者提供的泳池場景動畫，MIT；非本站生成',license:'MIT'},
   {"file":"3dicon-timer.webp","repo":"samyost1/3dicon","url":"https://raw.githubusercontent.com/samyost1/3dicon/9539d3a79ae6937205bf44f6b102af5ea15b9d49/skills/3dicon/examples/timer/timer.webp","title":"Sam Yost / 3dicon 作者隨附碼錶透明循環動畫，MIT；非本站生成","license":"MIT"},

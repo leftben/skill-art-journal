@@ -75,5 +75,16 @@
       "iart-motion-design",
       "3dicon"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "version": "1.0",
+    "slugs": [
+      "pixel2motion",
+      "brand-identity",
+      "comfyui-mcp",
+      "diorama",
+      "remotion"
+    ]
   }
 ]

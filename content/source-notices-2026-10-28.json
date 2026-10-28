@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "assets": [
+    {
+      "local": "C:/Users/leftbenhuang/Documents/Codex/2026-10-28/github-ai-skills-3d-c-users/outputs/discovery-assets/pixel2motion-horizon.gif",
+      "destination": "public/assets/pixel2motion-horizon.gif",
+      "source": "https://raw.githubusercontent.com/nolangz/pixel2motion/e9faedb28930df0da2acf17da00c80730a78cfe8/docs/gifs/claude-horizon.gif",
+      "sourcePage": "https://github.com/nolangz/pixel2motion/blob/e9faedb28930df0da2acf17da00c80730a78cfe8/docs/gifs/claude-horizon.gif",
+      "gitBlobExpected": "b05161d70b4d46ff08b1c61347ce1c4f7aa91390",
+      "gitBlobActual": "b05161d70b4d46ff08b1c61347ce1c4f7aa91390",
+      "license": "https://github.com/nolangz/pixel2motion/blob/e9faedb28930df0da2acf17da00c80730a78cfe8/LICENSE",
+      "licenseFile": "C:/Users/leftbenhuang/Documents/Codex/2026-10-28/github-ai-skills-3d-c-users/outputs/discovery-assets/nolangz--pixel2motion--LICENSE.txt",
+      "interpretation": "Root MIT (Copyright 2026 Nolan Lai) covers associated repository documentation; no separate image exceptions or asset notices found in recursive tree or README. Preserve unchanged README demo with complete MIT notice and author/source attribution. License does not grant third-party trademarks."
+    }
+  ]
+}
