@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'sprite-gen':{stages:[['character','角色原圖與動作'],['frames','生成去背並挑影格'],['sprites','透明圖集與時間資料']],summary:'由角色原圖分動作生成，再去背、對齊與挑選影格，交付透明動畫圖集；本站功能示意，非生成實測。'},
   'pixel2motion':{stages:[['brief','既有標誌與品牌個性'],['mark','重建分層向量'],['timeline','編排動作並看影格']],summary:'將既有點陣標誌重建為可修改的 SVG，分部件編排動畫，再比對輪廓與關鍵影格。'},
   'brand-identity':{stages:[['moodboard','品牌需求與方向'],['designboard','比較標誌字體配色'],['folder','選定後交付規範']],summary:'同一個品牌想法產生標誌、字體與配色，先比較再製作完整規範。'},
   'diorama':{stages:[['storyboard','觀察場景與動作'],['gamecollection','搭建角色與小舞台'],['iterate','逐角色檢查動畫']],summary:'研究動作、搭建固定鏡頭的像素風 3D 微縮場景，逐角色檢查循環。'},

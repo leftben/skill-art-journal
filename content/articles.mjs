@@ -8,7 +8,9 @@ import {newArticles as newOctober25Articles} from './new-2026-10-25.mjs';
 import {newArticles as newOctober26Articles} from './new-2026-10-26.mjs';
 import {newArticles as newOctober27Articles} from './new-2026-10-27.mjs';
 import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
+import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 export const articles = [
+  ...newOctober29Articles,
   ...newOctober28Articles,
   ...newOctober27Articles,
   ...newOctober26Articles,
@@ -386,6 +388,7 @@ export const articles = [
 ];
 
 export const assetSources = [
+  {"file":"sprite-gen-paladin.gif","repo":"aldegad/sprite-gen","url":"https://raw.githubusercontent.com/aldegad/sprite-gen/419f02cd54b4181e33689759d4ee9c1ef0006301/docs/assets/attack-paladin.gif","title":"Alex Kim / Sprite Gen 作者提供的聖騎士攻擊循環；Apache-2.0，非本站實測","license":"Apache-2.0","noticeUrl":"https://github.com/aldegad/sprite-gen/blob/419f02cd54b4181e33689759d4ee9c1ef0006301/NOTICE"},
   {"file":"pixel2motion-horizon.gif","repo":"nolangz/pixel2motion","url":"https://raw.githubusercontent.com/nolangz/pixel2motion/e9faedb28930df0da2acf17da00c80730a78cfe8/docs/gifs/claude-horizon.gif","title":"Nolan Lai / Pixel2Motion 作者 README 的 Horizon 標誌動畫，MIT；非本站實測","license":"MIT"},
   {file:'brand-identity-fernhill.jpg',repo:'fatihaydost/brand-identity-skill',url:'https://raw.githubusercontent.com/fatihaydost/brand-identity-skill/532742d7477dba3b744433adf92845642953dc28/docs/images/fernhill-board.jpg',title:'Fatih Aydost / 虛構 Fernhill Books 品牌比較板，保留 MIT 與商標聲明；非本站實測',license:'MIT'},
   {file:'diorama-pool.gif',repo:'sloemo01/diorama',url:'https://raw.githubusercontent.com/sloemo01/diorama/37739e804f67f4bcb445da635e6bedb060c704c6/media/pool.gif',title:'Nehal Kanak / Diorama 作者提供的泳池場景動畫，MIT；非本站生成',license:'MIT'},

@@ -86,5 +86,16 @@
       "diorama",
       "remotion"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "version": "1.0",
+    "slugs": [
+      "sprite-gen",
+      "logo-design",
+      "diagram-design",
+      "anatomy",
+      "pixel2motion"
+    ]
   }
 ]
