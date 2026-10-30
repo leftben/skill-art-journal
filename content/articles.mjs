@@ -9,7 +9,9 @@ import {newArticles as newOctober26Articles} from './new-2026-10-26.mjs';
 import {newArticles as newOctober27Articles} from './new-2026-10-27.mjs';
 import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
+import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+  ...newOctober30Articles,
   ...newOctober29Articles,
   ...newOctober28Articles,
   ...newOctober27Articles,
