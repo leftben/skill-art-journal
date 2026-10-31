@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "assets": [
+    {
+      "file": "srt-whiteboard-monkey.gif",
+      "repo": "geeklee/srt-whiteboard-animation",
+      "url": "https://raw.githubusercontent.com/geeklee/srt-whiteboard-animation/696a7243c0e6ffb6827676e539c2ca5ebae2bf6b/examples/scene-01-monkey-mountain-stream.gif",
+      "license": "MIT License\n\nCopyright (c) 2026 江哥是老登啊\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "gitBlob": "159c74ae4b565189667f82aad444de2f38dae0e8",
+      "bytes": 5334090,
+      "modified": false,
+      "interpretation": "README 宣告專案 MIT，根授權未排除範例圖片，依此保存原圖、完整聲明及來源；圖片為作者示例，非本站實測。"
+    }
+  ]
+}

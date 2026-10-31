@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+  'srt-whiteboard-animation':{stages:[['document','字幕與敘事分鏡'],['sketch','線稿分區與時序'],['video','落筆上色成影片']],summary:'把字幕對應線稿分區，依故事先後落筆與上色；本站功能示意，非作者成品或執行結果。'},
   'blender-production-skills':{stages:[['concept','拆解參考與鏡頭'],['mesh','原生白模與結構'],['browsercheck','多視角比對再細化']],summary:'參考圖拆成鏡頭與空間，先建可修改白模，再以多視角檢查材質與場景；本站功能示意，非作者成果。'},
   'sprite-gen':{stages:[['character','角色原圖與動作'],['frames','生成去背並挑影格'],['sprites','透明圖集與時間資料']],summary:'由角色原圖分動作生成，再去背、對齊與挑選影格，交付透明動畫圖集；本站功能示意，非生成實測。'},
   'pixel2motion':{stages:[['brief','既有標誌與品牌個性'],['mark','重建分層向量'],['timeline','編排動作並看影格']],summary:'將既有點陣標誌重建為可修改的 SVG，分部件編排動畫，再比對輪廓與關鍵影格。'},

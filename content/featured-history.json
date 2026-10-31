@@ -108,5 +108,16 @@
       "aseprite-ai-artist",
       "blender-production-skills"
     ]
+  },
+  {
+    "date": "2026-10-31",
+    "version": "1.0",
+    "slugs": [
+      "baoyu-skills",
+      "blender-agent-skills",
+      "srt-whiteboard-animation",
+      "brand-identity",
+      "diorama"
+    ]
   }
 ]

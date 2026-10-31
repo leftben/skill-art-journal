@@ -19,7 +19,7 @@ export const newArticles = [
     "requirements": "CPython 3.11+ 與專用虛擬環境、Pillow、NumPy；生成需支援的 Codex／Grok 工具與自己的登入或 API 憑證。影片流程另需 ffmpeg、img2webp；走跑修補與多方向週期對齊使用 RIFE，缺少時會警告並保留原拍攝切法。部分進階臉部流程需要 Node。作者 CI 僅跑 Python 3.14，並非每個版本與作業系統都已測試。 新版自動填補停格與提高輸出幀率也需要 RIFE；可用 --fill-held off 保留原切法。",
     "costs": "專案採 Apache-2.0，但角色生圖與影片並非免費保證：作者提供使用既有訂閱登入或自備 API 金鑰的路線，依帳號額度及供應商計費；影片重拍、多方向重做會增加成本。單純處理既有素材可在本機執行，仍有 agent、運算與人工檢視成本。選用 OpenAI API 或 ElevenLabs 聲音功能另有費用，本次沒有呼叫任何生成服務。",
     "outputs": "透明 sprite-sheet-alpha.png、含影格座標與播放資料的 manifest.json、逐動作透明 GIF／WebP／長條圖、檢查接觸表；可選 Aseprite 相容 JSON 供 Phaser／Flame 等引擎讀取",
-    "caveat": "2026-10-29 首次收錄，10 月 30 日實質更新原文至核對的 3.9.0；不是本日首次發布。新版會保留長停頓、辨識出的二拍／三拍動畫與部分首尾影格，補間不合格時可能保留原格並警告；提高幀率也可能退回來源格，不能保證每格都是成功補間。側向辨識可能判錯，生成提示也不保證角色始終朝對方向；鏡像會交換不對稱配件。走跑循環仍需通過實際動態檢查。export-aseprite 產生的是相容 JSON，不是可編輯的 .aseprite 原始檔。作者展示不能當成每次都能得到的品質保證，原圖與第三方角色權利須自行確認。",
+    "caveat": "2026-10-29 首次收錄，10 月 30 日核對 3.9.0，10 月 31 日實質更新至 3.13.0；不是本日首次發布。新版會保留長停頓、辨識出的二拍／三拍動畫與部分首尾影格，補間不合格時可能保留原格並警告；提高幀率也可能退回來源格，不能保證每格都是成功補間。側向辨識可能判錯，生成提示也不保證角色始終朝對方向；鏡像會交換不對稱配件。走跑循環仍需通過實際動態檢查。export-aseprite 產生的是相容 JSON，不是可編輯的 .aseprite 原始檔。作者展示不能當成每次都能得到的品質保證，原圖與第三方角色權利須自行確認。",
     "source": "https://github.com/aldegad/sprite-gen/blob/c39cc4e3efd9eae554a81aa1d3feb4bd9cd355eb/README.md",
     "skill": "https://github.com/aldegad/sprite-gen/blob/c39cc4e3efd9eae554a81aa1d3feb4bd9cd355eb/SKILL.md",
     "extraSource": "https://github.com/aldegad/sprite-gen/blob/c39cc4e3efd9eae554a81aa1d3feb4bd9cd355eb/docs/loop-repair.md#7-held-cells-a-picture-shown-again-and-a-cut-at-a-higher-rate",
