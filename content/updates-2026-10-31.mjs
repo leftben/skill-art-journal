@@ -20,5 +20,5 @@ const updates = {
   }
 };
 export function applyUpdates(articles) {
-  for(const article of articles) { const patch=updates[article.slug]; if(patch) Object.assign(article,patch,{updated:"2026-10-31T00:32:48.226Z"}); }
+  for(const article of articles) { const patch=updates[article.slug]; if(patch) Object.assign(article,patch,{updated:"2026-10-31"}); }
 }

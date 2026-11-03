@@ -1,3 +1,5 @@
+import {newArticles as novemberArticles} from './new-2026-11-03.mjs';
+import {applyNovemberUpdates} from './updates-2026-11-03.mjs';
 import {newArticles as newOctober31Articles} from './new-2026-10-31.mjs';
 import {applyUpdates} from './updates-2026-10-31.mjs';
 // Original Traditional Chinese editorial summaries. Repository statistics live in snapshot.json.
@@ -13,6 +15,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+  ...novemberArticles,
   ...newOctober31Articles,
   ...newOctober30Articles,
   ...newOctober29Articles,
@@ -422,3 +425,5 @@ export const assetSources = [
   {file:'diagram-flowchart.webp',repo:'cathrynlavery/diagram-design',url:'https://raw.githubusercontent.com/cathrynlavery/diagram-design/main/docs/screenshots/thumbs/flowchart.webp',title:'流程圖範例',license:'MIT'},
   {file:'logo-examples.png',repo:'kaankiziltug/logo-design-skill',url:'https://raw.githubusercontent.com/kaankiziltug/logo-design-skill/main/docs/images/hero.png',title:'標誌概念範例',license:'MIT'}
 ];
+
+applyNovemberUpdates(articles);

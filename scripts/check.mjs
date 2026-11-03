@@ -17,6 +17,7 @@ for(const a of articles){
 const home=await readFile(join(root,'index.html'),'utf8');
 const snapshot=JSON.parse(await readFile('content/snapshot.json','utf8'));
 const featured=JSON.parse(await readFile(join(root,'featured.json'),'utf8'));
+if(featured.ranked.some(item=>!Number.isFinite(item.score)||!Number.isFinite(item.factors.freshness)))throw new Error('Featured scores and freshness must be finite; use calendar dates for updated');
 const history=JSON.parse(await readFile('content/featured-history.json','utf8'));
 const expectedFeatures=selectFeatured(articles,snapshot,history);
 if(JSON.stringify(featured)!==JSON.stringify(expectedFeatures))throw new Error('Featured scores or selection are stale');
