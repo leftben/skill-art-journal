@@ -1,3 +1,5 @@
+import {newArticles as november4Articles} from './new-2026-11-04.mjs';
+import {applyTodayUpdates} from './updates-2026-11-04.mjs';
 import {newArticles as novemberArticles} from './new-2026-11-03.mjs';
 import {applyNovemberUpdates} from './updates-2026-11-03.mjs';
 import {newArticles as newOctober31Articles} from './new-2026-10-31.mjs';
@@ -15,6 +17,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+  ...november4Articles,
   ...novemberArticles,
   ...newOctober31Articles,
   ...newOctober30Articles,
@@ -398,6 +401,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+{"file":"pixelfx-acts.gif","repo":"patch-gg/pixelfx","url":"https://raw.githubusercontent.com/patch-gg/pixelfx/a84159688af3ca37a4be05a0d422b94451b2e24e/docs/readme/acts.gif","title":"Patch / pixelfx 作者動作展示；MIT，非本站實測","license":"MIT"},
   {file:'srt-whiteboard-monkey.gif',repo:'geeklee/srt-whiteboard-animation',url:'https://raw.githubusercontent.com/geeklee/srt-whiteboard-animation/696a7243c0e6ffb6827676e539c2ca5ebae2bf6b/examples/scene-01-monkey-mountain-stream.gif',title:'江哥是老登啊 / SRT 白板動畫作者的猴子山搶香蕉示例，MIT；非本站實測',license:'MIT'},
   {"file":"sprite-gen-paladin.gif","repo":"aldegad/sprite-gen","url":"https://raw.githubusercontent.com/aldegad/sprite-gen/419f02cd54b4181e33689759d4ee9c1ef0006301/docs/assets/attack-paladin.gif","title":"Alex Kim / Sprite Gen 作者提供的聖騎士攻擊循環；Apache-2.0，非本站實測","license":"Apache-2.0","noticeUrl":"https://github.com/aldegad/sprite-gen/blob/419f02cd54b4181e33689759d4ee9c1ef0006301/NOTICE"},
   {"file":"pixel2motion-horizon.gif","repo":"nolangz/pixel2motion","url":"https://raw.githubusercontent.com/nolangz/pixel2motion/e9faedb28930df0da2acf17da00c80730a78cfe8/docs/gifs/claude-horizon.gif","title":"Nolan Lai / Pixel2Motion 作者 README 的 Horizon 標誌動畫，MIT；非本站實測","license":"MIT"},
@@ -427,3 +431,5 @@ export const assetSources = [
 ];
 
 applyNovemberUpdates(articles);
+
+applyTodayUpdates(articles);

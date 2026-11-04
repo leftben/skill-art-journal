@@ -130,5 +130,16 @@
       "taste-skill",
       "pixel-plugin"
     ]
+  },
+  {
+    "date": "2026-11-04",
+    "version": "1.0",
+    "slugs": [
+      "pixelfx",
+      "ui-ux-pro-max",
+      "garden-skills",
+      "iart-motion-design",
+      "diagram-design"
+    ]
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-04",
+  "assets": [
+    {
+      "file": "pixelfx-acts.gif",
+      "repo": "patch-gg/pixelfx",
+      "source": "https://raw.githubusercontent.com/patch-gg/pixelfx/a84159688af3ca37a4be05a0d422b94451b2e24e/docs/readme/acts.gif",
+      "license": "MIT",
+      "licenseFile": "public/assets/licenses/patch-gg--pixelfx.txt",
+      "modified": false,
+      "interpretation": "README 明示 code and effects MIT；動作展示未包含另行權利保留的展示庫字型，保存 LICENSE 與 NOTICE，圖為原作者展示而非本站實測。"
+    }
+  ]
+}
