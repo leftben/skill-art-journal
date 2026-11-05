@@ -141,5 +141,16 @@
       "iart-motion-design",
       "diagram-design"
     ]
+  },
+  {
+    "date": "2026-11-05",
+    "version": "1.0",
+    "slugs": [
+      "pixelfx",
+      "comfyui-mcp",
+      "codixel",
+      "brand-identity",
+      "ian-xiaohei"
+    ]
   }
 ]

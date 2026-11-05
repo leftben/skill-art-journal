@@ -1,3 +1,5 @@
+import {newArticles as november5Articles} from './new-2026-11-05.mjs';
+import {applyNovember5Updates} from './updates-2026-11-05.mjs';
 import {newArticles as november4Articles} from './new-2026-11-04.mjs';
 import {applyTodayUpdates} from './updates-2026-11-04.mjs';
 import {newArticles as novemberArticles} from './new-2026-11-03.mjs';
@@ -17,6 +19,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+  ...november5Articles,
   ...november4Articles,
   ...novemberArticles,
   ...newOctober31Articles,
@@ -401,6 +404,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+{"file":"codixel-gem.gif","repo":"mankidev/codixel","url":"https://raw.githubusercontent.com/mankidev/codixel/604a9dcbcc4e386bc48188b5f7f49099f5d04db7/images/gem.gif","title":"mankidev / Codixel 作者 README 的紅寶石旋轉動畫，MIT；非本站實測","license":"MIT"},
 {"file":"pixelfx-acts.gif","repo":"patch-gg/pixelfx","url":"https://raw.githubusercontent.com/patch-gg/pixelfx/a84159688af3ca37a4be05a0d422b94451b2e24e/docs/readme/acts.gif","title":"Patch / pixelfx 作者動作展示；MIT，非本站實測","license":"MIT"},
   {file:'srt-whiteboard-monkey.gif',repo:'geeklee/srt-whiteboard-animation',url:'https://raw.githubusercontent.com/geeklee/srt-whiteboard-animation/696a7243c0e6ffb6827676e539c2ca5ebae2bf6b/examples/scene-01-monkey-mountain-stream.gif',title:'江哥是老登啊 / SRT 白板動畫作者的猴子山搶香蕉示例，MIT；非本站實測',license:'MIT'},
   {"file":"sprite-gen-paladin.gif","repo":"aldegad/sprite-gen","url":"https://raw.githubusercontent.com/aldegad/sprite-gen/419f02cd54b4181e33689759d4ee9c1ef0006301/docs/assets/attack-paladin.gif","title":"Alex Kim / Sprite Gen 作者提供的聖騎士攻擊循環；Apache-2.0，非本站實測","license":"Apache-2.0","noticeUrl":"https://github.com/aldegad/sprite-gen/blob/419f02cd54b4181e33689759d4ee9c1ef0006301/NOTICE"},
@@ -433,3 +437,5 @@ export const assetSources = [
 applyNovemberUpdates(articles);
 
 applyTodayUpdates(articles);
+
+applyNovember5Updates(articles);
