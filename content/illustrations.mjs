@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+'arjun-blender-skills':{stages:[['brief','訂風格與模型規格'],['mesh','白模與截圖檢查'],['gameasset','匯出並檢查引擎']],summary:'把規格、建模與匯出串成可檢查的製作流程；本站功能示意，非作者成果或執行結果。'},
 "codixel":{"stages":[["concept","授權參考圖"],["character","減色與骨架"],["sprites","檢查動作圖集"]],"summary":"以有授權參考圖整理像素與骨架，檢視每格動作後交付圖集；本站功能示意，非作者成果。"},
 'pixelfx':{stages:[['palette','挑選特效並換色'],['frames','蓄力命中與收招'],['sprites','透明圖集與時間']],summary:'以程式修改像素特效，配合角色動作再輸出圖集；本站功能示意，非作者作品。'},
   'pixel-plugin':{stages:[['palette','建立畫布與限色色盤'],['frames','圖層逐格調整動作'],['sprites','交付圖集與動畫標籤']],summary:'用 Aseprite 管理像素、圖層與逐格時間，再輸出圖集；本站功能示意，非作者作品或執行結果。'},

@@ -1,3 +1,5 @@
+import {newArticles as november6Articles} from './new-2026-11-06.mjs';
+import {applyNovember6Updates} from './updates-2026-11-06.mjs';
 import {newArticles as november5Articles} from './new-2026-11-05.mjs';
 import {applyNovember5Updates} from './updates-2026-11-05.mjs';
 import {newArticles as november4Articles} from './new-2026-11-04.mjs';
@@ -19,6 +21,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+  ...november6Articles,
   ...november5Articles,
   ...november4Articles,
   ...novemberArticles,
@@ -404,6 +407,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+{"file":"arjun-blender.png","repo":"arjun988/blender-skills","url":"https://raw.githubusercontent.com/arjun988/blender-skills/8f778d2405a214b508d4c7d80742be8e43acdd52/assets/Blender.png","title":"blender-skills contributors / 作者 README 的太空船模型示例；MIT，未修改，非本站實測","license":"MIT"},
 {"file":"codixel-gem.gif","repo":"mankidev/codixel","url":"https://raw.githubusercontent.com/mankidev/codixel/604a9dcbcc4e386bc48188b5f7f49099f5d04db7/images/gem.gif","title":"mankidev / Codixel 作者 README 的紅寶石旋轉動畫，MIT；非本站實測","license":"MIT"},
 {"file":"pixelfx-acts.gif","repo":"patch-gg/pixelfx","url":"https://raw.githubusercontent.com/patch-gg/pixelfx/a84159688af3ca37a4be05a0d422b94451b2e24e/docs/readme/acts.gif","title":"Patch / pixelfx 作者動作展示；MIT，非本站實測","license":"MIT"},
   {file:'srt-whiteboard-monkey.gif',repo:'geeklee/srt-whiteboard-animation',url:'https://raw.githubusercontent.com/geeklee/srt-whiteboard-animation/696a7243c0e6ffb6827676e539c2ca5ebae2bf6b/examples/scene-01-monkey-mountain-stream.gif',title:'江哥是老登啊 / SRT 白板動畫作者的猴子山搶香蕉示例，MIT；非本站實測',license:'MIT'},
@@ -439,3 +443,5 @@ applyNovemberUpdates(articles);
 applyTodayUpdates(articles);
 
 applyNovember5Updates(articles);
+
+applyNovember6Updates(articles);

@@ -152,5 +152,16 @@
       "brand-identity",
       "ian-xiaohei"
     ]
+  },
+  {
+    "date": "2026-11-06",
+    "version": "1.0",
+    "slugs": [
+      "sprite-gen",
+      "codixel",
+      "arjun-blender-skills",
+      "anatomy",
+      "pixel2motion"
+    ]
   }
 ]
