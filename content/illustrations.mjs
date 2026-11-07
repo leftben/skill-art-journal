@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+'spritecook-skills':{stages:[['palette','同風格生成素材'],['frames','檢查透明邊與動作'],['gameasset','圖集與引擎資源']],summary:'生成、修邊與動畫按素材編號接續，再整理遊戲資源；本站功能示意，非作者作品或生成實測。'},
 'arjun-blender-skills':{stages:[['brief','訂風格與模型規格'],['mesh','白模與截圖檢查'],['gameasset','匯出並檢查引擎']],summary:'把規格、建模與匯出串成可檢查的製作流程；本站功能示意，非作者成果或執行結果。'},
 "codixel":{"stages":[["concept","授權參考圖"],["character","減色與骨架"],["sprites","檢查動作圖集"]],"summary":"以有授權參考圖整理像素與骨架，檢視每格動作後交付圖集；本站功能示意，非作者成果。"},
 'pixelfx':{stages:[['palette','挑選特效並換色'],['frames','蓄力命中與收招'],['sprites','透明圖集與時間']],summary:'以程式修改像素特效，配合角色動作再輸出圖集；本站功能示意，非作者作品。'},
