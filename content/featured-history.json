@@ -174,5 +174,16 @@
       "diagram-design",
       "spritecook-skills"
     ]
+  },
+  {
+    "date": "2026-11-08",
+    "version": "1.0",
+    "slugs": [
+      "3dicon",
+      "diorama",
+      "baoyu-skills",
+      "claude-animation-skills",
+      "blender-agent-skills"
+    ]
   }
 ]
