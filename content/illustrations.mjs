@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+ 'rossark-motion':{stages:[['character','拆分角色部件'],['timeline','編排視線與動作'],['frames','檢查連續影格']],summary:'共用時鐘串起肢體、視線和跟隨動作；本站功能示意，非作者成果。'},
 "threejs-game-skills":{"stages":[["concept","玩法與美術方向"],["gameasset","模型、材質與介面"],["prototype","可玩的網頁遊戲"]],"summary":"先建立可玩的場景，再補齊美術與介面，以實際操作和瀏覽器資料檢查成果。 本站功能示意，非作者作品或執行結果。"},
 "claude-animation-skills":{"stages":[["storyboard","文字、資料與分鏡"],["timeline","程式動畫與對時"],["video","直式動畫短片"]],"summary":"選擇圖形模板或解說引擎，修改規格與鏡頭，在本機渲染直式影片。 本站功能示意，非作者作品。"},
 'spritecook-skills':{stages:[['palette','同風格生成素材'],['frames','檢查透明邊與動作'],['gameasset','圖集與引擎資源']],summary:'生成、修邊與動畫按素材編號接續，再整理遊戲資源；本站功能示意，非作者作品或生成實測。'},

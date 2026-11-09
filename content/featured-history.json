@@ -185,5 +185,16 @@
       "claude-animation-skills",
       "blender-agent-skills"
     ]
+  },
+  {
+    "date": "2026-11-09",
+    "version": "1.0",
+    "slugs": [
+      "3dicon",
+      "claude-animation-skills",
+      "rossark-motion",
+      "arjun-blender-skills",
+      "aseprite-ai-artist"
+    ]
   }
 ]

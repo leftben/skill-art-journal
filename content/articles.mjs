@@ -1,3 +1,5 @@
+import {newArticles as november9Articles} from './new-2026-11-09.mjs';
+import {applyNovember9Updates} from './updates-2026-11-09.mjs';
 import {newArticles as november8Articles} from './new-2026-11-08.mjs';
 import {applyNovember8Updates} from './updates-2026-11-08.mjs';
 import {newArticles as november7Articles} from './new-2026-11-07.mjs';
@@ -25,6 +27,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november9Articles,
  ...november8Articles,
  ...november7Articles,
   ...november6Articles,
@@ -413,6 +416,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+ {"file":"rossark-reveal.gif","repo":"rossark0/rossark-motion-skill","url":"https://raw.githubusercontent.com/rossark0/rossark-motion-skill/9b20964e32f07f8ac7e2948cd175746fa4a7712f/demo/reveal.gif","title":"rossark0 原作者示例：男孩降落、踢球與揮手，以程式繪製並動畫，非本站實測。","license":"MIT"},
 {"file":"claude-animation-skills-author.jpg","repo":"artemnovitckii/claude-animation-skills","url":"https://raw.githubusercontent.com/artemnovitckii/claude-animation-skills/5dbea55c23aa6a5c93dc3cfb5583840513b56b94/docs/skills.jpg","title":"作者提供的六種動畫模板總覽（非本站實測）","license":"MIT"},
 {"file":"arjun-blender.png","repo":"arjun988/blender-skills","url":"https://raw.githubusercontent.com/arjun988/blender-skills/8f778d2405a214b508d4c7d80742be8e43acdd52/assets/Blender.png","title":"blender-skills contributors / 作者 README 的太空船模型示例；MIT，未修改，非本站實測","license":"MIT"},
 {"file":"codixel-gem.gif","repo":"mankidev/codixel","url":"https://raw.githubusercontent.com/mankidev/codixel/604a9dcbcc4e386bc48188b5f7f49099f5d04db7/images/gem.gif","title":"mankidev / Codixel 作者 README 的紅寶石旋轉動畫，MIT；非本站實測","license":"MIT"},
@@ -458,3 +462,5 @@ applyNovember7Updates(articles);
 applyNovember7Corrections(articles);
 
 applyNovember8Updates(articles);
+
+applyNovember9Updates(articles);
