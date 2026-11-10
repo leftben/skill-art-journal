@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+ 'muyang-illustration':{stages:[['brief','指定主體與畫風'],['palette','讀取固定配方'],['sketch','生成插畫點陣圖']],summary:'先指定內容與具體畫風，再以固定配方交給生圖工具；本站功能示意，非作者作品或生成實測。'},
  'rossark-motion':{stages:[['character','拆分角色部件'],['timeline','編排視線與動作'],['frames','檢查連續影格']],summary:'共用時鐘串起肢體、視線和跟隨動作；本站功能示意，非作者成果。'},
 "threejs-game-skills":{"stages":[["concept","玩法與美術方向"],["gameasset","模型、材質與介面"],["prototype","可玩的網頁遊戲"]],"summary":"先建立可玩的場景，再補齊美術與介面，以實際操作和瀏覽器資料檢查成果。 本站功能示意，非作者作品或執行結果。"},
 "claude-animation-skills":{"stages":[["storyboard","文字、資料與分鏡"],["timeline","程式動畫與對時"],["video","直式動畫短片"]],"summary":"選擇圖形模板或解說引擎，修改規格與鏡頭，在本機渲染直式影片。 本站功能示意，非作者作品。"},
