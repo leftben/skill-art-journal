@@ -1,3 +1,4 @@
+import {newArticles as november11Articles} from './new-2026-11-11.mjs';
 import {newArticles as november10Articles} from './new-2026-11-10.mjs';
 import {applyNovember10Updates} from './updates-2026-11-10.mjs';
 import {newArticles as november9Articles} from './new-2026-11-09.mjs';
@@ -29,6 +30,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november11Articles,
  ...november10Articles,
  ...november9Articles,
  ...november8Articles,
@@ -419,6 +421,8 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+ {"file":"impeccable-with.webp","title":"Paul Bakaus 原作者「使用 Impeccable」的旅館網站：注意整版海岸夜景如何與大字、朱紅行動按鈕共同建立方向；作者同模型同需求的獨立生成比較，非本站實測","repo":"pbakaus/impeccable","url":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/docs/images/readme-with.webp","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/NOTICE.md"},
+ {"file":"impeccable-without.webp","title":"Paul Bakaus 原作者「未使用 Impeccable」的對照：米白背景、細襯線字與左右分欄插畫；比較的是構圖選擇，不能從這張圖判定效能、無障礙或整站品質","repo":"pbakaus/impeccable","url":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/docs/images/readme-without.webp","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/NOTICE.md"},
  {"file":"rossark-reveal.gif","repo":"rossark0/rossark-motion-skill","url":"https://raw.githubusercontent.com/rossark0/rossark-motion-skill/9b20964e32f07f8ac7e2948cd175746fa4a7712f/demo/reveal.gif","title":"rossark0 原作者示例：男孩降落、踢球與揮手，以程式繪製並動畫，非本站實測。","license":"MIT"},
 {"file":"claude-animation-skills-author.jpg","repo":"artemnovitckii/claude-animation-skills","url":"https://raw.githubusercontent.com/artemnovitckii/claude-animation-skills/5dbea55c23aa6a5c93dc3cfb5583840513b56b94/docs/skills.jpg","title":"作者提供的六種動畫模板總覽（非本站實測）","license":"MIT"},
 {"file":"arjun-blender.png","repo":"arjun988/blender-skills","url":"https://raw.githubusercontent.com/arjun988/blender-skills/8f778d2405a214b508d4c7d80742be8e43acdd52/assets/Blender.png","title":"blender-skills contributors / 作者 README 的太空船模型示例；MIT，未修改，非本站實測","license":"MIT"},

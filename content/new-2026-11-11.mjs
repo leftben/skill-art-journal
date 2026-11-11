@@ -1,0 +1,30 @@
+export const newArticles = [
+  {
+    "slug": "impeccable",
+    "repo": "pbakaus/impeccable",
+    "name": "Impeccable",
+    "category": "網頁與介面",
+    "kind": "介面設計與打磨 Skill",
+    "published": "2026-11-11",
+    "title": "去掉網頁的 AI 味，從看懂問題開始",
+    "short": "把模板感改成明確的設計",
+    "dek": "先找出重複卡片、模糊層次與多餘裝飾，再有方向地調整排版、文字和互動；用具體指令逐步打磨既有網站。",
+    "intro": "你可能看過這種網頁：每區都排三張相同卡片、每個標題上方都有圓角小圖示，再加一片紫藍漸層。單看元素不一定有錯，整頁卻很難看出品牌個性。Impeccable 把「幫我改好看」拆成可指定的工作，讓 AI 先理解產品與既有設計，再挑一段介面仔細修改。",
+    "process": "先用 init 記下產品對象與限制，用 document 整理既有視覺規則。critique 評估層次、閱讀與操作，audit 檢查無障礙、效能及不同尺寸；接著可用 typeset 調字級、layout 理間距、distill 刪掉多餘元素，最後 polish 收尾。bolder 和 quieter 分別讓畫面更鮮明或更收斂。另有 62 條確定性規則檢查常見模板模式與品質問題；它找的是具體設計特徵，不能證明頁面是否由 AI 製作，也不等於客觀美感評分。",
+    "example": "用 Impeccable 檢視我的陶藝工作室作品集。先 critique 首屏和作品列表，列出最影響閱讀與辨識度的三個問題；保留現有品牌綠色、真實作品照片、文案與功能。優先調整字體層次、留白和作品分組，刪掉沒有用途的裝飾。修改後以桌機和手機檢查圖片、按鈕與文字換行，再做 polish。",
+    "fit": "適合已有網站、作品集、產品頁或後台，想知道哪裡有模板感、又不想盲目整頁翻修的設計師與開發者。一次指定首屏、價目卡或表單，通常比籠統要求整站變高級更容易核對。也能做新頁，但仍需要明確內容、品牌方向與人工判斷。",
+    "requirements": "需要能讀寫專案、執行工具及查看畫面的 AI 程式助手，以及原專案的開發環境。支援 Codex、Claude Code、Cursor 等工具；npx 安裝路線需要 Node，技能執行器是隨附或首次下載的獨立程式。檢查渲染頁面需要 Chrome／Edge；live 模式針對本機開發伺服器，不是直接修改公開網站。",
+    "costs": "專案採 Apache-2.0。規則偵測器不需要模型或 API key；讓 AI 分析及修改程式仍會消耗所用助手的額度。直接寫前端程式的路線沒有必需的付費生圖服務；若另外選擇先生成視覺稿、照片或其他素材，才依對應工具的額度與授權計算。",
+    "outputs": "優先排序的介面問題報告、修改後的前端原始碼、產品與設計脈絡文件，以及依工作流程產生的預覽或檢查資料；不是只有一張不能操作的網頁圖片。",
+    "caveat": "2026-11-11 首次收錄，並非今日發布；本次核實的 Codex SKILL 標示 4.8.2，星數屬整個儲存庫。兩張旅館圖是作者用同一模型 Fable 5.1 與同一需求分別建立的示例，並非同一份原始碼改版前後，也不保證你的成果同樣改善。本站沒有執行技能驗證設計效果。若使用 live 的 Apply，README 說明無活躍聊天代理時可能改呼叫關閉批准及沙箱檢查的本機 CLI；可用 IMPECCABLE_LIVE_COPY_AGENT=chat 留在聊天代理，或 off 停用 Apply。",
+    "image": "impeccable-with.webp",
+    "imageAlt": "Paul Bakaus 的 Impeccable 旅館網站示例：以深藍海岸夜景、米色與朱紅大字建立整頁主視覺；作者展示，非本站實測。",
+    "extraImage": "impeccable-without.webp",
+    "extraImageTitle": "對照：相同需求，未使用 Impeccable",
+    "source": "https://github.com/pbakaus/impeccable/blob/fead7938331bb92129e3c5ce14f600611067bd06/README.md",
+    "skill": "https://github.com/pbakaus/impeccable/blob/fead7938331bb92129e3c5ce14f600611067bd06/.agents/skills/impeccable/SKILL.md",
+    "authorExample": "https://github.com/pbakaus/impeccable/blob/fead7938331bb92129e3c5ce14f600611067bd06/docs/images/readme-with.webp",
+    "extraSource": "https://github.com/pbakaus/impeccable/blob/fead7938331bb92129e3c5ce14f600611067bd06/NOTICE.md",
+    "extraSourceLabel": "原作者第三方來源聲明"
+  }
+];

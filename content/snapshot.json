@@ -3,7 +3,7 @@
   "timezone": "Asia/Taipei",
   "observed_at_utc": "2026-11-11T00:35:32.417Z",
   "previous_observed_at_utc": "2026-11-10T00:33:32.835Z",
-  "notes": "Repository exact star totals observed via GitHub API; per-repo deltas compare previous baseline, not individual skill popularity or Trending. Newly discovered repos have null delta and are not necessarily newly released. Default-branch SHAs and changed-head comparisons verified; no candidate code executed.",
+  "notes": "Repository exact star totals observed via GitHub API; per-repo deltas compare previous baseline, not individual skill popularity or Trending. Newly discovered repos have null delta and are not necessarily newly released. Default-branch SHAs and changed-head comparisons verified; no candidate code executed. Supplemental first inclusion of pbakaus/impeccable on November 11 at user request; other repository observation times remain the morning scan. No invented star delta.",
   "repositories": [
     {
       "repo": "anthropics/skills",
@@ -1179,6 +1179,30 @@
       "default_branch_commits_since_previous": 0,
       "previous_default_branch_head": "8c35300b74eaf8b34221b138082b8d7acd0363d5",
       "default_branch_changed": false
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "stars": 107680,
+      "delta": null,
+      "forks": 6402,
+      "pushed_at": "2026-11-11T03:06:57Z",
+      "previous_pushed_at": null,
+      "archived": false,
+      "default_branch": "main",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "license": "Apache-2.0",
+      "created_at": "2025-11-16T01:52:04Z",
+      "source": "https://api.github.com/repos/pbakaus/impeccable",
+      "first_observed_at_utc": "2026-11-11T03:11:41.466Z",
+      "observed_at_utc": "2026-11-11T03:11:41.466Z",
+      "previous_observed_at_utc": null,
+      "default_branch_head": "fead7938331bb92129e3c5ce14f600611067bd06",
+      "default_branch_head_date": "2026-11-11T02:14:52Z",
+      "default_branch_commits_since_previous": null,
+      "previous_default_branch_head": null,
+      "default_branch_changed": null
     }
-  ]
+  ],
+  "supplemental_observed_at_utc": "2026-11-11T03:11:41.466Z"
 }

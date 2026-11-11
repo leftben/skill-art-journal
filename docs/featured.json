@@ -19,6 +19,22 @@
       "penalty": 0
     },
     {
+      "slug": "impeccable",
+      "repo": "pbakaus/impeccable",
+      "category": "網頁與介面",
+      "published": "2026-11-11",
+      "score": 75,
+      "factors": {
+        "visual": 1,
+        "relevance": 0.8,
+        "growth": 0,
+        "freshness": 1,
+        "popularity": 1
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
       "slug": "taste-skill",
       "repo": "Leonxlnx/taste-skill",
       "category": "網頁與介面",
@@ -65,22 +81,6 @@
       },
       "exposures": 1,
       "penalty": 12
-    },
-    {
-      "slug": "aseprite-ai-artist",
-      "repo": "with-pebbly/aseprite-ai-artist",
-      "category": "像素與遊戲",
-      "published": "2026-10-21",
-      "score": 65.963,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.18657278826671098,
-        "freshness": 0.9057236642639067,
-        "popularity": 0.5645643290606209
-      },
-      "exposures": 1,
-      "penalty": 12
     }
   ],
   "ranked": [
@@ -96,6 +96,22 @@
         "growth": 0.04503670080155432,
         "freshness": 0.820335356007638,
         "popularity": 0.7733047251065688
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "impeccable",
+      "repo": "pbakaus/impeccable",
+      "category": "網頁與介面",
+      "published": "2026-11-11",
+      "score": 75,
+      "factors": {
+        "visual": 1,
+        "relevance": 0.8,
+        "growth": 0,
+        "freshness": 1,
+        "popularity": 1
       },
       "exposures": 0,
       "penalty": 0
