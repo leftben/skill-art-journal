@@ -87,3 +87,19 @@ First selection: Anatomy94.52, Logo85.11, Diagram82.07, Taste77.03, Aseprite75.2
 Before/after browser inspector on home?q=Aseprite (same catalogue filter, changed section fully included):1440/768/390 before0FAIL2WARN, final0FAIL2WARN. Every before and final fold/montage screenshot reviewed (6each). An intermediate reduced-hidden failure exposed inactive slides that still had display:block; fixed with genuine display:none and synchronous one-frame height measurement. Final reduced-motion check passes. Caption spacing tightened; carousel height remains stable when switching across all five images/titles. Actual browser verified5matching images/URLs, wraparound, manual picker, autonomous movement from1to4, focus stops and stays paused, Aseprite cover→article. Remaining warnings: no-footage (existing author animation/interactive reading replaces unrelated video); name-only-title is contradicted by the explicit18px AI Skill explanation directly under h1. Reading-first allowances and user-requested catalogue outlines remain intentional. Source lint0FAIL1WARN for the already-required catalogue border. Formula tests cover uniqueness/diversity/new slot/determinism/day-history/exposure cap/daily interval/missing stats/archived exclusion; build checker verifies current serialized scores and five rendered slides.
 
 Critique: one clear image/short purpose/action, equal page margins, no mobile overflow, protected text while focused. Creativity is a familiar slideshow carrying this publication's real work, not a new interaction paradigm. Limited simultaneous imagery remains the gallery-score cap. Design6.5,usability8.5,creativity7,content8.5 →7.4subjective. The new feature is easier to explain than the old category-only sample picker; an analytics claim would require a separate measurement plan. Existing catalogue functions and article routes preserved. Asset content hashes prevent old cached CSS/JS from breaking the new component after deployment.
+
+
+## 2026-11-11 — Impeccable 閱讀與查找優化
+
+使用者明確指定 Impeccable，要求先列出 AI 味問題再優化。採 Read 模式，在既有視覺內修整，不更換配色、字標、作者作品或內容。兩個隔離評估：設計評估29/40（主觀），機械偵測2個cramped-padding警告，均以瀏覽器40px／20px實際內距確認為誤報。未安裝hook或修理技能設定。
+
+實質問題與處理：
+1. 52篇同等大圖卡改為可掃讀文章列，保留整塊原生連結、來源圖片、完整摘要和既有搜尋／分類／排序。手機圖片伴隨標題，摘要仍18px並獨佔全寬，不裁掉內容。390px下清單由26,189px變為約13,385px；這是版面量測，不是閱讀速度或轉換率聲明。
+2. 五篇精選選擇控制由手機450px直列改為五張縮圖加序位的緊湊列，直接選擇與播放／暫停分離；控制區約130px。按鈕維持至少44px。焦點／懸停／手選停止輪播，明確按播放才繼續，減少動態偏好沿用。
+3. 首頁原作圖說用可展開的原生details保留完整文字，先顯示來源。修正輪播min-height沿用造成的額外空白，測量前清空高度且panel不拉伸；圖說展開後重新量測。
+4. 文章正文740px寬（外層820px含內距），長流程按完整句子分段，文字不改寫；已有作者主圖的補充功能示意改為原生details，無原作時主功能圖仍直接可見。
+5. 取消每張卡片重複入場和懸停位移，保留輪播切換的單一過場、清楚焦點與hover。導覽箭頭改為一致的線條SVG。
+
+驗證：build/check通過52文章56HTML，所有資產／內部連結、RSS與sitemap日期正確。featured.json與featured-history.json仍與改版前同hash，公式1.0及文章published/updated完全未改。Chrome桌機1440、平板768、手機390驗證無橫向溢出；五篇切換皆顯示對應圖片，獨立播放自動由2至3，暫停與手選後顯示播放。搜尋Impeccable=1/52，像素分類13/52，零結果可清除回52/52，星數排序首篇Anthropic。整塊文章連結Enter開啟正確，功能圖可用Enter展開／收起。初次全螢幕截圖逾時後重取成功；沒有宣稱顯示偵測覆蓋層，browser evaluate僅讀取。
+
+機械偵測前後維持相同2個內距誤報，無新增確定問題。沒有為通過偵測而改掉實際正確的內距。完整雙路報告與before/after JSON保存在本次工作區outputs；critique快照docs-index-html首輪29/40，已由本次polish完成並關閉。

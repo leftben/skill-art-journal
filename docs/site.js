@@ -4,11 +4,14 @@ if(carousel){
   const slides=[...carousel.querySelectorAll('.featured-slide')];
   const pickers=[...carousel.querySelectorAll('[data-featured-index]')];
   const region=carousel.querySelector('.featured-slides');
+  const toggle=carousel.querySelector('#featured-toggle');
+  const position=carousel.querySelector('#featured-count');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let index=0,playing=!reduced.matches,timer=null,inView=false,pending=0;
   function measure(){
     // Measure all panels synchronously, then truly hide the inactive ones.
     // Stable height prevents the catalogue from jumping when captions differ.
+    region.style.minHeight='';
     region.classList.add('is-measuring');
     region.style.minHeight=`${Math.ceil(Math.max(...slides.map(s=>s.getBoundingClientRect().height)))}px`;
     region.classList.remove('is-measuring');
@@ -17,15 +20,14 @@ if(carousel){
     clearTimeout(timer);
     pickers.forEach((button,i)=>{
       const current=i===index;
-      const action=playing?'暫停輪播':'播放輪播';
       const title=button.querySelector('.featured-picker-title').textContent;
-      const status=button.querySelector('.featured-picker-status');
       if(current)button.setAttribute('aria-current','true');
       else button.removeAttribute('aria-current');
-      status.textContent=current?`${i+1} / ${slides.length} · ${playing?'Ⅱ 暫停':'▶ 播放'}`:'';
-      button.setAttribute('aria-label',`${button.dataset.featuredName}：${title}，${current?`目前第 ${i+1} / ${slides.length} 篇，${action}`:`切換至第 ${i+1} / ${slides.length} 篇`}`);
-      button.title=current?action:`切換精選：${title}`;
+      button.setAttribute('aria-label',`${button.dataset.featuredName}：${title}，${current?`目前第 ${i+1} / ${slides.length} 篇`:`切換至第 ${i+1} / ${slides.length} 篇`}`);
+      button.title=`切換精選：${title}`;
     });
+    toggle.textContent=playing?'暫停輪播':'播放輪播';
+    position.textContent=`${index+1} / ${slides.length}`;
     region.setAttribute('aria-live',playing?'off':'polite');
     if(playing&&inView&&!document.hidden)timer=setTimeout(()=>show(index+1),8000);
   }
@@ -52,10 +54,9 @@ if(carousel){
   carousel.addEventListener('pointerenter',stop);
   carousel.querySelector('#featured-prev').addEventListener('click',()=>{stop();show(index-1);});
   carousel.querySelector('#featured-next').addEventListener('click',()=>{stop();show(index+1);});
-  pickers.forEach((button,i)=>button.addEventListener('click',()=>{
-    if(i===index){playing=!playing;schedule();}
-    else{stop();show(i);}
-  }));
+  pickers.forEach((button,i)=>button.addEventListener('click',()=>{stop();show(i);}));
+  toggle.addEventListener('click',()=>{playing=!playing;schedule();});
+  carousel.addEventListener('toggle',measure,true);
   reduced.addEventListener('change',stop);
   document.addEventListener('visibilitychange',schedule);
   if('IntersectionObserver'in window){new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:.25}).observe(carousel);}
@@ -104,14 +105,6 @@ if (list) {
   sort.addEventListener('change',update);
   document.querySelector('#reset')?.addEventListener('click',()=>{category='全部';search.value='';sort.value='editorial';update();search.focus();});
   update();
-}
-// Images arrive first, then their captions; content remains readable without JS.
-const arrivals=document.querySelectorAll('.entry-cover,.entry-main,.editorial>div');
-if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-  const observer=new IntersectionObserver(entries=>{
-    for(const item of entries)if(item.isIntersecting){item.target.classList.add('has-arrived');observer.unobserve(item.target);}
-  },{threshold:.08});
-  arrivals.forEach(element=>observer.observe(element));
 }
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.addEventListener('click',async()=>{
