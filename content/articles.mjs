@@ -1,3 +1,4 @@
+import {newArticles as november12Articles} from './new-2026-11-12.mjs';
 import {newArticles as november11Articles} from './new-2026-11-11.mjs';
 import {newArticles as november10Articles} from './new-2026-11-10.mjs';
 import {applyNovember10Updates} from './updates-2026-11-10.mjs';
@@ -30,6 +31,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november12Articles,
  ...november11Articles,
  ...november10Articles,
  ...november9Articles,
@@ -421,6 +423,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+ {file:'claude-drawing-autumn.jpg',repo:'cloveric/claude-drawing-skill',url:'https://raw.githubusercontent.com/cloveric/claude-drawing-skill/6af36dc717b63d6ddafb54d2eaa120cacd99ab4d/examples/watercolor_autumn.jpg',title:'cloveric 原作者的秋日湖畔水彩：觀察橙黃樹冠的透明疊色、紙面紋理與湖中柔化倒影，紅色小舟形成視覺焦點，對應程序化水彩的構圖與材質控制；靜態圖不證明 GIF 或其他 82 種畫風效果，非本站生成',license:'MIT'},
  {"file":"impeccable-with.webp","title":"Paul Bakaus 原作者「使用 Impeccable」的旅館網站：注意整版海岸夜景如何與大字、朱紅行動按鈕共同建立方向；作者同模型同需求的獨立生成比較，非本站實測","repo":"pbakaus/impeccable","url":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/docs/images/readme-with.webp","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/NOTICE.md"},
  {"file":"impeccable-without.webp","title":"Paul Bakaus 原作者「未使用 Impeccable」的對照：米白背景、細襯線字與左右分欄插畫；比較的是構圖選擇，不能從這張圖判定效能、無障礙或整站品質","repo":"pbakaus/impeccable","url":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/docs/images/readme-without.webp","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/pbakaus/impeccable/fead7938331bb92129e3c5ce14f600611067bd06/NOTICE.md"},
  {"file":"rossark-reveal.gif","repo":"rossark0/rossark-motion-skill","url":"https://raw.githubusercontent.com/rossark0/rossark-motion-skill/9b20964e32f07f8ac7e2948cd175746fa4a7712f/demo/reveal.gif","title":"rossark0 原作者示例：男孩降落、踢球與揮手，以程式繪製並動畫，非本站實測。","license":"MIT"},
@@ -473,3 +476,6 @@ applyNovember8Updates(articles);
 applyNovember9Updates(articles);
 
 applyNovember10Updates(articles);
+
+import {applyNovember12Updates} from './updates-2026-11-12.mjs';
+applyNovember12Updates(articles);

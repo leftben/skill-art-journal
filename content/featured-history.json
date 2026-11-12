@@ -218,5 +218,16 @@
       "blender-agent-skills",
       "brand-identity"
     ]
+  },
+  {
+    "date": "2026-11-12",
+    "version": "1.0",
+    "slugs": [
+      "claude-drawing",
+      "ui-ux-pro-max",
+      "pixelfx",
+      "iart-motion-design",
+      "diagram-design"
+    ]
   }
 ]
