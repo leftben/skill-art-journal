@@ -1,277 +1,51 @@
 {
   "version": "1.0",
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "items": [
     {
-      "slug": "claude-drawing",
-      "repo": "cloveric/claude-drawing-skill",
-      "category": "插畫與圖解",
-      "published": "2026-11-12",
-      "score": 74.6235,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0,
-        "freshness": 1,
-        "popularity": 0.46235077221115084
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "ui-ux-pro-max",
-      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "category": "網頁與介面",
-      "published": "2026-10-20",
-      "score": 71.2174,
-      "factors": {
-        "visual": 1,
-        "relevance": 0.8,
-        "growth": 0.05615762434317398,
-        "freshness": 0.6729500963161781,
-        "popularity": 1
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "pixelfx",
-      "repo": "patch-gg/pixelfx",
+      "slug": "diorama",
+      "repo": "sloemo01/diorama",
       "category": "像素與遊戲",
-      "published": "2026-11-04",
-      "score": 69.6,
+      "published": "2026-10-27",
+      "score": 77.3532,
       "factors": {
         "visual": 1,
         "relevance": 1,
-        "growth": 0.9303583668525043,
-        "freshness": 0.820335356007638,
-        "popularity": 0.7687835276012784
-      },
-      "exposures": 2,
-      "penalty": 24
-    },
-    {
-      "slug": "iart-motion-design",
-      "repo": "iart-ai/motion-design-skills",
-      "category": "品牌與設計",
-      "published": "2026-10-26",
-      "score": 69.2184,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.3361985113807983,
-        "freshness": 0.18574928614211858,
-        "popularity": 0.47082168782948014
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "diagram-design",
-      "repo": "cathrynlavery/diagram-design",
-      "category": "插畫與圖解",
-      "published": "2026-10-20",
-      "score": 66.2126,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.0630764160602613,
-        "freshness": 0.820335356007638,
-        "popularity": 0.9646048102392415
-      },
-      "exposures": 1,
-      "penalty": 12
-    }
-  ],
-  "ranked": [
-    {
-      "slug": "claude-drawing",
-      "repo": "cloveric/claude-drawing-skill",
-      "category": "插畫與圖解",
-      "published": "2026-11-12",
-      "score": 74.6235,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0,
-        "freshness": 1,
-        "popularity": 0.46235077221115084
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "ui-ux-pro-max",
-      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "category": "網頁與介面",
-      "published": "2026-10-20",
-      "score": 71.2174,
-      "factors": {
-        "visual": 1,
-        "relevance": 0.8,
-        "growth": 0.05615762434317398,
-        "freshness": 0.6729500963161781,
-        "popularity": 1
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "pixelfx",
-      "repo": "patch-gg/pixelfx",
-      "category": "像素與遊戲",
-      "published": "2026-11-04",
-      "score": 69.6,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.9303583668525043,
-        "freshness": 0.820335356007638,
-        "popularity": 0.7687835276012784
-      },
-      "exposures": 2,
-      "penalty": 24
-    },
-    {
-      "slug": "iart-motion-design",
-      "repo": "iart-ai/motion-design-skills",
-      "category": "品牌與設計",
-      "published": "2026-10-26",
-      "score": 69.2184,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.3361985113807983,
-        "freshness": 0.18574928614211858,
-        "popularity": 0.47082168782948014
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "diagram-design",
-      "repo": "cathrynlavery/diagram-design",
-      "category": "插畫與圖解",
-      "published": "2026-10-20",
-      "score": 66.2126,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.0630764160602613,
-        "freshness": 0.820335356007638,
-        "popularity": 0.9646048102392415
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "garden-skills",
-      "repo": "ConardLi/garden-skills",
-      "category": "影像與影片",
-      "published": "2026-10-20",
-      "score": 65.6325,
-      "factors": {
-        "visual": 1,
-        "relevance": 0.9,
-        "growth": 0.099818184208056,
-        "freshness": 0.18574928614211858,
-        "popularity": 0.8349863187056885
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "impeccable",
-      "repo": "pbakaus/impeccable",
-      "category": "網頁與介面",
-      "published": "2026-11-11",
-      "score": 65.5874,
-      "factors": {
-        "visual": 1,
-        "relevance": 0.8,
-        "growth": 0.12937069223662834,
-        "freshness": 1,
-        "popularity": 1
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "claude-animation-skills",
-      "repo": "artemnovitckii/claude-animation-skills",
-      "category": "影像與影片",
-      "published": "2026-11-08",
-      "score": 64.2161,
-      "factors": {
-        "visual": 1,
-        "relevance": 0.9,
         "growth": 1,
-        "freshness": 0.6729500963161781,
-        "popularity": 0.5621808561337401
-      },
-      "exposures": 2,
-      "penalty": 24
-    },
-    {
-      "slug": "scenario-skills",
-      "repo": "scenario-labs/skills",
-      "category": "像素與遊戲",
-      "published": "2026-10-20",
-      "score": 64.069,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.1717214067789186,
-        "freshness": 1,
-        "popularity": 0.7134523384707749
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "aseprite-ai-artist",
-      "repo": "with-pebbly/aseprite-ai-artist",
-      "category": "像素與遊戲",
-      "published": "2026-10-21",
-      "score": 63.7468,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.13941570922734722,
-        "freshness": 0.820335356007638,
-        "popularity": 0.5653445040337984
+        "freshness": 0.6095068271022377,
+        "popularity": 0.521061009228222
       },
       "exposures": 1,
       "penalty": 12
     },
     {
-      "slug": "rossark-motion",
-      "repo": "rossark0/rossark-motion-skill",
-      "category": "影像與影片",
-      "published": "2026-11-09",
-      "score": 63.6028,
+      "slug": "claude-drawing",
+      "repo": "cloveric/claude-drawing-skill",
+      "category": "插畫與圖解",
+      "published": "2026-11-12",
+      "score": 75.0984,
       "factors": {
         "visual": 1,
-        "relevance": 0.9,
-        "growth": 0.3079114306249485,
-        "freshness": 0.7429971445684742,
-        "popularity": 0.5799641004854192
+        "relevance": 1,
+        "growth": 0.6915831316012802,
+        "freshness": 0.9057236642639067,
+        "popularity": 0.4680888229680237
       },
       "exposures": 1,
       "penalty": 12
     },
     {
-      "slug": "remotion",
-      "repo": "remotion-dev/skills",
-      "category": "影像與影片",
-      "published": "2026-10-20",
-      "score": 62.749,
+      "slug": "creator-generalist",
+      "repo": "codepawl/creator-generalist",
+      "category": "3D 與材質",
+      "published": "2026-11-13",
+      "score": 74.3918,
       "factors": {
-        "visual": 0.45,
-        "relevance": 0.9,
-        "growth": 0.2037753207865521,
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0,
         "freshness": 1,
-        "popularity": 0.7673534094788411
+        "popularity": 0.4391799304818467
       },
       "exposures": 0,
       "penalty": 0
@@ -281,141 +55,13 @@
       "repo": "MengTo/Skills",
       "category": "插畫與圖解",
       "published": "2026-10-20",
-      "score": 62.7305,
+      "score": 66.5265,
       "factors": {
         "visual": 1,
         "relevance": 1,
-        "growth": 0.042528489699302376,
-        "freshness": 0.7429971445684742,
-        "popularity": 0.7734934975718103
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "illo",
-      "repo": "tmchow/illo-skill",
-      "category": "插畫與圖解",
-      "published": "2026-10-22",
-      "score": 62.1256,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0,
-        "freshness": 0.125,
-        "popularity": 0.5250624901923348
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "pixel-style-poster",
-      "repo": "v92388375-gif/pixel-style-poster-skill",
-      "category": "品牌與設計",
-      "published": "2026-10-24",
-      "score": 61.7153,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0,
-        "freshness": 0.15237670677555942,
-        "popularity": 0.44296876960953957
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "baoyu-skills",
-      "repo": "JimLiu/baoyu-skills",
-      "category": "插畫與圖解",
-      "published": "2026-10-20",
-      "score": 61.2672,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.012342060149878783,
-        "freshness": 0.6095068271022377,
-        "popularity": 0.887774893781289
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "logo-design",
-      "repo": "kaankiziltug/logo-design-skill",
-      "category": "品牌與設計",
-      "published": "2026-10-20",
-      "score": 61.2275,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.44426666973570883,
-        "freshness": 0.11321545803298834,
-        "popularity": 0.7643943635284086
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "diorama",
-      "repo": "sloemo01/diorama",
-      "category": "像素與遊戲",
-      "published": "2026-10-27",
-      "score": 61.0868,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.14339924178248406,
-        "freshness": 0.6729500963161781,
-        "popularity": 0.5124585728912949
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "pixel-art-studio",
-      "repo": "Gamezxz/pixel-art-studio",
-      "category": "像素與遊戲",
-      "published": "2026-10-20",
-      "score": 60.6366,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.4098436045340363
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "taste-skill",
-      "repo": "Leonxlnx/taste-skill",
-      "category": "網頁與介面",
-      "published": "2026-10-20",
-      "score": 60.0984,
-      "factors": {
-        "visual": 1,
-        "relevance": 0.8,
-        "growth": 0.10020552686650398,
-        "freshness": 0.6729500963161781,
-        "popularity": 1
-      },
-      "exposures": 1,
-      "penalty": 12
-    },
-    {
-      "slug": "anatomy",
-      "repo": "wheresryan22/anatomy",
-      "category": "插畫與圖解",
-      "published": "2026-10-20",
-      "score": 57.1374,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.18723350466913735,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.8854615101492083
+        "growth": 0.03949212265822833,
+        "freshness": 1,
+        "popularity": 0.7736700999295937
       },
       "exposures": 1,
       "penalty": 12
@@ -425,349 +71,287 @@
       "repo": "artokun/comfyui-mcp",
       "category": "影像與影片",
       "published": "2026-10-20",
-      "score": 56.8188,
+      "score": 65.2205,
       "factors": {
         "visual": 1,
         "relevance": 0.9,
-        "growth": 0.14456025191636449,
-        "freshness": 0.5,
+        "growth": 0,
+        "freshness": 0.45286183213195336,
         "popularity": 0.5927575654691111
+      },
+      "exposures": 0,
+      "penalty": 0
+    }
+  ],
+  "ranked": [
+    {
+      "slug": "diorama",
+      "repo": "sloemo01/diorama",
+      "category": "像素與遊戲",
+      "published": "2026-10-27",
+      "score": 77.3532,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 1,
+        "freshness": 0.6095068271022377,
+        "popularity": 0.521061009228222
       },
       "exposures": 1,
       "penalty": 12
     },
     {
-      "slug": "threejs-game-skills",
-      "repo": "majidmanzarpour/threejs-game-skills",
-      "category": "像素與遊戲",
-      "published": "2026-11-08",
-      "score": 56.6977,
+      "slug": "claude-drawing",
+      "repo": "cloveric/claude-drawing-skill",
+      "category": "插畫與圖解",
+      "published": "2026-11-12",
+      "score": 75.0984,
       "factors": {
-        "visual": 0.45,
+        "visual": 1,
         "relevance": 1,
-        "growth": 0.06055054501743979,
-        "freshness": 0.6729500963161781,
-        "popularity": 0.6892452803556326
+        "growth": 0.6915831316012802,
+        "freshness": 0.9057236642639067,
+        "popularity": 0.4680888229680237
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "creator-generalist",
+      "repo": "codepawl/creator-generalist",
+      "category": "3D 與材質",
+      "published": "2026-11-13",
+      "score": 74.3918,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0,
+        "freshness": 1,
+        "popularity": 0.4391799304818467
       },
       "exposures": 0,
       "penalty": 0
     },
     {
-      "slug": "dream-loop",
-      "repo": "achimala/dream-loop",
-      "category": "3D 與材質",
+      "slug": "mengto-illustration",
+      "repo": "MengTo/Skills",
+      "category": "插畫與圖解",
       "published": "2026-10-20",
-      "score": 55.2488,
+      "score": 66.5265,
       "factors": {
         "visual": 1,
         "relevance": 1,
-        "growth": 0.20619491631682418,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.6586725109422891
+        "growth": 0.03949212265822833,
+        "freshness": 1,
+        "popularity": 0.7736700999295937
       },
       "exposures": 1,
       "penalty": 12
     },
     {
-      "slug": "srt-whiteboard-animation",
-      "repo": "geeklee/srt-whiteboard-animation",
+      "slug": "comfyui-mcp",
+      "repo": "artokun/comfyui-mcp",
       "category": "影像與影片",
-      "published": "2026-10-31",
-      "score": 54.5269,
+      "published": "2026-10-20",
+      "score": 65.2205,
       "factors": {
         "visual": 1,
         "relevance": 0.9,
-        "growth": 0.09842825553361345,
-        "freshness": 0.3047534135511189,
-        "popularity": 0.748701952945686
+        "growth": 0,
+        "freshness": 0.45286183213195336,
+        "popularity": 0.5927575654691111
       },
-      "exposures": 1,
-      "penalty": 12
+      "exposures": 0,
+      "penalty": 0
     },
     {
-      "slug": "pixel2motion",
-      "repo": "nolangz/pixel2motion",
-      "category": "品牌與設計",
-      "published": "2026-10-28",
-      "score": 54.0899,
+      "slug": "garden-skills",
+      "repo": "ConardLi/garden-skills",
+      "category": "影像與影片",
+      "published": "2026-10-20",
+      "score": 65.1126,
       "factors": {
         "visual": 1,
-        "relevance": 1,
-        "growth": 0.042578226486773826,
-        "freshness": 0.22643091606597668,
-        "popularity": 0.6841890811843945
+        "relevance": 0.9,
+        "growth": 0.08676637841153441,
+        "freshness": 0.1682375240790445,
+        "popularity": 0.8353686769007478
       },
-      "exposures": 1,
-      "penalty": 12
+      "exposures": 0,
+      "penalty": 0
     },
     {
       "slug": "ian-xiaohei",
       "repo": "helloianneo/ian-xiaohei-illustrations",
       "category": "插畫與圖解",
       "published": "2026-10-20",
-      "score": 53.0779,
+      "score": 64.9909,
       "factors": {
         "visual": 1,
         "relevance": 1,
-        "growth": 0.01502578910634073,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.823930344407974
+        "growth": 0.017884663578563487,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.8240094388706082
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "aseprite-ai-artist",
+      "repo": "with-pebbly/aseprite-ai-artist",
+      "category": "像素與遊戲",
+      "published": "2026-10-21",
+      "score": 64.3924,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.22905654879956303,
+        "freshness": 0.7429971445684742,
+        "popularity": 0.566629422382557
       },
       "exposures": 1,
       "penalty": 12
     },
     {
-      "slug": "pixel-plugin",
-      "repo": "willibrandon/pixel-plugin",
-      "category": "像素與遊戲",
-      "published": "2026-11-03",
-      "score": 51.2005,
+      "slug": "impeccable",
+      "repo": "pbakaus/impeccable",
+      "category": "網頁與介面",
+      "published": "2026-11-11",
+      "score": 64.1278,
       "factors": {
-        "visual": 0.45,
+        "visual": 1,
+        "relevance": 0.8,
+        "growth": 0.12709917753759223,
+        "freshness": 0.9057236642639067,
+        "popularity": 1
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "illo",
+      "repo": "tmchow/illo-skill",
+      "category": "插畫與圖解",
+      "published": "2026-10-22",
+      "score": 63.8804,
+      "factors": {
+        "visual": 1,
         "relevance": 1,
-        "growth": 0.06497037627304435,
-        "freshness": 0.4101676780038189,
-        "popularity": 0.5248564191671337
+        "growth": 0.09626938098186344,
+        "freshness": 0.11321545803298834,
+        "popularity": 0.5256777860100623
       },
       "exposures": 0,
       "penalty": 0
     },
     {
-      "slug": "sprite-gen",
-      "repo": "aldegad/sprite-gen",
+      "slug": "scenario-skills",
+      "repo": "scenario-labs/skills",
       "category": "像素與遊戲",
-      "published": "2026-10-29",
-      "score": 50.6025,
+      "published": "2026-10-20",
+      "score": 63.635,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.22022984956924596,
+        "freshness": 0.9057236642639067,
+        "popularity": 0.7144581212302835
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "claude-animation-skills",
+      "repo": "artemnovitckii/claude-animation-skills",
+      "category": "影像與影片",
+      "published": "2026-11-08",
+      "score": 63.3278,
       "factors": {
         "visual": 1,
-        "relevance": 1,
-        "growth": 0.11507534310503838,
-        "freshness": 0.6729500963161781,
-        "popularity": 0.7206721848696761
+        "relevance": 0.9,
+        "growth": 1,
+        "freshness": 0.6095068271022377,
+        "popularity": 0.5685218479221124
       },
       "exposures": 2,
       "penalty": 24
     },
     {
-      "slug": "fal-skills",
-      "repo": "fal-ai-community/skills",
+      "slug": "pixel-style-poster",
+      "repo": "v92388375-gif/pixel-style-poster-skill",
+      "category": "品牌與設計",
+      "published": "2026-10-24",
+      "score": 61.4999,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0,
+        "freshness": 0.13801118920922653,
+        "popularity": 0.44296876960953957
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "pixelfx",
+      "repo": "patch-gg/pixelfx",
+      "category": "像素與遊戲",
+      "published": "2026-11-04",
+      "score": 60.6255,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.5384428779433064,
+        "freshness": 0.7429971445684742,
+        "popularity": 0.771164381081206
+      },
+      "exposures": 2,
+      "penalty": 24
+    },
+    {
+      "slug": "baoyu-skills",
+      "repo": "JimLiu/baoyu-skills",
+      "category": "插畫與圖解",
+      "published": "2026-10-20",
+      "score": 60.5193,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.018005327657093416,
+        "freshness": 0.5520447568369062,
+        "popularity": 0.8878539038258337
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "pixel-art-studio",
+      "repo": "Gamezxz/pixel-art-studio",
+      "category": "像素與遊戲",
+      "published": "2026-10-20",
+      "score": 60.4916,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.4098436045340363
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "remotion",
+      "repo": "remotion-dev/skills",
       "category": "影像與影片",
       "published": "2026-10-20",
-      "score": 49.9956,
+      "score": 59.8599,
       "factors": {
         "visual": 0.45,
         "relevance": 0.9,
-        "growth": 0,
-        "freshness": 0.6095068271022377,
-        "popularity": 0.48530225227291507
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "blender-game-skills",
-      "repo": "majidmanzarpour/blender-game-skills",
-      "category": "3D 與材質",
-      "published": "2026-10-20",
-      "score": 49.8976,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.26696599117717046,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.45201427759701496
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "threejs-skills",
-      "repo": "CloudAI-X/threejs-skills",
-      "category": "3D 與材質",
-      "published": "2026-10-22",
-      "score": 49.3753,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.08833733426429649,
-        "freshness": 0.125,
-        "popularity": 0.7233580972659432
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "blender-production-skills",
-      "repo": "XliuXjianX/blender-production-skills",
-      "category": "3D 與材質",
-      "published": "2026-10-30",
-      "score": 49.2161,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.08330228506199751,
-        "freshness": 0.27602237841845306,
-        "popularity": 0.49096897200170203
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "spine-animation-ai",
-      "repo": "GenielabsOpenSource/spine-animation-ai",
-      "category": "像素與遊戲",
-      "published": "2026-10-25",
-      "score": 48.9965,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.11591136740194374,
-        "freshness": 0.1682375240790445,
-        "popularity": 0.565473854610765
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "3dicon",
-      "repo": "samyost1/3dicon",
-      "category": "3D 與材質",
-      "published": "2026-10-26",
-      "score": 48.1358,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.06914757371520963,
-        "freshness": 0.6729500963161781,
-        "popularity": 0.565860754566205
-      },
-      "exposures": 2,
-      "penalty": 24
-    },
-    {
-      "slug": "brand-identity",
-      "repo": "fatihaydost/brand-identity-skill",
-      "category": "品牌與設計",
-      "published": "2026-10-27",
-      "score": 47.9376,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.28127358010179854,
-        "freshness": 0.4101676780038189,
-        "popularity": 0.5159567193233621
-      },
-      "exposures": 2,
-      "penalty": 24
-    },
-    {
-      "slug": "webgpu-threejs-tsl",
-      "repo": "dgreenheck/webgpu-claude-skill",
-      "category": "3D 與材質",
-      "published": "2026-10-24",
-      "score": 47.8164,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.04074930137591357,
-        "freshness": 0.15237670677555942,
-        "popularity": 0.6215776050365597
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "arjun-blender-skills",
-      "repo": "arjun988/blender-skills",
-      "category": "3D 與材質",
-      "published": "2026-11-06",
-      "score": 47.8093,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.6862239557740754,
-        "freshness": 0.5520447568369062,
-        "popularity": 0.6804178701144193
-      },
-      "exposures": 3,
-      "penalty": 36
-    },
-    {
-      "slug": "holo-card-studio",
-      "repo": "EverettFish/holo-card-studio",
-      "category": "3D 與材質",
-      "published": "2026-10-20",
-      "score": 47.7338,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.052854596224198865,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.6638628608181024
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "pixel-path",
-      "repo": "jonwheatley/pixel-path",
-      "category": "像素與遊戲",
-      "published": "2026-10-21",
-      "score": 47.5393,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.11626783732378865,
-        "freshness": 0.11321545803298834,
-        "popularity": 0.5015711743391662
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "guizang-material-illustration",
-      "repo": "op7418/guizang-material-illustration",
-      "category": "插畫與圖解",
-      "published": "2026-10-20",
-      "score": 47.0651,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0.04162241269419227,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.6194514619386841
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "blender-agent-skills",
-      "repo": "EL4CTEO/blender-skills",
-      "category": "3D 與材質",
-      "published": "2026-10-23",
-      "score": 46.9239,
-      "factors": {
-        "visual": 1,
-        "relevance": 1,
-        "growth": 0.5920082238686991,
-        "freshness": 0.6729500963161781,
-        "popularity": 0.5989513889175256
-      },
-      "exposures": 3,
-      "penalty": 36
-    },
-    {
-      "slug": "gimi-illustration",
-      "repo": "GiMi-Xiaomi/gimi-illustration-skill",
-      "category": "插畫與圖解",
-      "published": "2026-10-25",
-      "score": 46.749,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0,
-        "freshness": 0.1682375240790445,
-        "popularity": 0.572545505663595
+        "growth": 0.1297341805750936,
+        "freshness": 0.9057236642639067,
+        "popularity": 0.7679333113764867
       },
       "exposures": 0,
       "penalty": 0
@@ -777,29 +361,445 @@
       "repo": "mankidev/codixel",
       "category": "像素與遊戲",
       "published": "2026-11-05",
-      "score": 46.2837,
+      "score": 59.7586,
       "factors": {
         "visual": 1,
         "relevance": 1,
-        "growth": 0.168233399435412,
-        "freshness": 0.5,
-        "popularity": 0.44190300290852613
+        "growth": 0.2760103634734382,
+        "freshness": 0.45286183213195336,
+        "popularity": 0.44454329422951666
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "taste-skill",
+      "repo": "Leonxlnx/taste-skill",
+      "category": "網頁與介面",
+      "published": "2026-10-20",
+      "score": 59.7282,
+      "factors": {
+        "visual": 1,
+        "relevance": 0.8,
+        "growth": 0.12927783897785322,
+        "freshness": 0.6095068271022377,
+        "popularity": 1
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "brand-identity",
+      "repo": "fatihaydost/brand-identity-skill",
+      "category": "品牌與設計",
+      "published": "2026-10-27",
+      "score": 59.257,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.275342310902842,
+        "freshness": 0.3714985722842371,
+        "popularity": 0.5177663451188415
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "logo-design",
+      "repo": "kaankiziltug/logo-design-skill",
+      "category": "品牌與設計",
+      "published": "2026-10-20",
+      "score": 58.4928,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.3148362266644825,
+        "freshness": 0.10254191950095475,
+        "popularity": 0.7657963908015846
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "ui-ux-pro-max",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "category": "網頁與介面",
+      "published": "2026-10-20",
+      "score": 58.3618,
+      "factors": {
+        "visual": 1,
+        "relevance": 0.8,
+        "growth": 0.06095907282913757,
+        "freshness": 0.6095068271022377,
+        "popularity": 1
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "rossark-motion",
+      "repo": "rossark0/rossark-motion-skill",
+      "category": "影像與影片",
+      "published": "2026-11-09",
+      "score": 58.0037,
+      "factors": {
+        "visual": 1,
+        "relevance": 0.9,
+        "growth": 0.08027382002342369,
+        "freshness": 0.6729500963161781,
+        "popularity": 0.5804005782701459
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "diagram-design",
+      "repo": "cathrynlavery/diagram-design",
+      "category": "插畫與圖解",
+      "published": "2026-10-20",
+      "score": 56.8372,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.05942887898807058,
+        "freshness": 1,
+        "popularity": 0.9648642249701542
       },
       "exposures": 2,
       "penalty": 24
     },
     {
-      "slug": "motion-design",
-      "repo": "LottieFiles/motion-design-skill",
-      "category": "網頁與介面",
-      "published": "2026-10-23",
-      "score": 45.8448,
+      "slug": "anatomy",
+      "repo": "wheresryan22/anatomy",
+      "category": "插畫與圖解",
+      "published": "2026-10-20",
+      "score": 56.0936,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.1419840616187331,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.8860827423785196
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "threejs-game-skills",
+      "repo": "majidmanzarpour/threejs-game-skills",
+      "category": "像素與遊戲",
+      "published": "2026-11-08",
+      "score": 55.3359,
       "factors": {
         "visual": 0.45,
-        "relevance": 0.8,
-        "growth": 0.16660439979077452,
+        "relevance": 1,
+        "growth": 0.039949090346220496,
+        "freshness": 0.6095068271022377,
+        "popularity": 0.6894316062684439
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "pixel2motion",
+      "repo": "nolangz/pixel2motion",
+      "category": "品牌與設計",
+      "published": "2026-10-28",
+      "score": 54.0455,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.056234729308921615,
+        "freshness": 0.2050838390019095,
+        "popularity": 0.6844522901627206
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "srt-whiteboard-animation",
+      "repo": "geeklee/srt-whiteboard-animation",
+      "category": "影像與影片",
+      "published": "2026-10-31",
+      "score": 53.6586,
+      "factors": {
+        "visual": 1,
+        "relevance": 0.9,
+        "growth": 0.076392155115406,
+        "freshness": 0.27602237841845306,
+        "popularity": 0.7490461969056281
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "dream-loop",
+      "repo": "achimala/dream-loop",
+      "category": "3D 與材質",
+      "published": "2026-10-20",
+      "score": 52.826,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.09208893251409174,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.6591134199924957
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "iart-motion-design",
+      "repo": "iart-ai/motion-design-skills",
+      "category": "品牌與設計",
+      "published": "2026-10-26",
+      "score": 52.115,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.09377854535836742,
+        "freshness": 0.1682375240790445,
+        "popularity": 0.4715869694000908
+      },
+      "exposures": 1,
+      "penalty": 12
+    },
+    {
+      "slug": "pixel-plugin",
+      "repo": "willibrandon/pixel-plugin",
+      "category": "像素與遊戲",
+      "published": "2026-11-03",
+      "score": 50.6108,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.06428369363016151,
+        "freshness": 0.3714985722842371,
+        "popularity": 0.5252680734750085
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "fal-skills",
+      "repo": "fal-ai-community/skills",
+      "category": "影像與影片",
+      "published": "2026-10-20",
+      "score": 49.9922,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 0.9,
+        "growth": 0.04276444502335228,
+        "freshness": 0.5520447568369062,
+        "popularity": 0.4856269588057578
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "sprite-gen",
+      "repo": "aldegad/sprite-gen",
+      "category": "像素與遊戲",
+      "published": "2026-10-29",
+      "score": 49.5312,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.10884416477542153,
+        "freshness": 0.6095068271022377,
+        "popularity": 0.7211687078116178
+      },
+      "exposures": 2,
+      "penalty": 24
+    },
+    {
+      "slug": "threejs-skills",
+      "repo": "CloudAI-X/threejs-skills",
+      "category": "3D 與材質",
+      "published": "2026-10-22",
+      "score": 49.4582,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.10108697000203078,
+        "freshness": 0.11321545803298834,
+        "popularity": 0.7238186661253485
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "pixel-path",
+      "repo": "jonwheatley/pixel-path",
+      "category": "像素與遊戲",
+      "published": "2026-10-21",
+      "score": 48.1246,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.15299944769331011,
+        "freshness": 0.10254191950095475,
+        "popularity": 0.5026435200135878
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "spine-animation-ai",
+      "repo": "GenielabsOpenSource/spine-animation-ai",
+      "category": "像素與遊戲",
+      "published": "2026-10-25",
+      "score": 47.3581,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.04575877897309354,
+        "freshness": 0.15237670677555942,
+        "popularity": 0.565731979307064
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "holo-card-studio",
+      "repo": "EverettFish/holo-card-studio",
+      "category": "3D 與材質",
+      "published": "2026-10-20",
+      "score": 47.2311,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.03488421230900348,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.6640292572222108
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "blender-production-skills",
+      "repo": "XliuXjianX/blender-production-skills",
+      "category": "3D 與材質",
+      "published": "2026-10-30",
+      "score": 47.1597,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0,
+        "freshness": 0.25,
+        "popularity": 0.49096897200170203
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "webgpu-threejs-tsl",
+      "repo": "dgreenheck/webgpu-claude-skill",
+      "category": "3D 與材質",
+      "published": "2026-10-24",
+      "score": 46.7859,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0,
         "freshness": 0.13801118920922653,
-        "popularity": 0.6942583422117877
+        "popularity": 0.6215776050365597
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "guizang-material-illustration",
+      "repo": "op7418/guizang-material-illustration",
+      "category": "插畫與圖解",
+      "published": "2026-10-20",
+      "score": 46.6388,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.027486942765673712,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.61959021419883
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "gimi-illustration",
+      "repo": "GiMi-Xiaomi/gimi-illustration-skill",
+      "category": "插畫與圖解",
+      "published": "2026-10-25",
+      "score": 46.5111,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0,
+        "freshness": 0.15237670677555942,
+        "popularity": 0.572545505663595
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "3dicon",
+      "repo": "samyost1/3dicon",
+      "category": "3D 與材質",
+      "published": "2026-10-26",
+      "score": 45.8012,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0,
+        "freshness": 0.6095068271022377,
+        "popularity": 0.565860754566205
+      },
+      "exposures": 2,
+      "penalty": 24
+    },
+    {
+      "slug": "comfyui-custom-nodes",
+      "repo": "jtydhr88/comfyui-custom-node-skills",
+      "category": "像素與遊戲",
+      "published": "2026-10-20",
+      "score": 45.6728,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.03847094920855628,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.5010299956639812
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "blender-agent-skills",
+      "repo": "EL4CTEO/blender-skills",
+      "category": "3D 與材質",
+      "published": "2026-10-23",
+      "score": 45.5776,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.5708032633543259,
+        "freshness": 0.6095068271022377,
+        "popularity": 0.6018901791597389
+      },
+      "exposures": 3,
+      "penalty": 36
+    },
+    {
+      "slug": "blender-game-skills",
+      "repo": "majidmanzarpour/blender-game-skills",
+      "category": "3D 與材質",
+      "published": "2026-10-20",
+      "score": 45.4641,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 1,
+        "growth": 0.05230430619117226,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.45249021794608585
       },
       "exposures": 0,
       "penalty": 0
@@ -809,45 +809,61 @@
       "repo": "Leonxlnx/imagegen-skills",
       "category": "品牌與設計",
       "published": "2026-10-20",
-      "score": 45.2712,
+      "score": 45.1214,
       "factors": {
         "visual": 0.45,
         "relevance": 1,
-        "growth": 0.0730029297621956,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.3772981450344964
+        "growth": 0.07220326392096792,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.37841892053809606
       },
       "exposures": 0,
       "penalty": 0
+    },
+    {
+      "slug": "motion-design",
+      "repo": "LottieFiles/motion-design-skill",
+      "category": "網頁與介面",
+      "published": "2026-10-23",
+      "score": 45.0997,
+      "factors": {
+        "visual": 0.45,
+        "relevance": 0.8,
+        "growth": 0.1387828756023094,
+        "freshness": 0.125,
+        "popularity": 0.6949015278233952
+      },
+      "exposures": 0,
+      "penalty": 0
+    },
+    {
+      "slug": "arjun-blender-skills",
+      "repo": "arjun988/blender-skills",
+      "category": "3D 與材質",
+      "published": "2026-11-06",
+      "score": 44.7473,
+      "factors": {
+        "visual": 1,
+        "relevance": 1,
+        "growth": 0.5708332044411638,
+        "freshness": 0.5,
+        "popularity": 0.6830614584451136
+      },
+      "exposures": 3,
+      "penalty": 36
     },
     {
       "slug": "gsap-skills",
       "repo": "greensock/gsap-skills",
       "category": "網頁與介面",
       "published": "2026-10-21",
-      "score": 45.0731,
+      "score": 44.6425,
       "factors": {
         "visual": 0.45,
         "relevance": 0.8,
-        "growth": 0.06746781502140904,
-        "freshness": 0.11321545803298834,
-        "popularity": 0.8525471559332972
-      },
-      "exposures": 0,
-      "penalty": 0
-    },
-    {
-      "slug": "comfyui-custom-nodes",
-      "repo": "jtydhr88/comfyui-custom-node-skills",
-      "category": "像素與遊戲",
-      "published": "2026-10-20",
-      "score": 45.0457,
-      "factors": {
-        "visual": 0.45,
-        "relevance": 1,
-        "growth": 0,
+        "growth": 0.05382679581803123,
         "freshness": 0.10254191950095475,
-        "popularity": 0.5007581366114362
+        "popularity": 0.8527839966111544
       },
       "exposures": 0,
       "penalty": 0
@@ -857,13 +873,13 @@
       "repo": "google-labs-code/stitch-skills",
       "category": "網頁與介面",
       "published": "2026-10-20",
-      "score": 43.5961,
+      "score": 43.3571,
       "factors": {
         "visual": 0.45,
         "relevance": 0.8,
-        "growth": 0.033740689563149046,
-        "freshness": 0.10254191950095475,
-        "popularity": 0.7883122240472142
+        "growth": 0.028979163477575128,
+        "freshness": 0.09287464307105929,
+        "popularity": 0.788441308455419
       },
       "exposures": 0,
       "penalty": 0
@@ -873,12 +889,12 @@
       "repo": "yokel1121/muyang-illustration-skills",
       "category": "插畫與圖解",
       "published": "2026-11-10",
-      "score": 43.5016,
+      "score": 42.3416,
       "factors": {
         "visual": 0.45,
         "relevance": 1,
         "growth": 0,
-        "freshness": 0.820335356007638,
+        "freshness": 0.7429971445684742,
         "popularity": 0.46966097260963213
       },
       "exposures": 1,
@@ -889,12 +905,12 @@
       "repo": "SpriteCook/skills",
       "category": "像素與遊戲",
       "published": "2026-11-07",
-      "score": 39.139,
+      "score": 38.277,
       "factors": {
         "visual": 0.45,
         "relevance": 1,
         "growth": 0,
-        "freshness": 0.6095068271022377,
+        "freshness": 0.5520447568369062,
         "popularity": 0.3496376054012401
       },
       "exposures": 1,

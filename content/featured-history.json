@@ -229,5 +229,16 @@
       "iart-motion-design",
       "diagram-design"
     ]
+  },
+  {
+    "date": "2026-11-13",
+    "version": "1.0",
+    "slugs": [
+      "diorama",
+      "claude-drawing",
+      "creator-generalist",
+      "mengto-illustration",
+      "comfyui-mcp"
+    ]
   }
 ]
