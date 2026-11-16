@@ -1,3 +1,4 @@
+import {newArticles as november16Articles} from './new-2026-11-16.mjs';
 import {newArticles as november15Articles} from './new-2026-11-15.mjs';
 import {newArticles as november14Articles} from './new-2026-11-14.mjs';
 import {newArticles as november13Articles} from './new-2026-11-13.mjs';
@@ -34,6 +35,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november16Articles,
  ...november15Articles,
  ...november14Articles,
  ...november13Articles,
@@ -429,6 +431,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+ {file:'pixel-master-sakura.gif',repo:'424431185/pixel-asset-master-skills',url:'https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/33d891c421a9ad3608f5a09af97271388ca923af/sakura_preview.gif',title:'Pixel Asset Master 原作者的櫻花樹六格動畫；非本站生成或實測',license:'MIT'},
 {"file":"anidoodle-styles.jpg","repo":"alexgreensh/anidoodle","url":"https://raw.githubusercontent.com/alexgreensh/anidoodle/4ae27d2c281fcfd01bce87ab13dc5ad4df81a795/assets/styles.jpg","title":"Alex Greenshpun 作者以程式繪製的 32 種畫風總覽；非本站生成或實測。","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/alexgreensh/anidoodle/4ae27d2c281fcfd01bce87ab13dc5ad4df81a795/NOTICE"},
  {"file":"creator-generalist-mill.gif","repo":"codepawl/creator-generalist","url":"https://raw.githubusercontent.com/codepawl/creator-generalist/7235f50780ef7f125881e6bc790098e5c53d35d9/assets/mill.gif","title":"CodePawl 作者使用本合集製作的水車剖面動畫，呈現水輪、齒輪和磨盤；非本站生成或實測。 水車使用 Poly Haven 與 Quaternius 的 CC0 模型／材質；作者 README 已列來源。","license":"MIT"},
  {file:'claude-drawing-autumn.jpg',repo:'cloveric/claude-drawing-skill',url:'https://raw.githubusercontent.com/cloveric/claude-drawing-skill/6af36dc717b63d6ddafb54d2eaa120cacd99ab4d/examples/watercolor_autumn.jpg',title:'cloveric 原作者的秋日湖畔水彩：觀察橙黃樹冠的透明疊色、紙面紋理與湖中柔化倒影，紅色小舟形成視覺焦點，對應程序化水彩的構圖與材質控制；靜態圖不證明 GIF 或其他 82 種畫風效果，非本站生成',license:'MIT'},
@@ -495,3 +498,5 @@ applyNovember14Updates(articles);
 
 import {applyNovember15Updates} from './updates-2026-11-15.mjs';
 applyNovember15Updates(articles);
+import {applyNovember16Updates} from './updates-2026-11-16.mjs';
+applyNovember16Updates(articles);

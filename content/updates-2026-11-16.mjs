@@ -1,0 +1,8 @@
+const updates={
+  "ui-ux-pro-max": "2026-11-16：設計系統可加 --preview 產生獨立 HTML 預覽頁，也能以 --tokens dtcg 或 css 匯出色彩與字型的設計變數，減少從文件手抄色碼。例如替咖啡品牌先看一頁色盤、字型與元件，再把變數交給前端套用。預覽需搭配 --design-system；既有檔案預設跳過，不會任意覆寫；tokens 屬主設計系統，頁面覆寫不會各自輸出一份。適合品牌／介面設計與前端協作，沿用 Python 與 AI 助手，沒有新增必要付費生成成本。本站核對 README、真正 SKILL 與腳本差異，未執行；既有作者配圖不是新預覽功能的實測。",
+  "brand-identity": "2026-11-16：修正無頭瀏覽器的截圖方式，以 ANGLE 軟體繪圖取代停用 GPU，處理 Brave 157 在兩倍尺寸截圖時把左上角重複鋪滿的問題。例如品牌卡片、標誌表與比較板在檢查資料通過後，輸出畫面仍可能錯置；本次針對這個輸出缺陷修正。適合要交付品牌 PNG 比較板的人，沿用瀏覽器與既有工具，未新增付費服務。語言資料同步至 gflanguages 0.7.12，但字型目錄語言索引未增加。這是原始差異所載，本站未重現問題或執行修正，既有作者圖僅展示品牌方向。",
+  "emil-animation": "2026-11-16：新增 ask-emil 入口，先讀對應的實際技能，再依問題推薦一個技能或短流程。例如「購物車抽屜太慢」可從單一動畫著手，多個元素一起進場再用 choreograph，掉幀時轉效能檢查；不必先理解整套指令目錄。這是選用技能的引導更新，沒有新增動畫渲染引擎；沿用 AI 助手和原專案工具，不需額外付費 API。原首次收錄日維持 11 月 15 日，本站未執行候選。"
+};
+const heads={"nextlevelbuilder/ui-ux-pro-max-skill":{"old":"d643997c82e94742dd3bee43210b0198e8bbba3d","head":"b6a79003ad2b93c174590a4143a0ddbb2e4574e2"},"fatihaydost/brand-identity-skill":{"old":"3ba008e57b9363cf2a9117303237f951a7c1ef00","head":"af7ba40fe067b8b4aaeb2af90ed6c8996d014791"},"pbakaus/impeccable":{"old":"1b2aa57ca0f1cd6e393689bba70a780cb701aacd","head":"2b86d9c07b97d4bed7de23583e1bd1e58dd2baae"},"emilkowalski/skills":{"old":"0f2e23b32bb1265e84cff8d3e75785fec953fb1b","head":"64eb3deb9a5fbfa041faf783e0bc3fd635872e9c"}};
+export function applyNovember16Updates(articles){for(const a of articles)if(updates[a.slug]){a.update=(a.update?a.update+'\n\n':'')+updates[a.slug];a.updated='2026-11-16';a.source='https://github.com/'+a.repo+'/blob/'+heads[a.repo].head+'/README.md';a.extraSource='https://github.com/'+a.repo+'/compare/'+heads[a.repo].old+'...'+heads[a.repo].head;a.extraSourceLabel='本次核實的預設分支差異';}}
+
