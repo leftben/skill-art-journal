@@ -273,5 +273,16 @@
       "anidoodle",
       "claude-animation-skills"
     ]
+  },
+  {
+    "date": "2026-11-17",
+    "version": "1.0",
+    "slugs": [
+      "arjun-blender-skills",
+      "aseprite-ai-artist",
+      "logo-design",
+      "rossark-motion",
+      "meshy-3d-agent"
+    ]
   }
 ]

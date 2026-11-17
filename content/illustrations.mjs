@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+ 'meshy-3d-agent':{stages:[['concept','參考圖與用途預算'],['mesh','生成模型並看預覽'],['gameasset','遊戲或列印交付']],summary:'串接 Meshy 模型生成與後製，依用途交付數位資產或列印檔；本站功能示意，非作者作品或服務實測。'},
  'pixel-asset-master':{stages:[['palette','確認尺寸與色盤'],['frames','逐件製作並檢查'],['sprites','匯出 PNG 與圖集']],summary:'固定美術規格後逐件檢查，再整理遊戲素材；本站功能示意，非作者成果或執行結果。'},
  'emil-animation':{stages:[['brief','選擇有用的動態'],['timeline','安排曲線與先後'],['browsercheck','操作與效能檢查']],summary:'從用途出發安排動態並檢查中斷與效能；本站功能示意，非作者作品或技能實測。'},
  'anidoodle':{stages:[['palette','選畫風與構圖'],['sketch','程式畫筆逐步繪製'],['video','靜態動畫互動輸出']],summary:'由同一份繪圖來源安排筆觸與時間；本站功能示意，非作者成果或技能實測。'},
