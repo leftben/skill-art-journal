@@ -284,5 +284,16 @@
       "rossark-motion",
       "meshy-3d-agent"
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "version": "1.0",
+    "slugs": [
+      "blender-agent-skills",
+      "claude-animation-skills",
+      "diorama",
+      "pixelfx",
+      "ink-film"
+    ]
   }
 ]
