@@ -1,0 +1,1 @@
+2026-11-19：首次收錄 angry penguin 的 Blender Claymation；README、SKILL.md、MIT LICENSE 以 commit 0be7cc00f7c5dd80b50fab53f88d6527102ccc9c 核對。無可用作者成品圖，使用本站原創功能示意圖，並非作者渲染。完整授權保存在 public/assets/licenses/blender-claymation-LICENSE.txt。未執行候選。Illo 已收錄，去重後未新增圖片或文章。

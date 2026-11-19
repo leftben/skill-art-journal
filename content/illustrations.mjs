@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+"blender-claymation":{"stages":[["storyboard","短片與節拍"],["material","黏土偶與搭景"],["video","檢查後渲染"]],"summary":"用 Blender 逐格姿態製作停格短片；本站功能示意圖，非作者成果。"},
  'ink-film':{stages:[['document','自有文字與分鏡'],['storyboard','確認畫風與動畫'],['video','網頁與短片交付']],summary:'以程式畫出墨線、紙紋與動畫，再整理短片與聲音；本站功能示意圖，非作者成果或執行結果。'},
  'meshy-3d-agent':{stages:[['concept','參考圖與用途預算'],['mesh','生成模型並看預覽'],['gameasset','遊戲或列印交付']],summary:'串接 Meshy 模型生成與後製，依用途交付數位資產或列印檔；本站功能示意，非作者作品或服務實測。'},
  'pixel-asset-master':{stages:[['palette','確認尺寸與色盤'],['frames','逐件製作並檢查'],['sprites','匯出 PNG 與圖集']],summary:'固定美術規格後逐件檢查，再整理遊戲素材；本站功能示意，非作者成果或執行結果。'},
