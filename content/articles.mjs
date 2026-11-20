@@ -1,3 +1,4 @@
+import {newArticles as november20Articles} from './new-2026-11-20.mjs';
 import {newArticles as november19Articles} from './new-2026-11-19.mjs';
 import {newArticles as november18Articles} from './new-2026-11-18.mjs';
 import {newArticles as november17Articles} from './new-2026-11-17.mjs';
@@ -38,6 +39,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november20Articles,
  ...november19Articles,
  ...november18Articles,
   ...november17Articles,
@@ -437,6 +439,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+ {"file":"claude-blender-night.jpg","repo":"mromidev/claude-blender-skills","url":"https://raw.githubusercontent.com/mromidev/claude-blender-skills/567116bf3514ce0e469c2cb5cb04fa974fca217a/docs/img/night_final.jpg","title":"Mr omi 原作：Blender 夜城無人機短片畫面；示例使用第三方場景素材，素材不隨程式提供，詳見作者 README credits。非本站生成或實測。","license":"MIT"},
  {file:'pixel-master-sakura.gif',repo:'424431185/pixel-asset-master-skills',url:'https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/33d891c421a9ad3608f5a09af97271388ca923af/sakura_preview.gif',title:'Pixel Asset Master 原作者的櫻花樹六格動畫；非本站生成或實測',license:'MIT'},
 {"file":"anidoodle-styles.jpg","repo":"alexgreensh/anidoodle","url":"https://raw.githubusercontent.com/alexgreensh/anidoodle/4ae27d2c281fcfd01bce87ab13dc5ad4df81a795/assets/styles.jpg","title":"Alex Greenshpun 作者以程式繪製的 32 種畫風總覽；非本站生成或實測。","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/alexgreensh/anidoodle/4ae27d2c281fcfd01bce87ab13dc5ad4df81a795/NOTICE"},
  {"file":"creator-generalist-mill.gif","repo":"codepawl/creator-generalist","url":"https://raw.githubusercontent.com/codepawl/creator-generalist/7235f50780ef7f125881e6bc790098e5c53d35d9/assets/mill.gif","title":"CodePawl 作者使用本合集製作的水車剖面動畫，呈現水輪、齒輪和磨盤；非本站生成或實測。 水車使用 Poly Haven 與 Quaternius 的 CC0 模型／材質；作者 README 已列來源。","license":"MIT"},
@@ -514,3 +517,6 @@ applyNovember18Updates(articles);
 
 import {applyNovember19Updates} from './updates-2026-11-19.mjs';
 applyNovember19Updates(articles);
+
+import {applyNovember20Updates} from './updates-2026-11-20.mjs';
+applyNovember20Updates(articles);
