@@ -1,3 +1,4 @@
+import {newArticles as november23Articles} from './new-2026-11-23.mjs';
 import {newArticles as november20Articles} from './new-2026-11-20.mjs';
 import {newArticles as november19Articles} from './new-2026-11-19.mjs';
 import {newArticles as november18Articles} from './new-2026-11-18.mjs';
@@ -39,6 +40,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november23Articles,
  ...november20Articles,
  ...november19Articles,
  ...november18Articles,
@@ -455,6 +457,7 @@ export const assetSources = [
   {"file":"sprite-gen-paladin.gif","repo":"aldegad/sprite-gen","url":"https://raw.githubusercontent.com/aldegad/sprite-gen/419f02cd54b4181e33689759d4ee9c1ef0006301/docs/assets/attack-paladin.gif","title":"Alex Kim / Sprite Gen 作者提供的聖騎士攻擊循環；Apache-2.0，非本站實測","license":"Apache-2.0","noticeUrl":"https://github.com/aldegad/sprite-gen/blob/419f02cd54b4181e33689759d4ee9c1ef0006301/NOTICE"},
   {"file":"pixel2motion-horizon.gif","repo":"nolangz/pixel2motion","url":"https://raw.githubusercontent.com/nolangz/pixel2motion/e9faedb28930df0da2acf17da00c80730a78cfe8/docs/gifs/claude-horizon.gif","title":"Nolan Lai / Pixel2Motion 作者 README 的 Horizon 標誌動畫，MIT；非本站實測","license":"MIT"},
   {file:'brand-identity-fernhill.jpg',repo:'fatihaydost/brand-identity-skill',url:'https://raw.githubusercontent.com/fatihaydost/brand-identity-skill/532742d7477dba3b744433adf92845642953dc28/docs/images/fernhill-board.jpg',title:"Fatih Aydost 原作者的虛構書店 Fernhill Books 比較板：三欄各自配對標誌、字體、色盤與網頁片段，展示整套品牌方向如何並排選擇；圖中為提案草稿；非本站生成",license:'MIT'},
+  {file:'sprite-stacking-showcase.gif',repo:'danielwh2/sprite-stacking',url:'https://raw.githubusercontent.com/danielwh2/sprite-stacking/6fecdfd0d6e5a0595f979550e05f4b1fcde550fe/media/showcase.gif',title:'Daniel White 原作者六個像素堆疊道具旋轉展示，MIT；非本站生成或實測',license:'MIT'},
   {file:'diorama-pool.gif',repo:'sloemo01/diorama',url:'https://raw.githubusercontent.com/sloemo01/diorama/37739e804f67f4bcb445da635e6bedb060c704c6/media/pool.gif',title:'Nehal Kanak / Diorama 作者提供的泳池場景動畫，MIT；非本站生成',license:'MIT'},
   {"file":"3dicon-timer.webp","repo":"samyost1/3dicon","url":"https://raw.githubusercontent.com/samyost1/3dicon/9539d3a79ae6937205bf44f6b102af5ea15b9d49/skills/3dicon/examples/timer/timer.webp","title":"Sam Yost / 3dicon 作者隨附碼錶透明循環動畫，MIT；非本站生成","license":"MIT"},
   {"file":"iart-motion-showcase.gif","repo":"iart-ai/motion-design-skills","url":"https://raw.githubusercontent.com/iart-ai/motion-design-skills/3c129f769d90a1328c209c386492333c9ac62312/showcase.gif","title":"iart.ai 作者 README 的動態設計展示，MIT；非本站實測","license":"MIT"},
@@ -520,3 +523,6 @@ applyNovember19Updates(articles);
 
 import {applyNovember20Updates} from './updates-2026-11-20.mjs';
 applyNovember20Updates(articles);
+
+import {applyNovember23Updates} from './updates-2026-11-23.mjs';
+applyNovember23Updates(articles);

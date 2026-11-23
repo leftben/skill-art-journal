@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+ 'sprite-stacking':{stages:[['frames','核對四面像素圖'],['sprites','切出水平圖層'],['gameasset','旋轉預覽與圖集']],summary:'四面圖的輪廓交集切成薄片，再堆疊旋轉；本站功能示意，非作者成果。'},
  'claude-blender-films':{stages:[['storyboard','分鏡與自有素材'],['material','搭景與測試鏡頭'],['video','檢查與渲染短片']],summary:'由分鏡逐步搭建寫實 Blender 場景，先看測試圖再輸出序列；本站功能示意，非作者成果。'},
 "blender-claymation":{"stages":[["storyboard","短片與節拍"],["material","黏土偶與搭景"],["video","檢查後渲染"]],"summary":"用 Blender 逐格姿態製作停格短片；本站功能示意圖，非作者成果。"},
  'ink-film':{stages:[['document','自有文字與分鏡'],['storyboard','確認畫風與動畫'],['video','網頁與短片交付']],summary:'以程式畫出墨線、紙紋與動畫，再整理短片與聲音；本站功能示意圖，非作者成果或執行結果。'},

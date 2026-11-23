@@ -317,5 +317,16 @@
       "diagram-design",
       "mengto-illustration"
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "version": "1.0",
+    "slugs": [
+      "creator-generalist",
+      "sprite-gen",
+      "claude-drawing",
+      "sprite-stacking",
+      "claude-blender-films"
+    ]
   }
 ]
