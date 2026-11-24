@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+ 'image-to-sculpt':{stages:[['frames','核對照片與多視角'],['gameasset','分階段修出雕塑'],['frames','檢查圖與建模重播']],summary:'以原圖和多視角修整立體草模；本站功能示意，非作者成果。'},
  'sprite-stacking':{stages:[['frames','核對四面像素圖'],['sprites','切出水平圖層'],['gameasset','旋轉預覽與圖集']],summary:'四面圖的輪廓交集切成薄片，再堆疊旋轉；本站功能示意，非作者成果。'},
  'claude-blender-films':{stages:[['storyboard','分鏡與自有素材'],['material','搭景與測試鏡頭'],['video','檢查與渲染短片']],summary:'由分鏡逐步搭建寫實 Blender 場景，先看測試圖再輸出序列；本站功能示意，非作者成果。'},
 "blender-claymation":{"stages":[["storyboard","短片與節拍"],["material","黏土偶與搭景"],["video","檢查後渲染"]],"summary":"用 Blender 逐格姿態製作停格短片；本站功能示意圖，非作者成果。"},

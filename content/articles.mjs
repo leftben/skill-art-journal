@@ -1,3 +1,4 @@
+import {newArticles as november24Articles} from './new-2026-11-24.mjs';
 import {newArticles as november23Articles} from './new-2026-11-23.mjs';
 import {newArticles as november20Articles} from './new-2026-11-20.mjs';
 import {newArticles as november19Articles} from './new-2026-11-19.mjs';
@@ -40,6 +41,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november24Articles,
  ...november23Articles,
  ...november20Articles,
  ...november19Articles,
@@ -526,3 +528,6 @@ applyNovember20Updates(articles);
 
 import {applyNovember23Updates} from './updates-2026-11-23.mjs';
 applyNovember23Updates(articles);
+
+import {applyNovember24Updates} from './updates-2026-11-24.mjs';
+applyNovember24Updates(articles);

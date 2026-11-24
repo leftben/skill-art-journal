@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-10-21",
-    "version": "1.0",
-    "slugs": [
-      "anatomy",
-      "logo-design",
-      "diagram-design",
-      "taste-skill",
-      "aseprite-ai-artist"
-    ]
-  },
-  {
     "date": "2026-10-22",
     "version": "1.0",
     "slugs": [
@@ -327,6 +316,17 @@
       "claude-drawing",
       "sprite-stacking",
       "claude-blender-films"
+    ]
+  },
+  {
+    "date": "2026-11-24",
+    "version": "1.0",
+    "slugs": [
+      "sprite-stacking",
+      "baoyu-skills",
+      "anidoodle",
+      "codixel",
+      "image-to-sculpt"
     ]
   }
 ]
