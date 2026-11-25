@@ -24,4 +24,3 @@ export const newArticles = [
     "authorExample": "https://github.com/RobLe3/cc-blender-skill/blob/a2634b588e80265e796aa53f8ab178d75105c2af/plugin/skills/text-to-blender/assets/v1.1.0-validation/desk_lamp_emission.webp"
   }
 ];
-
