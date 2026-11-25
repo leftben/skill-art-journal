@@ -1,3 +1,4 @@
+import {newArticles as november25Articles} from './new-2026-11-25.mjs';
 import {newArticles as november24Articles} from './new-2026-11-24.mjs';
 import {newArticles as november23Articles} from './new-2026-11-23.mjs';
 import {newArticles as november20Articles} from './new-2026-11-20.mjs';
@@ -41,6 +42,7 @@ import {newArticles as newOctober28Articles} from './new-2026-10-28.mjs';
 import {newArticles as newOctober29Articles} from './new-2026-10-29.mjs';
 import {newArticles as newOctober30Articles} from './new-2026-10-30.mjs';
 export const articles = [
+ ...november25Articles,
  ...november24Articles,
  ...november23Articles,
  ...november20Articles,
@@ -443,6 +445,7 @@ export const articles = [
 applyUpdates(articles);
 
 export const assetSources = [
+ {file:'cc-blender-desk-lamp.webp',repo:'RobLe3/cc-blender-skill',url:'https://raw.githubusercontent.com/RobLe3/cc-blender-skill/a2634b588e80265e796aa53f8ab178d75105c2af/plugin/skills/text-to-blender/assets/v1.1.0-validation/desk_lamp_emission.webp',title:'RobLe3 作者的 Blender 桌燈驗證圖：燈罩發光與桌面照明。v1.1.0 原作，MIT；非新版新作或本站實測。',license:'MIT'},
  {"file":"claude-blender-night.jpg","repo":"mromidev/claude-blender-skills","url":"https://raw.githubusercontent.com/mromidev/claude-blender-skills/567116bf3514ce0e469c2cb5cb04fa974fca217a/docs/img/night_final.jpg","title":"Mr omi 原作：Blender 夜城無人機短片畫面；示例使用第三方場景素材，素材不隨程式提供，詳見作者 README credits。非本站生成或實測。","license":"MIT"},
  {file:'pixel-master-sakura.gif',repo:'424431185/pixel-asset-master-skills',url:'https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/33d891c421a9ad3608f5a09af97271388ca923af/sakura_preview.gif',title:'Pixel Asset Master 原作者的櫻花樹六格動畫；非本站生成或實測',license:'MIT'},
 {"file":"anidoodle-styles.jpg","repo":"alexgreensh/anidoodle","url":"https://raw.githubusercontent.com/alexgreensh/anidoodle/4ae27d2c281fcfd01bce87ab13dc5ad4df81a795/assets/styles.jpg","title":"Alex Greenshpun 作者以程式繪製的 32 種畫風總覽；非本站生成或實測。","license":"Apache-2.0","noticeURL":"https://raw.githubusercontent.com/alexgreensh/anidoodle/4ae27d2c281fcfd01bce87ab13dc5ad4df81a795/NOTICE"},
@@ -531,3 +534,6 @@ applyNovember23Updates(articles);
 
 import {applyNovember24Updates} from './updates-2026-11-24.mjs';
 applyNovember24Updates(articles);
+
+import {applyNovember25Updates} from './updates-2026-11-25.mjs';
+applyNovember25Updates(articles);

@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-10-22",
-    "version": "1.0",
-    "slugs": [
-      "anatomy",
-      "logo-design",
-      "illo",
-      "dream-loop",
-      "garden-skills"
-    ]
-  },
-  {
     "date": "2026-10-23",
     "version": "1.0",
     "slugs": [
@@ -327,6 +316,17 @@
       "anidoodle",
       "codixel",
       "image-to-sculpt"
+    ]
+  },
+  {
+    "date": "2026-11-25",
+    "version": "1.0",
+    "slugs": [
+      "aseprite-ai-artist",
+      "cc-blender-skill",
+      "claude-animation-skills",
+      "arjun-blender-skills",
+      "mengto-illustration"
     ]
   }
 ]
