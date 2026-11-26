@@ -1,5 +1,6 @@
 // Editorial diagrams explain capabilities; they are not generated project results.
 export const illustrations = {
+ 'orange-line-illustration':{stages:[['document','提煉文章的觀點'],['sketch','設計動作與橙色焦點'],['storyboard','選圖與投影片']],summary:'把文字觀點轉成一致的留白線條插圖；本站功能示意，非作者成果。'},
  'cc-blender-skill':{stages:[['brief','需求與真實尺寸'],['material','建模材質與打光'],['gameasset','看圖修正再交付']],summary:'串接 Blender 製作步驟，渲染檢查後依用途匯出；本站功能示意，非作者成果或執行結果。'},
  'image-to-sculpt':{stages:[['frames','核對照片與多視角'],['gameasset','分階段修出雕塑'],['frames','檢查圖與建模重播']],summary:'以原圖和多視角修整立體草模；本站功能示意，非作者成果。'},
  'sprite-stacking':{stages:[['frames','核對四面像素圖'],['sprites','切出水平圖層'],['gameasset','旋轉預覽與圖集']],summary:'四面圖的輪廓交集切成薄片，再堆疊旋轉；本站功能示意，非作者成果。'},

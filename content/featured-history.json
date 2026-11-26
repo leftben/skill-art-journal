@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-10-23",
-    "version": "1.0",
-    "slugs": [
-      "ui-ux-pro-max",
-      "mengto-illustration",
-      "baoyu-skills",
-      "blender-agent-skills",
-      "pixel-art-studio"
-    ]
-  },
-  {
     "date": "2026-10-24",
     "version": "1.0",
     "slugs": [
@@ -327,6 +316,17 @@
       "claude-animation-skills",
       "arjun-blender-skills",
       "mengto-illustration"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "version": "1.0",
+    "slugs": [
+      "pixelfx",
+      "claude-animation-skills",
+      "sprite-stacking",
+      "logo-design",
+      "orange-line-illustration"
     ]
   }
 ]

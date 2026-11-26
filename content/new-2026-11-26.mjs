@@ -1,0 +1,22 @@
+export const newArticles = [{
+  "slug": "orange-line-illustration",
+  "repo": "orange2ai/orange-line-illustration",
+  "name": "Orange Line Illustration",
+  "category": "插畫與圖解",
+  "kind": "單項 Skill",
+  "published": "2026-11-26",
+  "title": "用一個動作與一點橙色，說清文章的意思",
+  "short": "留白線條插圖與配圖投影片",
+  "dek": "先想具體場景，再把文章觀點變成黑線、白底和單一橙色焦點。",
+  "intro": "文章談「做減法」，配圖卻只剩幾個抽象圖示？橙線插畫會先找出內容的矛盾，再用極小人物與巨大物件的動作，把一個觀點畫成一張留白插圖。黑色細線、純白背景和一點暖橙色，讓同一系列的文章或演講維持一致。",
+  "process": "先提煉句子要說的意思，設計看得懂的動作場景，安排橙色落在最重要的位置，再把候選圖交給人挑選。多張圖預設沿用胸口橙點的小橙角色；需要其他人物時先選角色設定。投影片路線會先確認大綱、逐頁生圖與選圖，再組成有導覽和進度條的 HTML。",
+  "example": "為「功能太多會讓人找不到重點」畫一個小人物，正把整面巨大的按鈕牆擦到只剩一個橙色按鈕；再用同一角色為另外三個產品原則配圖。這是本站需求範例，未執行生成。",
+  "fit": "適合文章作者、產品設計者、講師，以及需要一套一致概念插圖的內容編輯。",
+  "requirements": "需要能讀取 SKILL.md 的 AI 助手，以及接受文字提示的生圖工具；技能本身是風格、隱喻與製作流程文件，不含生圖模型。HTML 投影片還需要助手能編寫與保存網頁。",
+  "costs": "個人非商業、教育、符合開源／Creative Commons 條件的公開專案，以及免費公開文章插圖可按作者免費授權使用；閉源產品、專有行銷、付費課程或保密客戶交付需另向作者購買商業授權。生圖服務與助手額度另計，沒有指定單一供應商或固定價格。",
+  "outputs": "概念插圖、文章封面，以及帶圖片、導覽與進度條的 HTML 投影片；HTML 不是原生可編輯 PPTX。",
+  "caveat": "2026-11-26 首次收錄；儲存庫建立於 2026-06-10，預設分支最後提交在 6 月，不是今天發布。本次核實 458 星。生成可能出現中文錯字、人物比例與角色不一致，文件主要由人選圖，不能保證自動品質檢查。README 的尺寸／標注位置摘要與 SKILL 細節有差異，實作應明確指定。作者示例圖片未見獨立再利用許可，本站不複製原圖，配圖是明確標示的功能示意。",
+  "source": "https://github.com/orange2ai/orange-line-illustration/blob/f7e1f8444c1832e38ab92bca03d314560fc4fb98/README.md",
+  "skill": "https://github.com/orange2ai/orange-line-illustration/blob/f7e1f8444c1832e38ab92bca03d314560fc4fb98/SKILL.md",
+  "authorExample": "https://github.com/orange2ai/orange-line-illustration/blob/f7e1f8444c1832e38ab92bca03d314560fc4fb98/README.md"
+}];

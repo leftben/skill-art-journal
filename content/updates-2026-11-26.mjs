@@ -1,0 +1,10 @@
+const updates={
+  "ui-ux-pro-max": "新增 PySide6／Qt 桌面介面指引，包含主題、卡片間距、背景工作與原生動畫，避免把網頁 CSS 直接套進 Qt。例如替美術素材管理器做可展開側欄與不中斷操作的掃描進度。適合製作 Python 桌面工具的人；需 Python 與對應 Qt 套件，qfluentwidgets 等元件另依其授權使用，沒有新增生圖費。另修正 src 目錄與自訂別名下已安裝 shadcn 元件的辨識。",
+  "diagram-design": "補強靜態圖表的完整性：重要資訊必須直接看見，不藏在滑鼠移入或點擊後才展開的區塊，避免匯出 PNG、列印或嵌入時漏字；並修正盒鬚圖檢查漏掉被相鄰 CSS 規則隱藏的資料。例如交付統計圖前，確認所有組別都真的顯示。適合做簡報與品牌資訊圖的人；沿用 Python 與原本匯出環境，沒有新增付費服務。",
+  "mengto-illustration": "房間場景直式短片的字幕改為預設米白色；只有製作計畫明確指定強調色時才使用，淺牆仍用深字。例如品牌不是橘色時，不再自動把重點字染成橘色。這是字幕製作規範與繪製邏輯調整；工具沿用原流程，沒有新增必付服務。",
+  "creator-generalist": "3d-generalist 0.15.0 新增約 30–60 秒的程式建構解說短片模式：左邊展示程式積木與數值變化，右邊場景同步長出來，字幕和聲音共用時間表。例如一步步把散落三角形折成立體物件，再變成發光核心。適合生成藝術、shader 與技術教學作者；依場景使用 Blender 或網頁繪圖環境，影片與聲音沿用原製作工具，選用商業素材或服務另計費。這是製作流程與範例配方，本站未實測。",
+  "impeccable": "4.11.0 擴充 Cursor、Copilot CLI、OpenCode 的持續工作連接流程，並新增 Muse 支援；未登入時列工具不再卡住等登入，先提供本機工具，再由明確登入步驟開啟遠端功能。另修正 Windows 啟動器、全頁截圖與響應式檢查的誤判。例如替作品集檢查手機版時，較不會把無法計算的間距誤判成零。沿用 Node、助手與瀏覽器環境；遠端帳號與 Pro 功能依原服務方案，本站未安裝或更新本機版本。"
+};
+const heads={"nextlevelbuilder/ui-ux-pro-max-skill":{"head":"b73ee96f8d4ff7bbc279c52dadcd907ffe23629c","old":"8db36338810d0942567b97ce439affd1619fcf31"},"cathrynlavery/diagram-design":{"head":"b228c5d77794a84150fca41b22940bb316b1398d","old":"58b7dcf7ebcd771331e76de028fb84132c5e7c57"},"MengTo/Skills":{"head":"a5b1d3d28bd72b206a28e4a76b653792fc7b4859","old":"05043c3b37d20a6943762fc219a7797c214b8bb0"},"pbakaus/impeccable":{"head":"9e460a87ef338ee9d12c7beed8fedc597a5af5f7","old":"b49177d32788f2dc585c42831d845dacf1ebed2c"},"codepawl/creator-generalist":{"head":"fd244459e21f364d7384c460e7965e1aff211791","old":"c0d3ff2f324820c18086c36bb4db431371154b8a"}};
+export function applyNovember26Updates(articles){for(const a of articles)if(updates[a.slug]){a.update=(a.update?a.update+"\n\n":"")+"2026-11-26："+updates[a.slug];a.updated="2026-11-26";a.source="https://github.com/"+a.repo+"/blob/"+heads[a.repo].head+"/README.md";a.extraSource="https://github.com/"+a.repo+"/compare/"+heads[a.repo].old+"..."+heads[a.repo].head;a.extraSourceLabel="本次核實的預設分支差異";}}
+
